@@ -10,10 +10,6 @@
 * Работа с потоками ввода-вывода
   * `<iostream>`, `<fstream>`, `<sstream>`
 * Строки в C++
-### Задачи
-1. [Hello, Classroom!](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/hello-classroom) (1 балл)
-2. [Второе вхождение](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vtoroe-vhozhdenie) (2 балла)
-3. [Бормотание](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/bormotanie) (5 баллов)
 
 ## Занятие 2-3
 * Контейнеры стандартной библиотеки C++
@@ -26,8 +22,6 @@
 * Итераторы
   * Типы итераторов
 
-### Задачи
-
 ## Занятие 4-5
 * Алгоритмы стандартной библиотеки C++
   * `std::for_each`, `std::sort`, `std::stable_sort`, `std::lower_bound`, `std::upper_bound`, `std::binary_search`, `std::copy_if`, `std::unique`, `std::any_of`, `std::all_of`, `std::none_of`, `std::copy_if`, `std::erase`
@@ -35,8 +29,6 @@
 * Лямбда-функции
 * Библиотека `<numeric>`
   * `std::iota`, `std::accumulate`, `std::inner_product` 
-
-### Задачи
 
 ## Занятие 6
 * Классы
@@ -46,8 +38,6 @@
   * Константные поля и методы
   * Перегрузка операторов
   * Ключевые слова `delete` и `default`
-
-### Задачи
 
 ## Занятие 7
 * Наследование
@@ -59,31 +49,21 @@
   * Умные указатели `std::unique_ptr` и `std::shared_ptr`
   * Идиома RAII
 
-### Задачи
-
 ## Занятие 8
 * Обобщенное программирование
 * Шаблоны проектирования (упоминание о существовании)
 * **Предварительный выбор проектов**
-
-### Задачи
 
 ## Занятие 9
 * Основы синтаксиса языка python
 * Работа в `jupyter notebook`
 * Полезные модули стандартной библиотеки
 
-### Задачи
-
 ## Занятие 10
 * Вычисления с библиотекой `numpy`
 
-### Задачи
-
 ## Занятие 11
 * Визуализация данных с `matplotlib`
-
-### Задачи
 
 ## Занятие 12
 * Графика и GUI с библиотеками `tkinter` и `pygame`
