@@ -12,7 +12,8 @@
 * Строки в C++
 ### Задачи
 1. [Hello, Classroom!](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/hello-classroom) (1 балл)
-2. [Бормотание](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/bormotanie) (5 баллов)
+2. [Второе вхождение](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vtoroe-vhozhdenie) (2 балла)
+3. [Бормотание](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/bormotanie) (5 баллов)
 
 ## Занятие 2-3
 * Контейнеры стандартной библиотеки C++
