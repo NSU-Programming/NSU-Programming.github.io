@@ -10,7 +10,7 @@
 1. [Hello, Classroom!](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/hello-classroom) (1 балл)
 2. [Второе вхождение](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vtoroe-vhozhdenie) (2 балла)
 3. [Минимальная строка](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/minimalnaya-stroka) (2 балла)
-4. [Палиндром](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/palindrom)
+4. [Палиндром](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/palindrom) (3 балла)
 5. [Бормотание](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/bormotanie) (5 баллов)
 
 ### Блок 2. Контейнеры и итераторы стандартной библиотеки C++
