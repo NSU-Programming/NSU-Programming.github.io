@@ -6,31 +6,31 @@
 * Выполнить проект по согласованию с семинаристом
 
 ## C++
-### Блок 1. Потоки ввода-вывода, строки
+### 1. Потоки ввода-вывода, строки
 1. [Hello, Classroom!](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/hello-classroom) (1 балл)
 2. [Второе вхождение](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vtoroe-vhozhdenie) (2 балла)
 3. [Минимальная строка](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/minimalnaya-stroka) (2 балла)
 4. [Палиндром](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/palindrom) (3 балла)
 5. [Бормотание](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/bormotanie) (5 баллов)
 
-### Блок 2. Контейнеры и итераторы стандартной библиотеки C++
+### 2. Контейнеры и итераторы стандартной библиотеки C++
 
-### Блок 3. Алгоритмы стандартной библиотеки C++
+### 3. Алгоритмы стандартной библиотеки C++
 
-### Блок 4. Объектно-ориентированное программирование
+### 4. Объектно-ориентированное программирование
 
-### Блок 5. Динамическое выделение памяти
+### 5. Динамическое выделение памяти
 
-### Блок 6. Обобщенное программирование
+### 6. Обобщенное программирование
 
 ## python
-### Блок 7. Основы языка python
+### 7. Основы языка python
 
-### Блок 8. Работа с `numpy`
+### 8. Работа с `numpy`
 
-### Блок 9. Работа с `matplotlib`
+### 9. Работа с `matplotlib`
 
-### Блок 10. Работа с `tkinter` и `pygame`
+### 10. Работа с `tkinter` и `pygame`
 
 ## Задания на пятерку
 
