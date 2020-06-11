@@ -14,7 +14,8 @@
 5. [Бормотание](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/bormotanie) (5 баллов)
 
 ### 2. Контейнеры и итераторы стандартной библиотеки C++
-1. [Перемещение строк](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/peremeshchenie-strok) (1 балл)
+1. [Перемещение строк](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/peremeshchenie-strok) (2 балл)
+2. [Разворот последовательности](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razvorot-posledovatelnosti) (2 балл)
 
 ### 3. Алгоритмы стандартной библиотеки C++
 
