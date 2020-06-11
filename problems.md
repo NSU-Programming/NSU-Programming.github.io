@@ -17,6 +17,7 @@
 1. [Перемещение строк](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/peremeshchenie-strok) (2 балла)
 2. [Разворот последовательности](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razvorot-posledovatelnosti) (2 балла)
 3. [Разворот последовательности 2](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razvorot-posledovatelnosti-2) (2 балла)
+4. [Анаграммы](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/anagrammy) (3 балла)
 
 ### 3. Алгоритмы стандартной библиотеки C++
 
