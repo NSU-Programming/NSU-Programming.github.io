@@ -21,6 +21,12 @@
   * [Algorithms Specialization](https://www.coursera.org/specializations/algorithms) (Tim Roughgarden, Stanford U.)
   * [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics) (Pavel Pevzner, US San Diego)
 
+## YouTube-каналы
+* [Coding Tech](https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ)
+  * [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=bFSnXNIsK4A)
+* [ The Cherno
+](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
+
 ## Ресурсы-задачники
 * [E-Olymp](https://www.e-olymp.com)
 * [Codewars](https://www.codewars.com)
