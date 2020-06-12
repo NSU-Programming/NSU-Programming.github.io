@@ -18,6 +18,8 @@
 2. [Разворот последовательности](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razvorot-posledovatelnosti) (2 балла)
 3. [Разворот последовательности 2](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razvorot-posledovatelnosti-2) (2 балла)
 4. [Анаграммы](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/anagrammy) (3 балла)
+5. [Количество уникальный строк](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/kolichestvo-unikalnyy-strok) (3 балла)
+6. [Вычисление арифметического выражения](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vychislenie-arifmeticheskogo-vyrazhenie) (5 баллов)
 
 ### 3. Алгоритмы стандартной библиотеки C++
 
