@@ -23,8 +23,10 @@
 
 ### 3. Алгоритмы стандартной библиотеки C++
 1. [Сортировка по модулю](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sortirovka-po-modulyu) (2 балла)
+2. [Сортировка без учета регистра](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sortirovka-bez-ucheta-registra) (2 балла)
 
 ### 4. Объектно-ориентированное программирование
+1. [Отсортированные строки](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/otsortirovannye-stroki) (2 балла)
 
 ### 5. Динамическое выделение памяти
 
