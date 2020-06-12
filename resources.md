@@ -24,8 +24,8 @@
 ## YouTube-каналы
 * [Coding Tech](https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ)
   * [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=bFSnXNIsK4A)
-* [ The Cherno
-](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
+* [The Cherno](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
+* [C++ User Group](https://www.youtube.com/channel/UCJ9v015sPgEi0jJXe_zanjA)
 
 ## Ресурсы-задачники
 * [E-Olymp](https://www.e-olymp.com)
@@ -38,3 +38,6 @@
 * Система автоматизации сборки ПО [CMake](https://cmake.org/download/)
 * Средства для работы с GitHub в Windows [GitHub Desctop](https://desktop.github.com/)
 * Дистрибутив языка python [Anaconda Windows installers](https://www.anaconda.com/products/individual#windows)
+
+## Разное
+* [Modern C++ Course](https://www.ipb.uni-bonn.de/teaching/modern-cpp/) (Bonn U.)

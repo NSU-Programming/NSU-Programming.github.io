@@ -22,6 +22,7 @@
 6. [Вычисление арифметического выражения](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vychislenie-arifmeticheskogo-vyrazhenie) (5 баллов)
 
 ### 3. Алгоритмы стандартной библиотеки C++
+1. [Сортировка по модулю](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sortirovka-po-modulyu) (2 балла)
 
 ### 4. Объектно-ориентированное программирование
 
