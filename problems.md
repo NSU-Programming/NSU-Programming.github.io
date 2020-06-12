@@ -33,6 +33,7 @@
 ### 5. Динамическое выделение памяти
 
 ### 6. Обобщенное программирование
+1. [Все в квадрат](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vse-v-kvadrat) (4 балла)
 
 ## python
 ### 7. Основы языка python
