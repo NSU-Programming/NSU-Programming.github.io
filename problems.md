@@ -17,7 +17,7 @@
 4. [Палиндром](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/palindrom) (3 балла)
 5. [Бормотание](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/bormotanie) (5 баллов)
 
-### 2. Контейнеры и итераторы стандартной библиотеки C++
+### 2. Контейнеры стандартной библиотеки C++
 
 1. [Перемещение строк](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/peremeshchenie-strok) (2 балла)
 2. [Разворот последовательности](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razvorot-posledovatelnosti) (2 балла)
@@ -31,6 +31,7 @@
 1. [Сортировка по модулю](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sortirovka-po-modulyu) (2 балла)
 2. [Сортировка без учета регистра](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sortirovka-bez-ucheta-registra) (2 балла)
 3. [Часть вектора](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/chast-vektora) (3 балла)
+4. [Разбиение на слова](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razbienie-na-slova) (3 балла)
 
 ### 4. Объектно-ориентированное программирование
 
@@ -50,9 +51,11 @@
 
 ### 7. Основы языка python
 
-### 8. Работа с `numpy`
+### 8. Работа с numpy
 
-### 9. Работа с `matplotlib`
+### 9. Работа с matplotlib
+1. [Визуализация "Колец Ньютона"]()
+
 
 ### 10. Работа с `tkinter` и `pygame`
 
