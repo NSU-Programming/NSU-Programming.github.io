@@ -28,7 +28,8 @@
 ### 4. Объектно-ориентированное программирование
 1. [Отсортированные строки](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/otsortirovannye-stroki) (2 балла)
 2. [Способы инициализации](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sposoby-inicializacii) (2 балла)
-3. [Суммирование матриц](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/summirovanie-matric) (6 баллов)
+3. [Номер телефона](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/nomer-telefona)
+4. [Суммирование матриц](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/summirovanie-matric) (6 баллов)
 
 ### 5. Динамическое выделение памяти
 
