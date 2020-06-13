@@ -26,6 +26,7 @@
   * [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=bFSnXNIsK4A)
 * [The Cherno](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
 * [C++ User Group](https://www.youtube.com/channel/UCJ9v015sPgEi0jJXe_zanjA)
+* [Студсовет ФПМИ МФТИ](https://www.youtube.com/channel/UCZ-sv20iKVXtQVR4epbmz8A/playlists)
 
 ## Ресурсы-задачники
 * [E-Olymp](https://www.e-olymp.com)
