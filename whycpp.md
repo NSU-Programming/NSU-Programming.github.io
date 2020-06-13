@@ -1,5 +1,5 @@
 ---
-layout: post
+# layout: post
 title: Why learn C++?
 youtubeId: LZflL44SVVY
 ---
