@@ -41,3 +41,5 @@
 
 ## Разное
 * [Modern C++ Course](https://www.ipb.uni-bonn.de/teaching/modern-cpp/) (Bonn U.)
+* Интерактивные оглайн компиляторы [godbolt.org](https://godbolt.org/)
+* Онлайн среда разработки [repl.it](https://repl.it/)
