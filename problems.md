@@ -50,6 +50,7 @@
 2. [Удаление повторов](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/udalenie-povtorov) (2 балла) 
 3. [Все в квадрат](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vse-v-kvadrat) (4 балла)
 4. [Максимальный элемент по предикату](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/poisk-blizhayshego-elementa) (4 балла)
+5. [Таблица](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/tablica) (6 баллов)
 
 ## python
 
