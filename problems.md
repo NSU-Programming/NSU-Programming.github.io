@@ -51,6 +51,7 @@
 3. [Все в квадрат](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vse-v-kvadrat) (4 балла)
 4. [Максимальный элемент по предикату](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/poisk-blizhayshego-elementa) (4 балла)
 5. [Таблица](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/tablica) (6 баллов)
+6. [Дек на основе двух векторов](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/dek-na-osnove-dvuh-vektorov) (6 баллов)
 
 ## python
 
