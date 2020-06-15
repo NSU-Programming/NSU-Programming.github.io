@@ -45,7 +45,8 @@
 ### 6. Обобщенное программирование
 
 1. [Часть множества](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/chast-mnozhestva) (2 балла)
-2. [Все в квадрат](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vse-v-kvadrat) (4 балла)
+2. [Удаление повторов](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/udalenie-povtorov) (2 балла) 
+3. [Все в квадрат](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vse-v-kvadrat) (4 балла)
 
 ## python
 
