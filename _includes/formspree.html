@@ -2,20 +2,24 @@
   action="https://formspree.io/{{ include.id }}"
   method="POST"
 >
+    <p>
   <label>
-    Ваш e-mail:
+    e-mail:
     <input type="text" name="_replyto">
   </label>
+   </p>
   <label>
-    Ваше имя:
+    <p>
+    Имя:
     <input type="text" name="_replyto">
   </label>
-  <br>
+   </p>
+   <p>
   <label>
-    Ваше сообщение:
+    Сообщение:<br>
     <textarea name="message"></textarea>
   </label>
-
+</p>
   <!-- your other form fields go here -->
 
   <button type="submit">Отправить</button>
