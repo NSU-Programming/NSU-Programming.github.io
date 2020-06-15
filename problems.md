@@ -32,6 +32,7 @@
 2. [Сортировка без учета регистра](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sortirovka-bez-ucheta-registra) (2 балла)
 3. [Часть вектора](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/chast-vektora) (3 балла)
 4. [Разбиение на слова](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razbienie-na-slova) (3 балла)
+5. [Перебор перестановок](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/perebor-perestanovok) (3 балла)
 
 ### 4. Объектно-ориентированное программирование
 
