@@ -33,6 +33,7 @@
 3. [Часть вектора](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/chast-vektora) (3 балла)
 4. [Разбиение на слова](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razbienie-na-slova) (3 балла)
 5. [Перебор перестановок](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/perebor-perestanovok) (3 балла)
+6. [Поиск ближайшего элемента](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/poisk-blizhayshego-elementa) (3 балла)
 
 ### 4. Объектно-ориентированное программирование
 
