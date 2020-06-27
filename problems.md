@@ -42,9 +42,9 @@
 3. [Номер телефона](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/nomer-telefona) (3 балла)
 4. [Суммирование матриц](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/summirovanie-matric) (6 баллов)
 
-### 5. Динамическое выделение памяти
+<!-- ### 5. Динамическое выделение памяти -->
 
-### 6. Обобщенное программирование
+### 5. Обобщенное программирование
 
 1. [Часть множества](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/chast-mnozhestva) (2 балла)
 2. [Удаление повторов](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/udalenie-povtorov) (2 балла) 
@@ -55,15 +55,16 @@
 
 ## python
 
-### 7. Основы языка python
+### 1. Основы языка python
 
-### 8. Работа с numpy
 
-### 9. Работа с matplotlib
+### 2. Работа с numpy
+
+### 3. Работа с matplotlib
 1. [Визуализация "Колец Ньютона"]()
 
 
-### 10. Работа с `tkinter` и `pygame`
+### 4. Работа с `tkinter` и `pygame`
 
 ## Задания на пятерку
 * Погода через OpenWeather API
