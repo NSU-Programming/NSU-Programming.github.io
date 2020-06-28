@@ -16,7 +16,7 @@ string d('d', 10);  // d = "dddddddddd"
 Строки последовательно хранят в памяти набор объектов `char`, поэтому во многих случаях со строками можно работать как с массивом. Например, обращаться с символам через индекс.
 
 ```cpp
-string a('abz');
+string a("abz");
 char c = a[2];  // 'z'
 char b = a.at(1);  // 'b'
 a[2] = 'c';  // a = "abc"
@@ -63,3 +63,4 @@ if (found != string::npos) {
 
 ## Документация 
 * [http://www.cplusplus.com/reference/string/string/](http://www.cplusplus.com/reference/string/string/)
+* [\<cctype\>](http://www.cplusplus.com/reference/cctype/) - библиотека для работы с символами
