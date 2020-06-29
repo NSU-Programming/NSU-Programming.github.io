@@ -57,19 +57,15 @@
 
 ### 1. Основы языка python
 
-
 ### 2. Стандартная библиотека python
 
 1. [key-value хранилище](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/key-value-hranilishche) (6 баллов)
 
-
 ### 3. Работа с numpy
-
 
 ### 4. Работа с matplotlib и plotly
 
 1. [Визуализация "Колец Ньютона"]()
-
 
 ### 4. Работа с `tkinter` и `pygame`
 
