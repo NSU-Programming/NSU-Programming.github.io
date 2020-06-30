@@ -1,0 +1,11 @@
+docs_list_title: Содержание
+docs:
+
+- title: Главная
+  url: index.md
+
+- title: Программа лекций
+  url: lectures.md
+
+- title: Материалы к практическим занятиям
+  url: textbook/index.md
