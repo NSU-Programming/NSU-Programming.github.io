@@ -2,10 +2,10 @@ docs_list_title: Содержание
 docs:
 
 - title: Главная
-  url: index.md
+  url: index
 
 - title: Программа лекций
-  url: lectures.md
+  url: lectures
 
 - title: Материалы к практическим занятиям
-  url: textbook/index.md
+  url: textbook/index
