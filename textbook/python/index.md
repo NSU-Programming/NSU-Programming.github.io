@@ -1,7 +1,9 @@
-# Язык python
+---
+title: Язык python
+---
 
-* [Содержание](../index.md)
---------------------------
+# {{ page.title }}
+
 * [Основы синтаксиса языка python](basics)
 * [Базовые типы данных `python`](built-in-types)
 * [Работа с файлами](file-io)

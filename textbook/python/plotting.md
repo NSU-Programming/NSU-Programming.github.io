@@ -1,4 +1,5 @@
-* [Содержание](../index.md)
-  * [python](index)
+---
+title: Визуализация данных с matplotlib и plotly
+---
 
-# Визуализация данных с `matplotlib` и `plotly`
+# {{ page.title }}

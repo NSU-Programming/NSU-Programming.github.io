@@ -1,4 +1,5 @@
-* [Содержание](../index.md)
-  * [python](index)
+---
+title: Основы синтаксиса языка python
+---
 
-# Основы синтаксиса языка python
+# {{ page.title }}

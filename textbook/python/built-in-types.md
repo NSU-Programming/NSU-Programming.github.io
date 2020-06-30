@@ -1,4 +1,5 @@
-* [Содержание](../index.md)
-  * [python](index)
+---
+title: Базовые типы данных в python
+---
 
-# Базовые типы данных `python`
+# {{ page.title }}

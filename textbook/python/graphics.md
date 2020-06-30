@@ -1,4 +1,5 @@
-* [Содержание](../index.md)
-  * [python](index)
+---
+title: Графика и GUI с библиотеками tkinter и pygame
+---
 
-# Графика и GUI с библиотеками `tkinter` и `pygame`
+# {{ page.title }}

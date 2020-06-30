@@ -1,4 +1,5 @@
-* [Содержание](../index)
-  * [C++](index)
+---
+title: Библиотека numeric
+---
 
-# Библиотека `numeric`
+# {{ page.title }}

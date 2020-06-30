@@ -1,4 +1,5 @@
-* [Содержание](../index.md)
-  * [python](index)
+---
+title: ООП в python
+---
 
-# ООП в `python`
+# {{ page.title }}

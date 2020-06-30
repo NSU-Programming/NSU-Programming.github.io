@@ -6,32 +6,12 @@ title: Материалы к практическим занятиям
 
 Данный раздел не претендует на полный обзор возможностей языков программирования C++ и python. Собранные здесь материалы должны помочь студенту маскимально быстро приступить к решению заданий. По каждой теме подобраны ссылки на документацию и более подробные материалы, которые позволят заинтересованному студенту более глубоко разобраться в теме.
 
-1. [Введение](intro)
-2. [Настройка рабочей среды](env)
-3. [Язык C++](cpp)
-   * [Работа с потоками ввода-вывода](cpp/io)
-   * [Строки в C++](cpp/string)
-   * [Контейнеры стандартной библиотеки C++](cpp/containers)
-   * [Эффективная передача параметров в функцию](cpp/function-parameters)
-   * [Итераторы](cpp/iterators)
-   * [Алгоритмы стандартной библиотеки C++](cpp/algorithms)
-   * [Библиотека `numeric`](cpp/numeric)
-   * [Классы](cpp/classes)
-   * [Наследование](cpp/inheritance)
-   * [Динамическое выделение памяти](cpp/dynamic-memory)
-   * [Обобщенное программирование](cpp/templates)
-4. [Язык python](python)
-   * [Основы синтаксиса языка python](python/basics)
-   * [Базовые типы данных `python`](python/built-in-types)
-   * [Работа с файлами](python/file-io)
-   * [Подробнее о строках](python/str)
-   * [Полезные модули стандартной библиотеки](python/std-library)
-   * [ООП в `python`](python/oop)
-   * [Продолжаем знакомство со стандартной библиотекой `python`](python/std-library-advanced)
-   * [Итераторы, генераторы и корутины](python/generators)
-   * [Вычисления с библиотекой `numpy`](python/numpy)
-   * [Визуализация данных с `matplotlib` и `plotly`](python/plotting)
-   * [Графика и GUI с библиотеками `tkinter` и `pygame`](python/graphics)
-   * [Библиотека `pandas`](python/pandas)
-5. [Дополнительные материалы](extra)
-   * [Шаблоны проектирования](extra/design-patterns)
+<h2>{{ site.data.textbook.toc_list_title }}</h2>
+{% for item in site.data.textbook.toc %}
+  <h3><a href="{{entry.url }}">{{ item.title }}</a></h3>
+  <ul>
+  {% for entry in item.items %}
+    <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
+  {% endfor %}
+  </ul>
+{% endfor %}

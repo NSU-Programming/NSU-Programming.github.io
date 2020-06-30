@@ -1,4 +1,5 @@
-* [Содержание](../index.md)
-  * [python](index)
+---
+title: Библиотека pandas
+---
 
-# Библиотека `pandas`
+# {{ page.title }}

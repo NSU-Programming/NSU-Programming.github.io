@@ -1,0 +1,92 @@
+toc_list_title: Материалы к практическим занятиям
+toc:
+
+- title: Введение
+  url: cpp/intro
+
+- title: Настройка рабочей среды
+  url: cpp/env
+
+- title: Язык C++
+  url: cpp
+  items:
+    
+  - page: Работа с потоками ввода-вывода
+    url: cpp/io
+
+  - page: Строки в C++
+    url: cpp/string
+
+  - page: Контейнеры стандартной библиотеки C++
+    url: cpp/containers
+
+  - page: Эффективная передача параметров в функцию
+    url: cpp/function-parameters
+
+  - page: Итераторы
+    url: cpp/iterators
+
+  - page: Алгоритмы стандартной библиотеки C++
+    url: cpp/algorithms
+
+  - page: Библиотека numeric
+    url: cpp/numeric
+
+  - page: Классы
+    url: cpp/classes
+
+  - page: Наследование
+    url: cpp/inheritance
+
+  - page: Динамическое выделение памяти
+    url: cpp/dynamic-memory
+
+  - page: Обобщенное программирование
+    url: cpp/templates
+
+- title: Язык python
+  url: python
+  items:
+    
+  - page: Основы синтаксиса языка python
+    url: python/basics
+    
+  - page: Базовые типы данных python
+    url: python/built-in-types
+    
+  - page: Работа с файлами
+    url: python/file-io
+    
+  - page: Подробнее о строках
+    url: python/str
+    
+  - page: Полезные модули стандартной библиотеки
+    url: python/std-library
+    
+  - page: ООП в python
+    url: python/oop
+    
+  - page: Продолжаем знакомство со стандартной библиотекой python
+    url: python/std-library-advanced
+    
+  - page: Итераторы, генераторы и корутины
+    url: python/generators
+    
+  - page: Вычисления с библиотекой numpy
+    url: python/numpy
+    
+  - page: Визуализация данных с matplotlib и plotly
+    url: python/plotting
+    
+  - page: Графика и GUI с библиотеками tkinter и pygame
+    url: python/graphics
+    
+  - page: Библиотека pandas
+    url: python/pandas
+
+- title: Дополнительные материалы
+  url: extra
+  items:
+
+    - page: Шаблоны проектирования
+      url: extra/design-patterns
