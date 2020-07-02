@@ -23,11 +23,11 @@ toc:
   - page: Эффективная передача параметров в функцию
     url: cpp/function-parameters
 
-  - page: Итераторы
-    url: cpp/iterators
-
   - page: Алгоритмы стандартной библиотеки C++
     url: cpp/algorithms
+    
+  - page: Итераторы
+    url: cpp/iterators
 
   - page: Библиотека numeric
     url: cpp/numeric
