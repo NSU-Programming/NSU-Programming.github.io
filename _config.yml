@@ -1,4 +1,5 @@
-theme: jekyll-theme-cayman
+# theme: jekyll-theme-cayman
+theme: jekyll-theme-lanyon
 title: Программирование на C++ и python
 
 email: vit.vorobiev@gmail.com

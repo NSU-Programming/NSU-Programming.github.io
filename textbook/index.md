@@ -1,5 +1,6 @@
 ---
 title: Материалы к практическим занятиям
+layout: textbook
 ---
 
 # {{ page.title }}
