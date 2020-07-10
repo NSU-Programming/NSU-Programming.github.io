@@ -1,4 +1,9 @@
-# Команда курса
+---
+title: Команда курса
+layout: default
+---
+
+# {{ page.title }}
 
 
 | <img src="pictures/circle-vitaly.png" width="200" height="200" />  | Воробьев Виталий Сергеевич       |

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Программирование на C++ и python
 formId: xgenyqwe
 ---
