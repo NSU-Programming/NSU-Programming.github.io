@@ -48,11 +48,8 @@ toc:
   url: python
   items:
     
-  - page: Основы синтаксиса языка python
+  - page: Основы языка python
     url: python/basics
-    
-  - page: Базовые типы данных python
-    url: python/built-in-types
     
   - page: Работа с файлами
     url: python/file-io
