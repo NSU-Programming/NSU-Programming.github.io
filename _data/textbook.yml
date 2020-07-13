@@ -51,9 +51,6 @@ toc:
   - page: Основы языка python
     url: python/basics
     
-  - page: Работа с файлами
-    url: python/file-io
-    
   - page: Подробнее о строках
     url: python/str
     
