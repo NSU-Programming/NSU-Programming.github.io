@@ -17,6 +17,8 @@ layout: default
     </div>
   </div>
 
+<hr/>
+
   <div class="row">
     <div class="col-4">
       <img src="pictures/circle-empty.png"  width="200" height="200" />
@@ -25,6 +27,8 @@ layout: default
       Пугачев Константин Владимирович
     </div>
   </div>
+
+<hr/>
 
   <div class="row">
     <div class="col-4">
@@ -35,6 +39,8 @@ layout: default
     </div>
   </div>
 
+<hr/>
+
   <div class="row">
     <div class="col-4">
       <img src="pictures/circle-empty.png"  width="200" height="200" />
@@ -43,6 +49,8 @@ layout: default
       Герасев Алексей
     </div>
   </div>
+
+<hr/>
 
   <div class="row">
     <div class="col-4">
@@ -53,6 +61,8 @@ layout: default
     </div>
   </div>
 
+<hr/>
+
   <div class="row">
     <div class="col-4">
       <img src="pictures/circle-empty.png"  width="200" height="200" />
@@ -61,6 +71,8 @@ layout: default
       Петров Никита
     </div>
   </div>
+
+<hr/>
 
   <div class="row">
     <div class="col-4">
