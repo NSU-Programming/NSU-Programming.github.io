@@ -132,7 +132,7 @@ sorted(a)  # ['a', 'e', 'l', 'p', 'p']
 ```py
 int('123')
 float('123.45')
-complex('123 + 45j')
+complex('123+45j')
 ```
 
 ## Контейнеры
@@ -474,7 +474,7 @@ with open('text.txt', 'r') as f:
     print(s)  # 'An important message.`
 ```
 
-При чтении файлов можно итерироваться по его строкам:
+При чтении файла можно итерироваться по его строкам:
 
 ```py
 with open('text.txt', 'r') as f:
