@@ -9,7 +9,7 @@ layout: default
 
 <h2>{{ site.data.textbook.toc_list_title }}</h2>
 {% for item in site.data.textbook.toc %}
-  <h3><a href="{{entry.url }}">{{ item.title }}</a></h3>
+  <h3><a href="{{item.url }}">{{ item.title }}</a></h3>
   <ul>
   {% for entry in item.items %}
     <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
