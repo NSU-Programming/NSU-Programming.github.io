@@ -13,4 +13,4 @@ layout: default
 | <img src="pictures/circle-empty.png"  width="200" height="200" />  | Герасев Алексей |
 | <img src="pictures/circle-yana.png"  width="200" height="200" />  | Савченко Яна |
 | <img src="pictures/circle-empty.png"  width="200" height="200" />  | Петров Никита |
-| <img src="pictures/circle-empty.png"  width="200" height="200" />  | Яковлев Даниил |
+| <img src="pictures/circle-daniil.png"  width="200" height="200" />  | Яковлев Даниил |
