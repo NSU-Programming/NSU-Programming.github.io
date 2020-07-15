@@ -7,6 +7,12 @@ layout: default
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
 
+<style>
+.main-content img {
+  max-width: 200px; /* hack to revert an annoying rule for this template */
+}
+</style>
+
 <div class="container">
   <div class="row">
     <div class="col-4">
