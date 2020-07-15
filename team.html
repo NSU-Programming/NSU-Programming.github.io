@@ -16,11 +16,9 @@ layout: default
     
     <div class="team-member-right">
       {% if member.site %}
-        <a href="{{ member.site }}">
-      {% endif %}
-      <h2>{{ member.name }}</h2>
-      {% if member.site %}
-        </a>
+        <h2><a href="{{ member.site }}">{{ member.name }}</a></h2>
+      {% else %}
+        <h2>{{ member.name }}</h2>
       {% endif %}
 
       {% if member.description %}
