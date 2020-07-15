@@ -43,10 +43,16 @@ layout: default
 
   <div class="row">
     <div class="col-4">
-      <img src="pictures/circle-empty.png"  width="200" height="200" />
+      <img src="pictures/circle-konstantin.png"  width="200" height="200" />
     </div>
     <div class="col-8">
-      <b>Пугачев Константин Владимирович</b><br>
+      <b><a href="http://wwwsnd.inp.nsk.su/~pugachev/">Пугачев Константин Владимирович</a></b><br>
+      м.н.с. ИЯФ СО РАН, асс. каф. ФТИ НГУ<br>
+      <i>
+        Выпускник каф. ФТИ со всеми вытекающими.
+        Люблю фотографировать, заниматься веб-программированием и жаловаться на жизнь в ЖЖ.
+        Хочу помочь физикам научиться программировать так, чтобы на работе у них больше времени уходило на физику.
+      </i>
     </div>
   </div>
 
