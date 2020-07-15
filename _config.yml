@@ -1,10 +1,17 @@
-theme: jekyll-theme-cayman
-title: Программирование на C++ и python
+# Setup
+title:               'NSU Programming'
+tagline:             'Программирование на C++ и Python'
+description:         'Сайт курса "Программирование на C++ и Python" для студентов ФФ НГУ.'
+url:                 ''
+baseurl:             ''
+repo:                'https://github.com/NSU-Programming/NSU-Programming.github.io'
 
-email: vit.vorobiev@gmail.com
-description: "" # >- # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# About/contact
+author:
+  email:             vit.vorobiev@gmail.com
+
+# Gems
+markdown: kramdown
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
