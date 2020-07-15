@@ -17,6 +17,7 @@ layout: default
   }
   .photo-container img {
     width: 75%;
+    margin: auto auto 1em auto;
   }
   b {
     display: block;
