@@ -6,7 +6,7 @@ glob_doc: https://docs.python.org/3/library/glob.html
 
 # {{ page.title }}
 
-Стандартная библиотека python [очень обширна](https://docs.python.org/3/library/). В ней есть инструменты для работы с [файловой системой](https://docs.python.org/3/library/filesys.html), [сервисами операционной системы](https://docs.python.org/3/library/allos.html), [поддержка многопоточности](https://docs.python.org/3/library/concurrency.html), [инструменты для работы с сетью](https://docs.python.org/3/library/ipc.html) и многие другое. В этом разделе мы рассмотрим несколько примероы применения стандартных библиотек.
+Стандартная библиотека python [очень обширна](https://docs.python.org/3/library/). В ней есть инструменты для работы с [файловой системой](https://docs.python.org/3/library/filesys.html), [сервисами операционной системы](https://docs.python.org/3/library/allos.html), [поддержка многопоточности](https://docs.python.org/3/library/concurrency.html), [инструменты для работы с сетью](https://docs.python.org/3/library/ipc.html) и многие другое. В этом разделе мы рассмотрим несколько стандартных модулей python.
 
 ## Работа с операционной системой
 
