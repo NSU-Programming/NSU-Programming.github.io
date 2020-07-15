@@ -19,7 +19,21 @@
     display: flex;
   }
 
+  .team-member-left {
+    width: 100%;
+    margin: 16px 0;
+  }
+
+  .team-member-photo {
+    margin: auto auto 1em auto;
+  }
+
   .team-member-right {
     flex: 1;
   }
+
+  h2 {
+    text-align: center;
+  }
+
 }
