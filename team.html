@@ -8,9 +8,9 @@ layout: default
   <div class="team-member">
     <div class="team-member-left">
       {% if member.photo %}
-        <img class="team-member-photo" src="{{ member.photo }}" />
+        <img class="team-member-photo" src="{{ member.photo | relative_url }}" />
       {% else %}
-        <img class="team-member-photo" src="/pictures/circle-empty.png" />
+        <img class="team-member-photo" src="{{ '/pictures/circle-empty.png' | relative_url }}" />
       {% endif %}
     </div>
     

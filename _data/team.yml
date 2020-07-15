@@ -1,5 +1,5 @@
 - name: "Воробьев Виталий Сергеевич"
-  photo: "/pictures/circle-vitaly.png"
+  photo: "pictures/circle-vitaly.png"
   description: "К.ф.-м.н., с.н.с. ИЯФ СО РАН, ст. пред. НГУ"
 
 - name: "Герасев Алексей Владимирович"
@@ -8,7 +8,7 @@
 
 - name: "Пугачев Константин Владимирович"
   site: "http://wwwsnd.inp.nsk.su/~pugachev/"
-  photo: "/pictures/circle-konstantin.png"  
+  photo: "pictures/circle-konstantin.png"
   description: "
     м.н.с. ИЯФ СО РАН, асс. каф. ФТИ НГУ
     <br />
@@ -20,9 +20,9 @@
   "
 
 - name: "Савченко Яна"
-  photo: "/pictures/circle-yana.png"
+  photo: "pictures/circle-yana.png"
 
 - name: "Сухарев Андрей Михайлович"
 
 - name: "Яковлев Даниил Дмитриевич"
-  photo: "/pictures/circle-daniil.png"
+  photo: "pictures/circle-daniil.png"
