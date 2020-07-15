@@ -8,17 +8,29 @@ layout: default
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
 
 <style>
-.main-content img {
-  max-width: 200px; /* hack to revert an annoying rule for this template */
+.photo-container img {
+  max-width: 90%;
+}
+@media(max-width:767px){ /* bootstrap xs */
+  .photo-container {
+    text-align: center;
+  }
+  .photo-container img {
+    width: 75%;
+  }
+  b {
+    display: block;
+    text-align: center;
+  }
 }
 </style>
 
 <div class="container">
   <div class="row">
-    <div class="col-4">
-      <img src="pictures/circle-vitaly.png" width="200" height="200" /> 
+    <div class="photo-container col-md-4 col-xs-12">
+      <img src="pictures/circle-vitaly.png" /> 
     </div>
-    <div class="col-8">
+    <div class="col-md-8 col-xs-12">
       <b>Воробьев Виталий Сергеевич</b><br>К.ф.-м.н., с.н.с. ИЯФ СО РАН, ст. пред. НГУ
     </div>
   </div>
@@ -26,10 +38,10 @@ layout: default
 <hr/>
 
   <div class="row">
-    <div class="col-4">
-      <img src="pictures/circle-empty.png"  width="200" height="200" />
+    <div class="photo-container col-md-4 col-xs-12">
+      <img src="pictures/circle-empty.png" />
     </div>
-    <div class="col-8">
+    <div class="col-md-8 col-xs-12">
       <b>Герасев Алексей Владимирович</b><br>
     </div>
   </div>
@@ -37,10 +49,10 @@ layout: default
 <hr/>
 
   <div class="row">
-    <div class="col-4">
-      <img src="pictures/circle-empty.png"  width="200" height="200" />
+    <div class="photo-container col-md-4 col-xs-12">
+      <img src="pictures/circle-empty.png" />
     </div>
-    <div class="col-8">
+    <div class="col-md-8 col-xs-12">
       <b>Петров Никита Александрович</b><br>
     </div>
   </div>
@@ -48,10 +60,10 @@ layout: default
 <hr/>
 
   <div class="row">
-    <div class="col-4">
-      <img src="pictures/circle-konstantin.png"  width="200" height="200" />
+    <div class="photo-container col-md-4 col-xs-12">
+      <img src="pictures/circle-konstantin.png" />
     </div>
-    <div class="col-8">
+    <div class="col-md-8 col-xs-12">
       <b><a href="http://wwwsnd.inp.nsk.su/~pugachev/">Пугачев Константин Владимирович</a></b><br>
       м.н.с. ИЯФ СО РАН, асс. каф. ФТИ НГУ<br>
       <i>
@@ -65,10 +77,10 @@ layout: default
 <hr/>
 
   <div class="row">
-    <div class="col-4">
-      <img src="pictures/circle-yana.png"  width="200" height="200" />
+    <div class="photo-container col-md-4 col-xs-12">
+      <img src="pictures/circle-yana.png" />
     </div>
-    <div class="col-8">
+    <div class="col-md-8 col-xs-12">
       <b>Савченко Яна</b><br>
     </div>
   </div>
@@ -76,10 +88,10 @@ layout: default
 <hr/>
 
   <div class="row">
-    <div class="col-4">
-      <img src="pictures/circle-empty.png"  width="200" height="200" />
+    <div class="photo-container col-md-4 col-xs-12">
+      <img src="pictures/circle-empty.png" />
     </div>
-    <div class="col-8">
+    <div class="col-md-8 col-xs-12">
       <b>Сухарев Андрей Михайлович</b><br>
     </div>
   </div>
@@ -87,10 +99,10 @@ layout: default
 <hr/>
 
   <div class="row">
-    <div class="col-4">
-      <img src="pictures/circle-daniil.png"  width="200" height="200" />
+    <div class="photo-container col-md-4 col-xs-12">
+      <img src="pictures/circle-daniil.png" />
     </div>
-    <div class="col-8">
+    <div class="col-md-8 col-xs-12">
       <b>Яковлев Даниил Дмитриевич</b><br>
     </div>
   </div>
