@@ -1,16 +1,17 @@
 # Setup
-title:               Программирование на C++ и Python
-#tagline:             'A Jekyll theme'
-#description:         ''
-#url:                 http://nsu-programming.github.io
-#baseurl:             ''
-paginate:            5
-permalink:           pretty
+title:               NSU Programming
+tagline:             'Программирование на C++ и Python'
+description:         'Сайт курса "Программирование на C++ и Python" для студентов ФФ НГУ.'
+url:                 http://nsu-programming.github.io
+baseurl:             ''
+repo:                https://github.com/NSU-Programming/NSU-Programming.github.io
 
 # About/contact
 author:
   email:             vit.vorobiev@gmail.com
 
 # Gems
-plugins:
-  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
