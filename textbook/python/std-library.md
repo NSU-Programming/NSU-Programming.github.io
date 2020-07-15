@@ -1,5 +1,7 @@
 ---
 title: Полезные модули стандартной библиотеки
+
+glob_doc: https://docs.python.org/3/library/glob.html
 ---
 
 # {{ page.title }}
@@ -87,22 +89,22 @@ NEWENV: value
 Модуль [os.path](https://docs.python.org/3/library/os.path.html) содержит полезные инструменты для работы с путями файловой системы. Функция [os.path.exists](https://docs.python.org/3/library/os.path.html#os.path.exists) проверяет указывает ли путь на существующий объект в файловой системе. Функция [os.path.isfile](https://docs.python.org/3/library/os.path.html#os.path.isfile) имеет схожий смысл, но возвращает `True` только в том случае, если объект является обычным файлом (не директория и не ссылка):
 
 ```py
-print(os.path.exists('/home/vitaly'))  # True
-print(os.path.exists('/home/david'))   # False
-print(os.path.isfile('/home/vitaly'))  # False
+os.path.exists('/home/vitaly')  # True
+os.path.exists('/home/david')   # False
+os.path.isfile('/home/vitaly')  # False
 ```
 
 Функции [`os.path.join`](https://docs.python.org/3/library/os.path.html#os.path.join), [`os.path.split`](https://docs.python.org/3/library/os.path.html#os.path.split) и [`os.path.splitext`](https://docs.python.org/3/library/os.path.html#os.path.splitext) выполняют часто встречающиеся манипуляции со строками путей:
 
 ```py
 path = os.path.join('/home', 'vitaly', 'test.py')  # /home/vitaly/test.py
-head, tail = os.path.split(path)  # head = /home/vitaly, tail = test.py
-root, ext = os.path.splitext(path)  # root = '/home/vitaly/test', ext = '.py'
+head, tail = os.path.split(path)  # ['/home/vitaly', 'test.py']
+root, ext = os.path.splitext(path)  # ['/home/vitaly/test', '.py']
 ```
 
 ### Модуль shutil
 
-Модуль [`shutil`](https://docs.python.org/3/library/shutil.html) предоставляет высокоуровневые инструменты для операций с файлами:
+Модуль [`shutil`](https://docs.python.org/3/library/shutil.html) предоставляет высокоуровневые инструменты для операций с файлами. Вот несколько примеров:
 
 ```py
 shutil.copy('filename', 'path/to/dir')  # копирование файла в директорию
@@ -112,17 +114,32 @@ shutil.rmtree('path/to/dir')  # рекурсивное удаление соде
 shutil.move(src, dst)  # рекурсивное перемещение файла или директории
 ```
 
-Другие инструенты могут быть найдены в [документации](https://docs.python.org/3/library/shutil.html).
-
 ### Модуль glob
 
+Модуль [`glob`]({{page.glob_doc}}) позволяет выполнять поиск объектов в файловой системе, имена которых удовлетворяют заданному паттерну:
 
+```py
+text_files = glob.glob('./*.txt')  # список текстовых файлов в текущей директории
+text_files_all = glob.glob('./**/*.py', recursive=True)  # рекурсивный поиск файлов с расширением .py, начиная с текущей директории
+```
 
 ## Работа со строками
 
 ### Модуль string
 
+Модуль [`string`](https://docs.python.org/3/library/string.html) содержит различные инструмены для работы со строками, многие из которых дублируют возможности стандартного типа `str`. Модуль `string` содержит набор констант, которые часто оказываются полезны:
+
+```py
+string.ascii_lowercase  # 'abcdefghijklmnopqrstuvwxyz'
+string.ascii_uppercase  # 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+string.ascii_letters    # 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+string.digits           # '0123456789'
+string.punctuation      # !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+```
+
 ### Модуль re
+
+Модуль [`re`](https://docs.python.org/3/library/re.html) содержит инструменты для работы с регулярными выражениями. Подробное обсуждение регулярных выражений выходит за рамки этого курса. Мы рекомендуем читателю самостоятельно изучить базовые приемы работы с регулярными выражениями.
 
 ## Вычисления с произвольной точностью
 
