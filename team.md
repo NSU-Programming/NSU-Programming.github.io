@@ -13,7 +13,7 @@ layout: default
       <img src="pictures/circle-vitaly.png" width="200" height="200" /> 
     </div>
     <div class="col-8">
-      Воробьев Виталий Сергеевич. К.ф.-м.н., с.н.с. ИЯФ СО РАН, ст. пред. НГУ
+      <b>Воробьев Виталий Сергеевич</b><br>К.ф.-м.н., с.н.с. ИЯФ СО РАН, ст. пред. НГУ
     </div>
   </div>
 
@@ -24,7 +24,7 @@ layout: default
       <img src="pictures/circle-empty.png"  width="200" height="200" />
     </div>
     <div class="col-8">
-      Пугачев Константин Владимирович
+      <b>Герасев Алексей Владимирович</b><br>
     </div>
   </div>
 
@@ -35,7 +35,7 @@ layout: default
       <img src="pictures/circle-empty.png"  width="200" height="200" />
     </div>
     <div class="col-8">
-      Сухарев Андрей Михайлович
+      <b>Петров Никита Александрович</b><br>
     </div>
   </div>
 
@@ -46,7 +46,7 @@ layout: default
       <img src="pictures/circle-empty.png"  width="200" height="200" />
     </div>
     <div class="col-8">
-      Герасев Алексей
+      <b>Пугачев Константин Владимирович</b><br>
     </div>
   </div>
 
@@ -57,7 +57,7 @@ layout: default
       <img src="pictures/circle-yana.png"  width="200" height="200" />
     </div>
     <div class="col-8">
-      Савченко Яна
+      <b>Савченко Яна</b><br>
     </div>
   </div>
 
@@ -68,7 +68,7 @@ layout: default
       <img src="pictures/circle-empty.png"  width="200" height="200" />
     </div>
     <div class="col-8">
-      Петров Никита
+      <b>Сухарев Андрей Михайлович</b><br>
     </div>
   </div>
 
@@ -79,7 +79,7 @@ layout: default
       <img src="pictures/circle-daniil.png"  width="200" height="200" />
     </div>
     <div class="col-8">
-      Яковлев Даниил
+      <b>Яковлев Даниил Дмитриевич</b><br>
     </div>
   </div>
 </div>
