@@ -9,7 +9,7 @@ layout: default
 
 <style>
 .photo-container img {
-  max-width: 100%;
+  max-width: 90%;
 }
 @media(max-width:767px){ /* bootstrap xs */
   .photo-container {
