@@ -1,0 +1,20 @@
+toc_list_title: Меню
+
+toc:
+- title: Главная
+  url: index
+
+- title: Программа лекций
+  url: lectures
+
+- title: Программа семинаров
+  url: seminars
+
+- title: Задания
+  url: problems
+
+- title: Материалы к практическим занятиям
+  url: textbook
+
+- title: Команда курса
+  url: team
