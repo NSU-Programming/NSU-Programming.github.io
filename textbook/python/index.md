@@ -2,8 +2,6 @@
 title: Язык python
 ---
 
-# {{ page.title }}
-
 * [Основы синтаксиса языка python](basics)
 * [Базовые типы данных `python`](built-in-types)
 * [Работа с файлами](file-io)

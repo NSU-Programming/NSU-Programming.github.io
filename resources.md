@@ -1,4 +1,6 @@
-# Полезные ресурсы
+---
+title: Полезные ресурсы
+---
 
 ## Документация по C++
 * [cppreference.com](https://en.cppreference.com/w/)
