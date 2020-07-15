@@ -1,0 +1,25 @@
+.team-member {
+  overflow: hidden;
+}
+
+.team-member-photo {
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.team-member-left {
+  width: 200px;
+  margin: 16px;
+}
+
+@media (min-width: 38em) {
+  .team-member {
+    display: flex;
+  }
+
+  .team-member-right {
+    flex: 1;
+  }
+}

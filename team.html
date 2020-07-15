@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<h1> {{ page.title }} </h1>
+
+{% for member in site.data.team %}
+  <div class="team-member">
+    <div class="team-member-left">
+      {% if member.photo %}
+        <img class="team-member-photo" src="{{ member.photo }}" />
+      {% else %}
+        <img class="team-member-photo" src="/pictures/circle-empty.png" />
+      {% endif %}
+    </div>
+    
+    <div class="team-member-right">
+      {% if member.site %}
+        <a href="{{ member.site }}">
+      {% endif %}
+      <h2>{{ member.name }}</h2>
+      {% if member.site %}
+        </a>
+      {% endif %}
+
+      {% if member.description %}
+        <div>{{ member.description }}</div>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
