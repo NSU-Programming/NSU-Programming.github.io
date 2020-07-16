@@ -16,19 +16,21 @@
       `layout: page` in the front-matter. See readme for usage.
     {% endcomment %}
 
-    {% if page.menu %}
-      {% assign pages_list = page.menu %}
+    {% if page.menu == "textbook-cpp" %}
+      {% assign pages_list = site.data.menu_textbook_cpp %}
+    {% elsif page.menu == "textbook-python" %}
+      {% assign pages_list = site.data.menu_textbook_python %}
     {% else %}
       {% assign pages_list = site.data.menu_default %}
     {% endif %}
     {% for item in pages_list.toc %}
       <a class="sidebar-nav-item{% if page.url == item.url %} active{% endif %}" href="{{ item.url | absolute_url }}">{{ item.title }}</a>
       {% if item.items %}
-        <ul>
+        <ol>
         {% for entry in item.items %}
-          <li><a class="sidebar-nav-item{% if page.url == entry.url %} active{% endif %}" href="{{ entry.url | absolute_url }}">{{ entry.title }}</a></li>
+          <li><a class="sidebar-nav-item{% if page.url == entry.url %} active{% endif %}" href="{{ entry.url | absolute_url }}">{{ entry.page }}</a></li>
         {% endfor %}
-        </ul>
+        </ol>
       {% endif %}
     {% endfor %}
 

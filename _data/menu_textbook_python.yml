@@ -1,0 +1,56 @@
+toc_list_title: Меню
+
+toc:
+- title: Главная
+  url: index
+
+- title: Программа лекций
+  url: lectures
+
+- title: Программа семинаров
+  url: seminars
+
+- title: Задания
+  url: problems
+
+- title: Материалы к практическим занятиям - C++
+  url: textbook/cpp
+
+- title: Материалы к практическим занятиям - python
+  url: textbook/python
+  items:
+  - page: Основы языка python
+    url: textbook/python/basics
+    
+  - page: Подробнее о строках
+    url: textbook/python/str
+    
+  - page: Стандартные модули I
+    url: textbook/python/std-library
+    
+  - page: ООП в python
+    url: textbook/python/oop
+
+  - page: Стандартные модули II
+    url: textbook/python/std-library-advanced
+
+  - page: Итераторы, генераторы и корутины
+    url: textbook/python/generators
+    
+  - page: Вычисления с библиотекой numpy
+    url: textbook/python/numpy
+    
+  - page: Визуализация данных с matplotlib и plotly
+    url: textbook/python/plotting
+    
+  - page: Графика и GUI с библиотеками tkinter и pygame
+    url: textbook/python/graphics
+    
+  - page: Библиотека pandas
+    url: textbook/python/pandas
+
+- title: О курсе
+  url: about
+
+- title: Команда курса
+  url: team

@@ -1,0 +1,59 @@
+toc_list_title: Меню
+
+toc:
+- title: Главная
+  url: index
+
+- title: Программа лекций
+  url: lectures
+
+- title: Программа семинаров
+  url: seminars
+
+- title: Задания
+  url: problems
+
+- title: Материалы к практическим занятиям - C++
+  url: textbook/cpp
+  items:
+  - page: Работа с потоками ввода-вывода
+    url: textbook/cpp/io
+
+  - page: Строки в C++
+    url: textbook/cpp/string
+
+  - page: Контейнеры стандартной библиотеки C++
+    url: textbook/cpp/containers
+
+  - page: Эффективная передача параметров в функцию
+    url: textbook/cpp/function-parameters
+
+  - page: Алгоритмы стандартной библиотеки C++
+    url: textbook/cpp/algorithms
+    
+  - page: Итераторы
+    url: textbook/cpp/iterators
+
+  - page: Библиотека numeric
+    url: textbook/cpp/numeric
+
+  - page: Классы
+    url: textbook/cpp/classes
+
+  - page: Наследование
+    url: textbook/cpp/inheritance
+
+  - page: Динамическое выделение памяти
+    url: textbook/cpp/dynamic-memory
+
+  - page: Обобщенное программирование
+    url: textbook/cpp/templates
+
+- title: Материалы к практическим занятиям - python
+  url: textbook/python
+
+- title: О курсе
+  url: about
+
+- title: Команда курса
+  url: team

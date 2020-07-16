@@ -1,6 +1,6 @@
 ---
 title: Стандартные модули python, часть I
-
+menu: textbook-python
 glob_doc: https://docs.python.org/3/library/glob.html
 ---
 
