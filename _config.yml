@@ -5,6 +5,7 @@ description:         'Сайт курса "Программирование на
 url:                 ''
 baseurl:             ''
 repo:                'https://github.com/NSU-Programming/NSU-Programming.github.io'
+google_analytics_id: 'UA-21390409-2'
 
 # About/contact
 author:
