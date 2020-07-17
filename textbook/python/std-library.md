@@ -169,7 +169,7 @@ Decimal('10').log10()  # Decimal('1')
 
 ### Модуль fractions
 
-Тип `Fraction` из модуля [`fractions`](https://docs.python.org/3/library/fractions.html) описывает рациональные числа - числа, которое можно представить в виде обычновенной дроби:
+Тип `Fraction` из модуля [`fractions`](https://docs.python.org/3/library/fractions.html) описывает рациональные числа - числа, которые можно представить в виде обычновенной дроби:
 
 ```py
 from fractions import Fraction
@@ -227,7 +227,7 @@ v1.y  # 0.5
 v1.z  # 0.6
 ```
 
-Тип [`deq`](https://docs.python.org/3/library/collections.html#collections.deque) реализует контейнер двусторонняя учередь, или дек. Это последовательный контейнер, который позволяет эффективно добавлять и удалять элементы в начало и в конец:
+Тип [`deque`](https://docs.python.org/3/library/collections.html#collections.deque) реализует контейнер двусторонняя учередь, или дек. Это последовательный контейнер, который позволяет эффективно добавлять и удалять элементы в начало и в конец:
 
 ```py
 from collections import deque
@@ -273,7 +273,7 @@ for comb in itertools.combinations(arr, 3):
 
 ## Время и дата с модулем datetime
 
-Модуль ['datetime'](https://docs.python.org/3/library/datetime.html) позволяет полноценно работать с объектами даты и времени:
+Модуль [`datetime`](https://docs.python.org/3/library/datetime.html) позволяет полноценно работать с объектами даты и времени:
 
 ```py
 from datetime import date, timedelta

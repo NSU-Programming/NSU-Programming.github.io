@@ -28,7 +28,8 @@
       {% if item.items %}
         <ol>
         {% for entry in item.items %}
-          <li><a class="sidebar-nav-item{% if page.url == entry.url %} active{% endif %}" href="{{ entry.url | absolute_url }}">{{ entry.page }}</a></li>
+          {% assign entry_url = entry.url | absolute_url | append: '.html' %}
+          <li><a class="sidebar-nav-item{% if page.url == entry_url %} active{% endif %}" href="{{ entry.url | absolute_url }}">{{ entry.page }}</a></li>
         {% endfor %}
         </ol>
       {% endif %}
