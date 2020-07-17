@@ -13,7 +13,7 @@ formId: xgenyqwe
 * [Программа лекций](lectures)
 * [Программа практических занятий](seminars)
 * [Задания](problems)
-* [Материалы к пректическим занятиям](textbook)
+* [Материалы к практическим занятиям](textbook)
 * [Команда курса](team)
 * [Материалы 2019 года](https://github.com/VitalyVorobyev/CppPython2019)
 
