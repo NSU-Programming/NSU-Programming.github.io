@@ -3,7 +3,7 @@ title: ООП в python
 menu: textbook-python
 ---
 
-Язык python содержит средства для объектно-ориентированной разработки. Минимальный класс в python можно создать следующим образом:
+Язык python полноценно поддерживает объектно-ориентированную разработку. Минимальный класс в python можно создать следующим образом:
 
 ```py
 class NewGreatType:
@@ -13,7 +13,7 @@ obj = NewGreatType()
 type(obj)  # <class '__main__.NewGreatType'>
 ```
 
-Любой объект в python является объектом класса:
+Любой объект в python является объектом какого-либо класса:
 
 ```py
 type(1)              # <class 'int'>
@@ -40,7 +40,7 @@ False.__or__(True)   # True
 
 ## Поля и методы
 
-Вспомним класс `LorentzVector`, который мы создавали в [разделе](../cpp/classes) про классы в C++ и начнем писать его аналог на python:
+Вспомним класс `LorentzVector`, с которым мы работали в [разделе](../cpp/classes) про классы в C++ и начнем писать его аналог на python:
 
 ```py
 class LorentzVector:
@@ -117,21 +117,21 @@ class LorentzVector:
         return list(map(lambda x: x / lv.t, lv.x))
 ```
 
-Как и следовало ожидать, статический метод не должен иметь аргумент `self`. [Дектораторы](https://habr.com/ru/post/141411/) - это инструмент python, позволяющий менять поведение функций. По сути это функция, которая принимает на вход некоторую функцию, и возвращает новую функцию с тем же набором аргументов.
+Как и следовало ожидать, статический метод не имеет аргумента `self`. [Дектораторы](https://habr.com/ru/post/141411/) - это инструмент python, позволяющий менять поведение функций. Технически - это функция, которая принимает на вход некоторую функцию, и возвращает новую функцию с тем же набором аргументов.
 
-С помощью декторатора `attribute` можно делать вызов методов, не имеющих аргументов, похожим на обращение к полю класса:
+С помощью декторатора `property` можно делать вызов методов, не имеющих аргументов, похожим на обращение к полю класса:
 
 ```py
 class LorentzVector:
     # ...
-    @attribute
+    @property
     def r2(self):
         """ Квадрат модуля пространственной компоненты """
         if isinstance(self.x, (int, float)):
             return self.x**2
         return sum(list(map(lambda a: a**2, self.x)))
 
-    @attribute
+    @property
     def inv(self):
         """ Релятивистский инвариант """
         return self.t**2 - self.r2()
@@ -154,10 +154,10 @@ class LorentzVector:
     # ...
     def __add__(self, rhs):
         """ Сложение двух векторов """
-        # пространственные части должны иметь одинаковую размерность
-        assert type(self.x) == type(rhs.x)
-        x_new = self.x + rhs.x if isinstance(self.x, (int, float)) else\
-                list(map(lambda a: sum(a), zip(self.x, rhs.x)))
+        if isinstance(self.x, (int, float)):
+            x_new = self.x + rhs.x
+        else:
+            list(map(lambda a: sum(a), zip(self.x, rhs.x)))
         return LorentzVector(self.t + rhs.t, x_new)
 ```
 
@@ -191,20 +191,86 @@ lv = LorentzVector(1, 0.5)
 print(lv)  # LorentzVector [1, 0.5]
 ```
 
-Мы рассмотрели лишь некоторые из специальных методов. Рекомендуем ознакомиться с полным списком в [документации](https://docs.python.org/3/reference/datamodel.html#special-method-names).
+Мы рассмотрели лишь некоторые из доступных специальных методов. Рекомендуем ознакомиться с полным списком в [документации](https://docs.python.org/3/reference/datamodel.html#special-method-names).
 
 ## Наследование
 
+Язык python позволяет выполнять наследование классов. Класс-потомок имеет доступ ко всем полям и методам класса-предка. Все классы в python являются наследниками класса `object`. Об класса `object` наш класс `LorentzVector` наследует большинство своих атрибутов:
 
+```py
+lv = LorentzVector(1, 0.5)
+isinstance(lv, object)  # True
+dir(lv)
+# ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'inv', 'mass', 'r2', 'sum', 't', 'x']
+```
+
+Используем механизм наследования, чтобы реализовать тип релятивисткого вектора иначе. Новый тип будет наследником именованного кортежа [NamedTyple](https://docs.python.org/3/library/typing.html#typing.NamedTuple):
+
+```py
+from typing import NamedTyple
+
+class FourVector(NamedTyple):  # <- наследование
+    """ Релятивистский вектор """
+
+    t: float  # такой синтаксис используется для задания
+    r: list   # полей кортежа и аннотации их типов
+
+    @property
+    def r2(self):
+        """ Квадрат модуля пространственной компоненты """
+        return sum(list(map(lambda a: a**2, self.r)))
+
+    @property
+    def inv(self):
+        """ Релятивистский инвариант """
+        return self.t**2 - self.r2()
+
+    def __repr__(relf):
+        """ Текстовое представление вектора """
+        return f'FourVector [{self.t}, {self.r}]'
+```
+
+Новая реализация яснее показывает структуру нашего типа данных. Для создания объекта `FourVector` необходимо задать значения полям `t` и `r`:
+
+```py
+fv1 = FourVector(1, [0.3, 0.4, 0.0])
+fv2 = FourVector(t=1, r=[0.3, 0.4, 0.0])
+fv3 = FourVector(t=1, r=[0.5])
+fv4 = FourVector(t=1, r=0.5)
+
+fv3.r2  # 0.25
+fv4.r2  # TypeError: 'float' object is not iterable
+```
+
+При создании объекта `fv4` мы нарушили соглашение и передали в поле `r` объект `float` вместо `list`. Это привело к ошибке при вызове метода `r2`. При определении класса `FourVector` мы использовали [аннотацию типов](extra#type-ann) (`t: float`).
+
+Больше информации о наследовании в python можно найти в [документации](https://docs.python.org/3/tutorial/classes.html#inheritance).
 
 ## Полиморфизм в python
 
+Реализация полиморфизма в python сильно отличается от его реализации в C++. Полиморфизм в C++ реализуется с помощью инструментов наследования и шаблонов. Динамическая типизация python позволяет использовать гораздо более гибкие инструменты полиморфизма. Переменные, аргументы функций и атрибуты классов в python могут в разных контекстах иметь разные типы и даже менять тип со временем. Таким образом, все объекты в python изначально полиморфны.
 
-## Заключение
+В такой ситуации возникает вопрос о том как описывать ограничения на допустимые типы объектов. Здесь на помощь приходит принцип утиной типизации (duck typing), дословно состоящий в том, что "если что-то выглядит как утка и крякает как утка, значит это утка". Иными словами, если объект предоставляет необходимый интерфейс, то мы можем с ним работать вне зависимости от его типа. Для поддержки этого подхода в python реализованы инструменты для проверки свойств объектов:
 
+```py
+isinstance(obj, (int, float))       # проверяет тип obj
+hasattr(obj, 'norm')                # проверяет имеет ли obj атрибут norm
+issubclass(FourVector, NamedTuple)  # является ли класс FourVector подклассом NamedTuple
+```
+
+Столь гибкая типизация приводит к необходимости качественной документации кода. Хорошим стилем является описание всех контрактор функции или метода в его строке комментария. Значительно улучшает читаемость кода и аннотация типов.
+
+## Резюме
+
+В этом разделе мы выполнили краткий обзор инструментов python, реализующих парадигму объектно-ориентированного программирования. Обсудили создание классов; определение полей и методов; статических полей и методов; определение специальных методов, позволяющих интегрировать тип данных в среду языка; кратко рассмотрели наследование классов и принципы реализации полиморфизма в python.
+
+Концепция ООП в python не является основной, как в C++, однако средства ООП составляют важную часть языка, и их понимание необходимо для грамотной разработки на python, поскольку все типы объектов в python являются классами.
 
 ## Источники
 
-* [https://docs.python.org/3/reference/datamodel.html](https://docs.python.org/3/reference/datamodel.html)
-* [https://docs.python.org/3/tutorial/classes.html](https://docs.python.org/3/tutorial/classes.html)
+* [docs.python.org/3/reference/datamodel](https://docs.python.org/3/reference/datamodel.html)
+* [docs.python.org/3/tutorial/classes](https://docs.python.org/3/tutorial/classes.html)
+* [docs.python.org/3/library/typing](https://docs.python.org/3/library/typing.html)
+* [Python Inheritance](https://www.w3schools.com/python/python_inheritance.asp)
 * [Понимаем декораторы в Python'e, шаг за шагом](https://habr.com/ru/post/141411/)
+* [Введение в аннотации типов Python](https://habr.com/ru/company/lamoda/blog/432656/)
