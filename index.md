@@ -14,11 +14,5 @@ formId: xgenyqwe
 * [Программа практических занятий](seminars)
 * [Задания](problems)
 * [Материалы к практическим занятиям](textbook)
+* [Вопросы и ответы](qna)
 * [Команда курса](team)
-* [Материалы 2019 года](https://github.com/VitalyVorobyev/CppPython2019)
-
-## Напишите нам
-
-Если Вам необходим ответ, убедитесь, что оставляете правильный e-mail.
-
-{% include formspree.html id=page.formId %}
