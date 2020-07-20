@@ -1,4 +1,4 @@
 ---
-title: Библиотека pandas
+title: Библиотека `pandas`
 menu: textbook-python
 ---

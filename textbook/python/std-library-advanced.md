@@ -5,23 +5,23 @@ menu: textbook-python
 
 ## Сериализация и сжатие данных
 
-### Модуль json
+### Модуль `json`
 
-### Модуль csv
+### Модуль `csv`
 
-### Модуль zlib
+### Модуль `zlib`
 
 ## Инструменты тестирования
 
-### Модуль timeit
+### Модуль `timeit`
 
-### Модуль pytest и unittest
+### Модуль `pytest` и `unittest`
 
-### Модуль doctest
+### Модуль `doctest`
 
 ## Web-программирование
 
-### urllib
+### `urllib`
 
 ## Резюме
 
