@@ -24,6 +24,8 @@
   description: "Выпускница кафедры ФЭЧ ФФ НГУ, старший лаборант ИЯФ СО РАН"
 
 - name: "Сухарев Андрей Михайлович"
+  photo: "pictures/circle-suharev.png"
+  description: "К.ф.-м.н., с. н. с. ИЯФ СО РАН, ассистент кафедры ФТИ ФФ НГУ"
 
 - name: "Яковлев Даниил Дмитриевич"
   photo: "pictures/circle-daniil.png"
