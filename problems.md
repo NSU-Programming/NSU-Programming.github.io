@@ -2,80 +2,98 @@
 title: Задания
 ---
 
-Задания разделены на блоки по темам. Для получения оценки "хорошо" за курс, необходимо набрать 10 баллов в каждом блоке. Можно выбирать любые задачи из каждого блока.
+Задания разделены на десять тематических блоков и один блок с задачами "на пятерку". Для получения за курс оценки "удовлетворительно" необходимо набрать по 5 баллов из первых девяти блоков. Можно выбирать любые задачи из каждого блока.
 
-Для получения оценки "отлично" необходимо выполнить условия получения оценки "хорошо" и дополнительно
+Для получения оценки "хорошо" ("отлично") необходимо выполнить условия получения оценки "удовлетворительно" и, кроме того, набрать в сумме не менее 60 (80) баллов.
 
-* Набрать 30 баллов из блока заданий на пятерку, либо
-* Выполнить проект по согласованию с семинаристом
-
-## C++
+## Язык C++
 
 ### 1. Потоки ввода-вывода, строки
 
-1. [Hello, Classroom!](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/hello-classroom) (1 балл)
-2. [Второе вхождение](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vtoroe-vhozhdenie) (2 балла)
-3. [Минимальная строка](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/minimalnaya-stroka) (2 балла)
-4. [Палиндром](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/palindrom) (3 балла)
-5. [Бормотание](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/bormotanie) (5 баллов)
+1. Hello, Classroom! (1 балл)
+2. Второе вхождение (2 балла)
+3. Минимальная строка (2 балла)
+4. Палиндром (3 балла)
+5. Бормотание (5 баллов)
 
 ### 2. Контейнеры стандартной библиотеки C++
 
-1. [Перемещение строк](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/peremeshchenie-strok) (2 балла)
-2. [Разворот последовательности](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razvorot-posledovatelnosti) (2 балла)
-3. [Разворот последовательности 2](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razvorot-posledovatelnosti-2) (2 балла)
-4. [Анаграммы](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/anagrammy) (3 балла)
-5. [Количество уникальных строк](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/kolichestvo-unikalnyy-strok) (3 балла)
-6. [Вычисление арифметического выражения](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vychislenie-arifmeticheskogo-vyrazhenie) (5 баллов)
+1. Перемещение строк (2 балла)
+2. Разворот последовательности (3 балла)
+3. Анаграммы (3 балла)
+4. Количество уникальных строк (3 балла)
+5. Вычисление арифметического выражения (5 баллов)
 
 ### 3. Алгоритмы стандартной библиотеки C++
 
-1. [Сортировка по модулю](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sortirovka-po-modulyu) (2 балла)
-2. [Сортировка без учета регистра](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sortirovka-bez-ucheta-registra) (2 балла)
-3. [Часть вектора](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/chast-vektora) (3 балла)
-4. [Разбиение на слова](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/razbienie-na-slova) (3 балла)
-5. [Перебор перестановок](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/perebor-perestanovok) (3 балла)
-6. [Поиск ближайшего элемента](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/poisk-blizhayshego-elementa) (3 балла)
+1. Сортировка по модулю (2 балла)
+2. Сортировка без учета регистра (2 балла)
+3. Часть вектора (3 балла)
+4. Разбиение на слова (3 балла)
+5. Перебор перестановок (3 балла)
+6. Поиск ближайшего элемента (3 балла)
 
 ### 4. Объектно-ориентированное программирование
 
-1. [Отсортированные строки](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/otsortirovannye-stroki) (2 балла)
-2. [Способы инициализации](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/sposoby-inicializacii) (2 балла)
-3. [Номер телефона](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/nomer-telefona) (3 балла)
-4. [Суммирование матриц](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/summirovanie-matric) (6 баллов)
-
-<!-- ### 5. Динамическое выделение памяти -->
+1. Отсортированные строки (2 балла)
+2. Способы инициализации (2 балла)
+3. Номер телефона (3 балла)
+4. Суммирование матриц (6 баллов)
+5. Символьная арифметика (8 баллов)
 
 ### 5. Обобщенное программирование
 
-1. [Часть множества](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/chast-mnozhestva) (2 балла)
-2. [Удаление повторов](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/udalenie-povtorov) (2 балла) 
-3. [Все в квадрат](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/vse-v-kvadrat) (4 балла)
-4. [Максимальный элемент по предикату](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/poisk-blizhayshego-elementa) (4 балла)
-5. [Таблица](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/tablica) (6 баллов)
-6. [Дек на основе двух векторов](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/dek-na-osnove-dvuh-vektorov) (6 баллов)
+1. Часть множества (2 балла)
+2. Удаление повторов (2 балла)
+3. Все в квадрат (4 балла)
+4. Максимальный элемент по предикату (4 балла)
+5. Таблица (6 баллов)
+6. Дек на основе двух векторов (6 баллов)
 
-## python
+## Язык python
 
-### 1. Основы языка python
+### 6. Основы языка python
 
-### 2. Стандартная библиотека python
+1. Набор заданий I (4 балла)
+2. Набор заданий II (4 балла)
+3. Набор заданий III (4 балла)
+4. Набор заданий IV (4 балла)
+5. Набор заданий V (4 балла)
 
-1. [key-value хранилище](https://classroom.github.com/classrooms/66505170-nsu-programming-2020/assignments/key-value-hranilishche) (6 баллов)
+### 7. Стандартная библиотека python
 
-### 3. Работа с numpy
+1. Набор заданий I (4 балла)
+2. Набор заданий II (4 балла)
+3. Набор заданий III (4 балла)
+4. Набор заданий IV (4 балла)
+5. Набор заданий V (4 балла)
 
-### 4. Работа с matplotlib и plotly
+### 8. Работа с numpy
 
-1. [Визуализация "Колец Ньютона"]()
+1. Набор заданий I (4 балла)
+2. Набор заданий II (4 балла)
+3. Набор заданий III (4 балла)
+4. Монте-Карло интегрирование (4 балла)
+5. Монте-Карло генератор (4 балла)
 
-### 4. Работа с `tkinter` и `pygame`
+### 9. Работа с matplotlib
+
+1. Кольца Ньютона (4 балла)
+2. Отбор сигнальных событий (4 балла)
+3. Фурье-анализ сигнала (4 балла)
+4. Неизвестная задача I (x баллов)
+5. Неизвестная задача II (x баллов)
+
+### 10. Работа с pygame
+
+1. Игра "Жизнь" (>8 баллов)
+2. Игра "Nim" (>8 баллов)
+3. Динамическая визуаилзация графа (>8 баллов)
+4. Игра "Hex" (>8 баллов)
+5. Просачивание (>8 баллов)
 
 ## Задания на пятерку
 
-* Погода через OpenWeather API
-* NASA Asteriods API
+*TODO*
 
-## Проекты
-
-Возможные проекты не ограничены этим списком. Студент может сам предложить тему проекта и согласовать её с семинаристом. Тема проекта, например, может быть связана с курсовой работой студента.
+Студент сам может предложить задание на пятерку и выполнить его по согласованию с семинаристом. Тема задачи, например, может быть связана с курсовой работой студента.

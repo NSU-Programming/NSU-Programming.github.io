@@ -1,5 +1,5 @@
 ---
-title: Графика и GUI с библиотеками tkinter и pygame
+title: Графика и GUI с библиотекой pygame
 menu: textbook-python
 ---
 
