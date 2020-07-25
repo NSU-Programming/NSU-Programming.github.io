@@ -24,6 +24,11 @@
   "
 
 - name: "Петров Никита Александрович"
+  site: "https://cmd.inp.nsk.su/~petrov"
+  photo: "pictures/circle-nikita.png"
+  description: "
+    Выпускник ФЭЧ ФФ НГУ, старший лаборант ИЯФ СО РАН.
+  "
 
 - name: "Пугачев Константин Владимирович"
   site: "http://wwwsnd.inp.nsk.su/~pugachev/"
