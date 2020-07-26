@@ -3,61 +3,113 @@ title: Графика и GUI с библиотекой pygame
 menu: textbook-python
 ---
 
-## Пакет pygame
+Библиотека pygame создана для разработки игр. Она проста в освоении и позволяет быстро создавать прототипы игр. Cредства библиотеки pygame также позволяют создавать различные интеграктивные визуализации и приложения с простым графическим пользовательским интерфейсом. В этом разделе будут рассмотрены основные инструменты pygame.
 
-Библиотека `pygame` представляет собой простой фреймворк для разработки игр на python. Разработка игр не является предметом этого курса, однако инструменты `pygame` могут оказаться полезными для различных интерактивных визуализаций. В этом разделе мы напишем простую программу с использованием `pygame`.
+## Основной цикл
 
-Для начала необходимо подключить библиотеку и выполнить инициализацию:
+Интерактивность программ с pygame обеспечивается благодаря основному циклу. В этом цикле происходит обработка событий, таких как нажатие кнопок клавиатуры, и отрисовка изображения. Вот так выглядит программа, которая рисует в окне круг и завершается при нажатии Escape или кнопки закрытия окна:
 
 ```py
+import sys
 import pygame
 
+# Инициализация pygame
 pygame.init()
-```
+# Размер окна
+screen = pygame.display.set_mode((300, 300))
+# Заголовок окна
+pygame.display.set_caption('Blue Circle')
 
-### Главный цикл
-
-Интерактивные программы обычно содержат главный цикл, который обрабатывает события. Одним из таких событий является выход из программы. Напишем сразу заготовку основного цикла и обработкой события выхода:
-
-```py
 while True:
-    pygame.display.update()
+    # Задаем цвет фона
+    screen.fill((255, 255, 224))
+    # Рисуем круг
+    pygame.draw.circle(screen, (50, 50, 200), (150, 150), 75)
+    # Обновляем экран
+    pygame.display.flip()
+
     for event in pygame.event.get():
-        if event.type == pygame.locals.QUIT:
+        if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                pygame.quit()
+                sys.exit()
 ```
 
-Метод `pygame.display.update()` применяет изменения, произошедшие в текущей итерации цикла.
+Функция [`pygame.draw.circle`](https://www.pygame.org/docs/ref/draw.html#pygame.draw.circle) принимает следующие аргументы:
 
-### События
+* `surface` - объект типа [`Surface`](https://www.pygame.org/docs/ref/surface.html) - поверхность, на которой будет отрисован круг. В данном случае это основное окно программы.
+* `color` - кортеж из трех целых чисел или объект типа [`Color`](https://www.pygame.org/docs/ref/color.html) - цвет фигуры в представлении RGB.
+* `center` - кортеж из двух челых чисел - координаты центра круга в пикселях. Координаты отсчитываются от левого верхнего угла.
+* `radius` - радиус круга в пикселях.
+* `width` - ширина кольца в пикселях - необязательный параметр. Если параметр задан, то будет нарисовано кольцо, а не круг.
 
-В ходе работы программы генерируются события, например, когда пользователь кликает мышкой или нажимает кнопку на клавиатуре. Вызов `pygame.event.get()` возвращает список текущих событий.
+Функция `pygame.draw.circle` возвращает объект [`Rect`](https://www.pygame.org/docs/ref/rect.html) - прямоугольник, содержащий нарисованный объект. Это нам еще пригодиться, когда мы будем организовывать взаимодействие с кругом.
 
-### Экран монитора
+![pygame1](../../figs/textbook-pygame/screen1.png)
 
-Все события происходят внутри окна, размер которого (в пикселях) задается с помощью функции `display.set_mode()`:
+## Вывод текста
+
+За работу с текстом в pygame отвечает модуль [font](https://www.pygame.org/docs/ref/font.html). Перед его использованием необходимо выполнить инициализацию
 
 ```py
-DISPLAYSURF = pygame.display.set_mode((300, 300))
-DISPLAYSURF.fill(pygame.Color(255, 255, 255))  # заполняем белым цветом
-pygame.display.set_caption("Game")  # заголовок окна
+pygame.font.init()
 ```
 
-### Графические объекты
-
-Поместим на экран круг:
+Функция [`pygame.font.SysFont`](https://www.pygame.org/docs/ref/font.html#pygame.font.SysFont) создает объект типа [`Font`](https://www.pygame.org/docs/ref/font.html#pygame.font.Font), который может отрисовывать текст:
 
 ```py
-color = pygame.Color(128, 128, 128)
-position = (200, 50)
-radius = 30
-pygame.draw.circle(DISPLAYSURF, color, position, radius)
+font = pygame.font.SysFont(name=font, size=20)
+surf = font.render(
+    'Click on the circle',
+    antialias=True,
+    color=(0, 0, 0))
+screen.blit(surf, (70, 260))
 ```
 
-Координаты на экране отсчитываются от левого верхнего угла. Цвета задаются в схеме RGB.
+Функция `render` создает объект типа `Surface` с отрисованным текстом. Параметр `antialias` управляет сглаживанием текста.
 
-Другие функции для рисования:
+Метод [`Surface.blit`](https://www.pygame.org/docs/ref/surface.html#pygame.Surface.blit) отрисовывает одну поверхность на другой. Мы ей воспользовались чтобы отрисовать поверхность с текстом в основном окне. В результате получаем следующее:
+
+![pygame2](../../figs/textbook-pygame/screen2.png)
+
+## Обработка событий
+
+Следаем так, чтобы круг менял цвет при нажатии на него мышкой:
+
+```py
+def get_color():
+    idx = 0
+    colors = [
+        (50, 50, 200),
+        (50, 200, 50),
+        (200, 50, 50)
+    ]
+    while True:
+        yield colors[idx % len(colors)]
+        idx += 1
+
+colors = get_color()
+color = next(colors)
+
+while True:
+    # ...
+    circ_rect = pygame.draw.circle(screen, color, (150, 150), 75)
+
+    for event in pygame.event.get():
+        # ...
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if circ_rect.collidepoint(event.pos):
+                color = next(colors)
+```
+
+Атрибут `pos` возвращает координаты нажатия курсора, метод [`Rect.collidepoint`](https://www.pygame.org/docs/ref/rect.html#pygame.Rect.collidepoint) возвращает `True`, если координаты лежат внутри прямоугольника.
+
+## Графические примитивы и маски
+
+Модуль [`pygame.draw`](https://www.pygame.org/docs/ref/draw.html) содержит инструменты для отрисовки различных графических примитивов:
 
 * `pygame.draw.polygon(surface, color, pointlist, width)`
 * `pygame.draw.line(surface, color, start_point, end_point, width)`
@@ -66,21 +118,135 @@ pygame.draw.circle(DISPLAYSURF, color, position, radius)
 * `pygame.draw.ellipse(surface, color, bounding_rectangle, width)`
 * `pygame.draw.rect(surface, color, rectangle_tuple, width)`
 
-### Частота обновления
+В текущем виде программа реагирует на нажатие мышки внутри квадрата, описанного вокруг круга. Для проверки попадания координаты внутрь круга можно использовать инструменты модуля `pygame.mask`:
 
 ```py
-FPS = 30
-FramePerSec = pygame.time.Clock()
+while True:
+    # ...
+    circ_surf = pygame.Surface((150, 150), pygame.SRCALPHA, 32).convert_alpha()
+    circ_rect = pygame.draw.circle(circ_surf, color, (75, 75), 75)
+    screen.blit(circ_surf, (75, 75))
+    circ_mask = pygame.mask.from_surface(circ_surf)
+
+    for event in pygame.event.get():
+        # ...
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            rpos = (event.pos[0] - 75, event.pos[1] - 75)
+            if circ_rect.collidepoint(rpos) and circ_mask.get_at(rpos):
+                color = next(colors)
+```
+
+Сначала мы создали прозрачную поверхность, на которой нарисовали круг. Затем на основе этой поверхности создали битовую маску, соответствующую пикселям поверхности. Маска выделяет все непрозрачные пиксели поверхности. При проверке попадания координаты внутрь круга используется метод [`mask.get_at`](https://www.pygame.org/docs/ref/mask.html#pygame.mask.Mask.get_at), возвращающий значение маски в заданной позиции. Поскольку круг нарисован на поверхности `circ_surf`, а не в главной поверхности, то проверка положения выполняется в локальных координатах на поверхности `circ_surf`.
+
+## Работа с растровыми файлами
+
+Модуль `pygame.image` позволяет открывать изображение из файла и сохранять поверхности (объекты типа `Surface`) в файл. Поместим логотип pygame в наше окно:
+
+![pygame_logo](../../figs/textbook-pygame/logo_lofi.png)
+
+```py
+logo_surf = pygame.image.load('figs/logo_lofi.png')
+screen.blit(logo_surf, (60, 10))
+```
+
+В результате получаем:
+
+![pygame_logo](../../figs/textbook-pygame/screen3.png)
+
+Чтобы сохранить содержимое поверхности в файл нужно вызвать
+
+```py
+pygame.image.save(screen, 'screen.png')
+```
+
+## Частота обновления
+
+Наш учебный пример не содержит двигающихся объектов, поэтому никакой разницы с какой частотой выполняется основной цикл. Ситуация меняется, если в программе есть анимация. В этом случае скорость движения прямо зависит от скорости работы цикла. Модуль `pygame.time` содержит инструменты для работы со временем. Например, класс `pygame.time.Clock` позволяет ограничить количество обновлений в секунду:
+
+```py
+frames_per_second = 30
+clock = pygame.time.Clock()
 
 while True:
     # ...
-    FramePerSec.tick(FPS)
+    clock.tick(frames_per_second)
 ```
 
+Другой вариант - функция [`pygame.time.wait'](https://www.pygame.org/docs/ref/time.html#pygame.time.wait), которая выполняет задержку на определенное количество миллисекунд. Заметим, что использовать задержку имеет смысл даже в нашем примере. Действительно, достаточно малая задержка не будет видна пользователю, но позволит значительно уменьшить нагрузку на процессор. Полный код нашего примера выглядит так:
 
+```py
+import sys
+import pygame
+
+# Инициализация pygame
+pygame.init()
+pygame.font.init()
+# Размер окна
+screen = pygame.display.set_mode((300, 300))
+# Заголовок окна
+pygame.display.set_caption("Blue Circle")
+
+font = pygame.font.SysFont(name='arial', size=20)
+
+def get_color():
+    idx = 0
+    colors = [
+        (50, 50, 200),
+        (50, 200, 50),
+        (200, 50, 50)
+    ]
+    while True:
+        yield colors[idx % len(colors)]
+        idx += 1
+
+text = 'Click on the circle'
+colors = get_color()
+color = next(colors)
+
+logo_surf = pygame.image.load('figs/logo_lofi.png')
+delay = 100
+
+while True:
+    # Задаем цвет фона
+    screen.fill((255, 255, 224))
+    # Рисуем круг
+    circ_surf = pygame.Surface((150, 150), pygame.SRCALPHA, 32).convert_alpha()
+    circ_rect = pygame.draw.circle(circ_surf, color, (75, 75), 75)
+    screen.blit(circ_surf, (75, 75))
+    circ_mask = pygame.mask.from_surface(circ_surf)
+    # Рисуем текст
+    font_surf = font.render(text, True, (0, 0, 0))
+    screen.blit(font_surf, (70, 260))
+    # Рисуем лого pygame
+    screen.blit(logo_surf, (60, 10))
+    # Обновляем экран
+    pygame.display.flip()
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                pygame.quit()
+                sys.exit()
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            rpos = (event.pos[0] - 75, event.pos[1] - 75)
+            if circ_rect.collidepoint(rpos) and circ_mask.get_at(rpos):
+                color = next(colors)
+
+    pygame.time.wait(delay)
+```
+
+## Резюме
+
+В этом разделе мы обсудили основные инструмены библиотекаи pygame.
 
 ## Источники
 
+* [Документация pygame](https://www.pygame.org/docs/)
+* [PyGame: A Primer on Game Programming in Python](https://realpython.com/pygame-a-primer/)
 * [Python pygame – The Full Tutorial](https://coderslegacy.com/python/python-pygame-tutorial/)
+* [Game loop](https://gameprogrammingpatterns.com/game-loop.html)
 * [Game Loop pattern](https://www.patternsgameprog.com/discover-python-and-patterns-8-game-loop-pattern/)
 * [dr0id pygame tutorials](https://dr0id.bitbucket.io/legacy/pygame_tutorials.html)
