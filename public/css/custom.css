@@ -24,10 +24,9 @@
     margin: auto auto 1em auto;
   }
 
-  h2 {
+  .team-member-name {
     text-align: center;
   }
-
 }
 
 @media (min-width: 38em) {
