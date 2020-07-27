@@ -1,0 +1,33 @@
+---
+layout: page
+title: Задания
+---
+
+{% assign problems = site.data.problems %}
+
+Задания разделены на десять тематических блоков и один блок с задачами "на пятерку". Для получения за курс оценки "удовлетворительно" необходимо набрать по <b>{{problems.criteria.min-3-each-block}}</b> баллов из первых девяти блоков. Можно выбирать любые задачи из каждого блока.
+
+Для получения оценки "хорошо" ("отлично") необходимо выполнить условия получения оценки "удовлетворительно" и, кроме того, набрать в сумме не менее <b>{{problems.criteria.min-4}}</b> (<b>{{problems.criteria.min-5}}</b>) баллов.
+
+{% for chapter in problems.chapters %}
+  <h2>{{ chapter.name }}</h2>
+  <ol
+  {% if chapter.start-index %}
+    start="{{ chapter.start-index }}"
+  {% endif %}
+  >
+  {% for section in chapter.sections %}
+    <li>
+      <h3>{{ section.name }}</h3>
+      <ol>
+      {% for task in section.tasks %}
+        <li>{{ task.name }} ({{ task.score }}
+        {% case task.score %}{% when 1 %}балл{% when 2 %}балла{% when 3 %}балла{% when 4 %}балла{% else %}баллов{% endcase %})</li>
+      {% endfor %}
+      </ol>
+    </li>
+  {% endfor %}
+  </ol>
+{% endfor %}
+
+Студент сам может предложить задание на пятерку и выполнить его по согласованию с семинаристом. Тема задачи, например, может быть связана с курсовой работой студента.
