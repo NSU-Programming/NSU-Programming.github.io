@@ -1,3 +1,7 @@
+- name: "Белозерова Мария Сергеевна"
+  photo: "pictures/circle-maria.jpeg"
+  description: "Выпускница кафедры ФТИ НГУ, старший лаборант ИЯФ СО РАН"
+
 - name: "Воробьев Виталий Сергеевич"
   site: "https://github.com/VitalyVorobyev"
   photo: "pictures/circle-vitaly.png"
