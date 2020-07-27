@@ -23,6 +23,10 @@
   .team-member-photo {
     margin: auto auto 1em auto;
   }
+
+  .team-member-name {
+    text-align: center;
+  }
 }
 
 @media (min-width: 38em) {
