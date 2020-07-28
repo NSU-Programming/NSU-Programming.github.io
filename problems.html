@@ -21,8 +21,14 @@ title: Задания
       <h3>{{ section.name }}</h3>
       <ol>
       {% for task in section.tasks %}
-        <li>{{ task.name }} ({{ task.score }}
-        {% case task.score %}{% when 1 %}балл{% when 2 %}балла{% when 3 %}балла{% when 4 %}балла{% else %}баллов{% endcase %})</li>
+        <li>
+          {% if task.id %}
+            <a href="https://git.inp.nsk.su/prognsu/tasks/{{ task.id }}">{{ task.name }}</a>
+          {% else %}
+            {{ task.name }}
+          {% endif %}
+          ({{ task.score }} {% case task.score %}{% when 1 %}балл{% when 2 %}балла{% when 3 %}балла{% when 4 %}балла{% else %}баллов{% endcase %})
+        </li>
       {% endfor %}
       </ol>
     </li>
