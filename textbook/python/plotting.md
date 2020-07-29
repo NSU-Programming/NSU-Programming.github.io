@@ -9,6 +9,8 @@ menu: textbook-python
 
 ## Двумерные графики
 
+### pyplot.plot
+
 Нарисовать графики функций sin и cos с matplotlib.pyplot можно слудующим образом:
 
 ```py
@@ -72,7 +74,9 @@ plt.show()
 
 Полный список доступных параметров можно найти [в документации](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D).
 
-Результат измерения в физике часто представлен в виде величины с ошибкой. Функция [`plt.errorbar`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.errorbar.html#matplotlib.pyplot.errorbar) позволяет отображать такие данные:
+### pyplot.errorbar
+
+Результаты измерений в физике чаще всего представлены в виде величин с ошибками. Функция [`plt.errorbar`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.errorbar.html#matplotlib.pyplot.errorbar) позволяет отображать такие данные:
 
 ```py
 rg = np.random.Generator(np.random.PCG64(5))
@@ -97,7 +101,7 @@ plt.show()
 
 ![ex5](../../figs/textbook-plotting/mpl5.png)
 
-Ошибки измерений могут быть асимметричными. Для их отображения в качестве параметра `yerr` (или `xerr`)необходимо передать кортеж из двух списков:
+Ошибки измерений могут быть асимметричными. Для их отображения в качестве параметра `yerr` (или `xerr`) необходимо передать кортеж из двух списков:
 
 ```py
 rg = np.random.Generator(np.random.PCG64(11))
@@ -121,10 +125,10 @@ plt.show()
 * capsize - длина "колпачков" на концах линий ошибок
 * capthick - толщина "колпачков" на концах линий ошибок
 
-и некоторые другие параметры. Приведем пример их использования:
+и некоторые другие. Изменим параметры отрисовки данных из предыдущего примера:
 
 ```py
-#...
+# ...
 plt.errorbar(x, y, yerr=yerr, marker='o', linestyle='none',
     ecolor='k', elinewidth=0.8, capsize=4, capthick=1)
 plt.show()
@@ -134,23 +138,161 @@ plt.show()
 
 ## Настройки отображения
 
-Диапазон осей
+Наши графики все еще выглядят довольно наивно. В этой части мы рассмотрим различные настройки, которые позволят достичь качества диаграмм публикационного уровня.
 
-Размер шрифта
+### Диапазон значений осей
 
-Подписи осей
+Задавать диапазон значений осей в matplotlib можно несколькими способами. Например, так:
 
-Сетка
+```py
+pyplot.xlim([0, 200])  # диапазон горизонтальной оси от 0 до 200
+pyplot.xlim([0, 1])    # диапазон вертикальной оси от 0 до 1
+```
 
-Легенда
+### Размер шрифта
 
-Заголовок
+Размер и другие свойста шрифта, который используется в matplotlib по умолчанию, можно изменить с помощью объекта `matplotlib.rcParams`:
 
-tight_layout
+```py
+matplotlib.rcParams.update({'font.size': 14})
+```
 
-Логарифмический масштаб
+Объект `matplotlib.rcParams` хранит множество настроек, изменяя которые, можно управлять поведением по умолчанию. Смотрите подробнее в [документации](https://matplotlib.org/tutorials/introductory/customizing.html).
 
-Размер изображения
+### Подписи осей
+
+Подписи к осям задаются следующим образом:
+
+```py
+plt.xlabel('run number', fontsize=16)
+plt.ylabel(r'average current ($\mu A$)', fontsize=16)
+```
+
+В подписях к осям (и вообще в любом тексте в matplotlib) можно использовать инструменты текстовой разметки [TeX](https://en.wikipedia.org/wiki/TeX), позволяющие отрисовывать различные математические выражения. TeX-выражения должны быть внутри пары символов `$`, кроме того, их следует помещать в r-строки, чтобы избежать неправильной обработки.
+
+### Заголовок
+
+Функция `pyplot.title` задает заголовок диаграммы. Применим наши новые знания:
+
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+# задаем размер шрифта
+matplotlib.rcParams.update({'font.size': 12})
+
+rg = np.random.Generator(np.random.PCG64(11))
+x = np.arange(6)
+y = rg.poisson(149, x.size)
+yerr = [
+    0.7*np.sqrt(y),
+    1.2*np.sqrt(y)
+]
+plt.errorbar(x, y, yerr=yerr, marker='o', linestyle='none',
+    ecolor='k', elinewidth=0.8, capsize=4, capthick=1)
+
+# добавляем подписи к осям и заголовок диаграммы
+plt.xlabel('run number', fontsize=16)
+plt.ylabel(r'average current ($\mu A$)', fontsize=16)
+plt.title(r'The $\alpha^\prime$ experiment. Season 2020-2021')
+
+# задаем диапазон значений оси y
+plt.ylim([0, 200])
+# оптимизируем поля и расположение объектов
+plt.tight_layout()
+
+plt.show()
+```
+
+![ex8](../../figs/textbook-plotting/mpl8.png)
+
+В этом примере мы использовали функцию [pyplot.tight_layout](https://matplotlib.org/tutorials/intermediate/tight_layout_guide.html), которая автоматически подбирает параметры отображения так, чтобы различные элементы не пересекались.
+
+### Легенда
+
+При построении нескольких графиков в одних осях поезно добавлять легенду - пояснения к каждой линии. Следующий пример показывает как это делается с помощью аргументов `label` и функции [`pyplot.legend`](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html):
+
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+matplotlib.rcParams.update({'font.size': 12})
+
+x = np.linspace(0, 1, 100)
+f1 = 0.25 - (x - 0.5)**2
+f2 = x**3
+
+# указываем в аргументе label содержание легенты 
+plt.plot(x, f1, ':b', label='1st component')
+plt.plot(x, f2, '--r', label='2nd component')
+plt.plot(x, f1+f2, 'k', label='total')
+
+plt.xlabel(r'$x$', fontsize=16)
+plt.ylabel(r'$f(x)$', fontsize=16)
+
+plt.xlim([0, 1])
+plt.ylim([0, 1])
+
+# выводим легенду
+plt.legend(fontsize=14)
+
+plt.tight_layout()
+
+plt.savefig(f'plots/mpl{exno}.png')
+
+plt.show()
+```
+
+![ex9](../../figs/textbook-plotting/mpl9.png)
+
+Функция `pyplot.legend` старается расположить легенду так, чтобы она не пересекала графики. Аргумент `loc` позволяет задать расположение легенды вручную. В большинстве случаев расположение по умолчанию получается удачным. Детали и описание других аргументов смотрите в [документации](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html).
+
+### Сетка
+
+Сетка во многих случаях облегчает анализ графиков. Включить отображение сетки можно с помощью функции `pyplot.grid`. Аргумент `axis` этой функции имеет три возможных значения: `x`, `y` и `both` и определяет оси, вдоль которых будут проведены линии сетки. Управлять свойствами линии сетки можно с помощью именованых аргументов, которые мы рассматривали выше при обсуждении функции `pyplot.plot`.
+
+В matplotlib поддердивается два типа сеток: основная и дополнительная. Выбор типа сетки выполняется с помощью аргумента `which`, который может принимать три значения: `major`, `minor` и `both`. По умолчанию используется основная сетка.
+
+Линии сетки привязаны к отметкам на осях. Чтобы работать с дополнительной сеткой необходимо сначала включить вспомогательные отметки на осях (которые по умолчанию отключены и к которым привязаны линии дополнительной сетки) с помощью функции `pyplot.minorticks_on`. Приведем пример:
+
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+matplotlib.rcParams.update({'font.size': 12})
+
+x = np.linspace(-1, 1, 250)
+plt.plot(x, x, label=r'$x$')
+plt.plot(x, x**2, label=r'$x^2$')
+plt.plot(x, x**3, label=r'$x^3$')
+plt.plot(x, np.cbrt(x), label=r'$x^{1/3}$')
+plt.legend(fontsize=16)
+
+# включаем дополнительные отметки на осях
+plt.minorticks_on()
+plt.xlabel(r'$x$', fontsize=16)
+
+plt.xlim([-1., 1.])
+plt.ylim([-1., 1.])
+# включаем основную сетку
+plt.grid(which='major')
+# включаем дополнительную сетку
+plt.grid(which='minor', linestyle=':')
+plt.tight_layout()
+
+plt.show()
+```
+
+![ex10](../../figs/textbook-plotting/mpl10.png)
+
+### Логарифмический масштаб
+
+### Произвольные метки и отметки на осях
+
+### Размер изображения
 
 ## Гистограммы
 
