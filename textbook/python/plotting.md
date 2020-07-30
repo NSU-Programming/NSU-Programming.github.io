@@ -308,7 +308,7 @@ plt.semilogy()
 
 ### Произвольные отметки на осях
 
-Вернемся к первому примеру, в котором мы строили графики синуса и косинуса. Сделаем так, чтобы на горизонтальной оси отметки соответствовали различным долям числа pi, и имели соответствуеющие подписи:
+Вернемся к первому примеру, в котором мы строили графики синуса и косинуса. Сделаем так, чтобы на горизонтальной оси отметки соответствовали различным долям числа pi и имели соответствуеющие подписи:
 
 ![ex13](../../figs/textbook-plotting/mpl13.png)
 
@@ -345,27 +345,253 @@ fig = plt.figure(figsize=(6, 6))
 plt.axis('equal')
 ```
 
-Функция [`pyplot.axis`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axis.html) позволяет задавать некоторые свойства осей. Ее вызов с параметрос `equal` делает одинаковыми масштабы вертикальной и горизонтальной осей, что кажется хорошей идеей в этом примере. Функция `pyplot.axis` возвращает кортеж из четырех значений `xmin, xmax, ymin, ymax`, соответствующих границам диапазонов значений осей.
+Функция [`pyplot.axis`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axis.html) позволяет задавать некоторые свойства осей. Ее вызов с параметром `'equal'` делает одинаковыми масштабы вертикальной и горизонтальной осей, что кажется хорошей идеей в этом примере. Функция `pyplot.axis` возвращает кортеж из четырех значений `xmin, xmax, ymin, ymax`, соответствующих границам диапазонов значений осей.
 
 Некоторые другие способы использования функции `pyplot.axis`:
 
-* Кортеж из четырех `float` задаст новые значения для границ диапазонов значений осей
-* Строка `off` выключит отображение линий и меток осей
+* Кортеж из четырех `float` задаст новые границы диапазонов значений осей
+* Строка `'off'` выключит отображение линий и меток осей
 
 ## Гистограммы
 
+Обратимся теперь к другим типам диаграмм. Функция [`pyplot.hist`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html) строит гистограмму по набору значений:
+
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+
+rg = np.random.Generator(np.random.PCG64(5))
+data = rg.poisson(145, 10000)
+plt.hist(data, bins=40)
+# для краткости мы опускаем код для настройки осей, сетки и т.д.
+```
+
+![ex15](../../figs/textbook-plotting/mpl15.png)
+
+Аргумент `bins` задает количество бинов гистограммы. По умолчанию используется значение 10. Если вместо целого числа в аргумент `bins` передать кортеж значений, то они будут использованы для задания границ бинов. Таким образом можно постороить гистограмму с произвольным разбиением.
+
+Некоторые другие аргументы функции `pyplot.hist`:
+
+* `range` - кортеж из двух значений. Определяет диапазон значений, в котором строися гистограмма. Значения за пределами заданного диапазона игнорируются.
+* `density` - `bool`. При значении `True` будет построена гистограмма, соответствующая плотности вероятности, так что площадь гистограммы будет равна единице.
+* `wieghts` - список `float` значений того же размера, что и набор данных. Определяет вес каждого значения при построении гистограммы.
+* `histtype` может принимать значения `{'bar', 'barstacked', 'step', 'stepfilled'}`. Определяет тип отрисовки гистограммы.
+
+В качестве первого аргумента можно передать кортеж наборов значений. Для каждого из них будет построена гистограмма. Аргумент `stacked` со значением `True` позволяет строить сумму гистограмм для кортежа наборов. Покажем несколько примеров:
+
+![ex18](../../figs/textbook-plotting/mpl18.png)
+
+```py
+rg = np.random.Generator(np.random.PCG64(5))
+data1 = rg.poisson(145, 10000)
+data2 = rg.poisson(140, 2000)
+
+# левая гистограмма
+plt.hist([data1, data2], bins=40)
+# центральная гистограмма
+plt.hist([data1, data2], bins=40, histtype='step')
+# правая гистограмма
+plt.hist([data1, data2], bins=40, stacked=True)
+```
+
+В физике гистограммы часто представляют в виде набора значений с ошибками, предполагая при этом, что количество событий в каждом бине является случайной величиной, подчиняющейся биномиальному распределению. В пределе больших значений флуктуации количеста событий в бине могут быть описаны распределением Пуассона, так что характерная величина флуктуации определяется корнем из числа событий. Библиотека `matplotlib` не имеет инструмента для такого представления данных, однако его легко получить с помощью комбинации `numpy.histogram` и `pyplot.errorbar`:
+
+```py
+def poisson_hist(data, bins=60, lims=None):
+    """ Гистограмма в виде набора значений с ошибками """
+    hist, bins = np.histogram(data, bins=bins, range=lims)
+    bins = 0.5 * (bins[1:] + bins[:-1])
+    return (bins, hist, np.sqrt(hist))
+
+rg = np.random.Generator(np.random.PCG64(5))
+data = rg.poisson(145, 10000)
+
+x, y, yerr = poisson_hist(data, bins=40, lims=(100, 190))
+plt.errorbar(x, y, yerr=yerr, marker='o', markersize=4,
+             linestyle='none', ecolor='k', elinewidth=0.8,
+             capsize=3, capthick=1)
+```
+
+![ex19](../../figs/textbook-plotting/mpl19.png)
+
 ## Диаграммы рассеяния
+
+Распределение событий по двум измерениям удобно визуализировать с помощью [диаграммы рассеяния](https://en.wikipedia.org/wiki/Scatter_plot):
+
+```py
+rg = np.random.Generator(np.random.PCG64(5))
+
+means = (0.5, 0.9)
+covar = [
+    [1., 0.6],
+    [0.6, 1.]
+]
+data = rg.multivariate_normal(means, covar, 5000)
+
+plt.scatter(data[:,0], data[:,1], marker='o', s=1)
+```
+
+![ex20](../../figs/textbook-plotting/mpl20.png)
+
+Каждой паре значений в наборе данных соответствует одна точка на диаграмме. Несмотря на свою простоту, диаграмма рассеяния позволяет во многих случаях наглядно представлять двумерные данные. Функция [pyplot.scatter](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html) позволяет визуализировать и данные более высокой размерности: размер и цвет маркера могут быть заданы для каждой точки отдельно:
+
+```py
+rg = np.random.Generator(np.random.PCG64(4))
+
+data = rg.uniform(-1, 1, (50, 2))
+col = np.arctan2(data[:, 1], data[:, 0])
+size = 100*np.sum(data**2, axis=1)
+
+plt.scatter(data[:,0], data[:,1], marker='o', s=size, c=col)
+```
+
+![ex21](../../figs/textbook-plotting/mpl21.png)
+
+Цветовую палитру можно задать с помощью аргумента `cmap`. Подробности и описание других аргументов функции `pyplot.scatter` можно найти в [документации](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html).
 
 ## Контурные диаграммы
 
-## Настройка осей
+Контурные диаграммы позволяют визуализировать функции двух переменных:
 
-figure и axis, subplots
+```py
+from scipy import stats
 
-## Интерактивные графики
+means = (0.5, 0.9)
+covar = [
+    [1., 0.6],
+    [0.6, 1.]
+]
+
+mvn = stats.multivariate_normal(means, covar)
+x, y = np.meshgrid(
+    np.linspace(-3, 3, 80),
+    np.linspace(-2, 4, 80)
+)
+data = np.dstack((x, y))
+
+# левая диаграмма - без заливки цветом
+plt.contour(x, y, mvn.pdf(data), levels=10)
+# правая диаграмма - с заливкой цветом
+plt.contourf(x, y, mvn.pdf(data), levels=10)
+```
+
+![ex22](../../figs/textbook-plotting/mpl22.png)
+
+Аргумент `levels` задает количество контуров. По умолчанию контуры отрисовываются равномерно между максимальным и минимальным значениями. В аргумент `levels` также можно передать список уровней, на которых следует провести контуры.
+
+Обратите внимание на использование функций [numpy.meshgrid](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html) и [numpy.dstack](https://numpy.org/doc/stable/reference/generated/numpy.dstack.html) в этом примере.
+
+Контурную диаграмму можно дополнить цветовой полосой [`colorbar`](https://matplotlib.org/api/colorbar_api.html#matplotlib.colorbar.Colorbar), вызвав функцию [`pyplot.colorbar`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.colorbar.html):
+
+```py
+cs = plt.contourf(x, y, mvn.pdf(data), levels=15,
+                  cmap=matplotlib.cm.magma_r)
+cbar = plt.colorbar(cs)
+```
+
+![ex23](../../figs/textbook-plotting/mpl23.png)
+
+Более подробное описание функций `plt.contour` и `plt.contourf` смотрите в [документации](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contourf.html).
+
+## Расположение нескльких осей
+
+В одном окне (объекте [`Figure`](https://matplotlib.org/3.3.0/api/_as_gen/matplotlib.figure.Figure.html)) можно разместить несколько осей (объектов [`axis.Axis`](https://matplotlib.org/3.3.0/api/axes_api.html#the-axes-class)). Функция [`pyplot.subplots`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html) создает объект `Figure`, содержащий регулярную сетку объектов `axis.Axis`:
+
+{% raw %}
+
+```py
+import numpy as np
+from scipy import stats
+import matplotlib.pyplot as plt
+
+fig, axes = plt.subplots(ncols=3, nrows=2, figsize=(12, 8))
+x = np.linspace(0.01, 25, 250)
+
+for idx, row in enumerate(axes):
+    for jdx, ax in enumerate(row):
+        ndf = idx * 3 + jdx + 1
+        y = stats.chi2.pdf(x, ndf)
+        ax.plot(x, y, label=fr'$\chi^2_{{ndf={ndf}}}(x)$')
+        ax.set_xlabel(r'$x$', fontsize=16)
+        ax.set_ylim([0, 1.05*y.max()])
+        ax.minorticks_on()
+        ax.legend(fontsize=16)
+        ax.grid(which='major')
+        ax.grid(which='minor', linestyle=':')
+
+fig.tight_layout()
+plt.show()
+```
+
+{% endraw %}
+
+![ex24](../../figs/textbook-plotting/mpl24.png)
+
+Количество строк и столбцов, по которым располагаются различные оси, задаются с помощью параметров `nrows` и `ncols`, соответственно. Функция `pyplot.subplots` возвращает объект `Figure` и двумерный список осей `axis.Axis`. Обратите внимание на то, что вместо вызовов функций модуля `pyplot` в этом примере использовались вызовы методов классов `Figure` и `axis.Axis`.
+
+В последнем примере горизонтальная ось во всех графиках имеет один и тот же диапазон. Аргумент `sharex` функции `pyplot.subplots` позволяет убрать лишнее дублирование отрисовки осей в таких случаях:
+
+```py
+fig, axes = plt.subplots(ncols=3, nrows=2, figsize=(12, 8),
+                         sharex=True)
+# ...
+for idx, row in enumerate(axes):
+    for jdx, ax in enumerate(row):
+        # ...
+        if idx:
+            ax.set_xlabel(r'$x$', fontsize=16)
+```
+
+![ex25](../../figs/textbook-plotting/mpl25.png)
+
+Конечно, существует аналогичный параметр `sharey` для вертикальной оси.
+
+Более гибкие возможности регулярного расположения осей предоставляет функция [pyplot.subplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html). Мы не будем рассматривать эту функцию и ограничимся лишь ее упоминанием.
+
+Функция [`pyplot.axes`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axes.html) позволяет добавлять новые оси в текущем окне в произвольном месте:
+
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+
+exno = 26
+
+rg = np.random.Generator(np.random.PCG64(5))
+x1 = rg.exponential(10, 5000)
+x2 = rg.normal(10, 0.1, 100)
+
+# Строим основную гистограмму
+plt.hist([x1, x2], bins=150, range=(0, 60), stacked=True)
+plt.minorticks_on()
+plt.xlim((0, 60))
+plt.grid(which='major')
+plt.grid(which='minor', linestyle=':')
+
+# Строим вторую гистограмму в отдельных осях
+plt.axes([.5, .5, .4, .4])
+plt.hist([x1, x2], bins=100, stacked=True, range=(9, 11))
+plt.grid(which='major')
+
+plt.tight_layout()
+plt.show()
+```
+
+![ex26](../../figs/textbook-plotting/mpl26.png)
+
+## Резюме
+
+В этом разделе был рассмотрен модуль `pyplot` библиотеки `matplotlib`:
+
+* рассмотерны функции `pyplot.plot`, `pyplot.errorbar`. `pyplot.hist`, `pyplot.scatter`, `pyplot.contour` и `pyplot.contourf`, позволяющие строить диаграммы различных типов;
+* рассмотрены средства настройки свойств линий и маркеров;
+* рассмотрены инструменты настройки координатных осей: подписи, размер шрифта, координатная сетка, произвольные метки др.;
+* рассмотрены инструмены для расположения нескольких координатных осей в одном окне.
+
+Рассмотренные инструменты далеко не исчерпывают возможности библиотеки `matplotlib`, однако их должно быть достаточно в большинстве случаев для визуализации данных публикационного качества. Мы рекомендуем заинтересованному читалелю изучить список источников, в которых можно найти много дополнительной информации.
 
 ## Источники
 
 * [matplotlib.pyplot](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.html)
 * [Pyplot tutorial](https://matplotlib.org/3.3.0/tutorials/introductory/pyplot.html)
+* [Colormaps](https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html)
 * [Scipy Lecture Notes](https://scipy-lectures.org/)
