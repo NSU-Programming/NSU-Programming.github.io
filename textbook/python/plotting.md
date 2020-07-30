@@ -544,7 +544,7 @@ for idx, row in enumerate(axes):
 
 ![ex25](../../figs/textbook-plotting/mpl25.png)
 
-Конечно, существует аналогичный параметр `sharey` для вертикальной оси.
+Существует аналогичный параметр `sharey` для вертикальной оси.
 
 Более гибкие возможности регулярного расположения осей предоставляет функция [pyplot.subplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html). Мы не будем рассматривать эту функцию и ограничимся лишь ее упоминанием.
 
