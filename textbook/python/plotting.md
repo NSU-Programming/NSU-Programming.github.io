@@ -493,7 +493,7 @@ cbar = plt.colorbar(cs)
 
 Более подробное описание функций `plt.contour` и `plt.contourf` смотрите в [документации](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contourf.html).
 
-## Расположение нескльких осей
+## Расположение нескольких осей в одном окне
 
 В одном окне (объекте [`Figure`](https://matplotlib.org/3.3.0/api/_as_gen/matplotlib.figure.Figure.html)) можно разместить несколько осей (объектов [`axis.Axis`](https://matplotlib.org/3.3.0/api/axes_api.html#the-axes-class)). Функция [`pyplot.subplots`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html) создает объект `Figure`, содержащий регулярную сетку объектов `axis.Axis`:
 
