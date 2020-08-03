@@ -294,7 +294,7 @@ def quad_eq(a, b, c):
 
 ### Модуль pytest
 
-Библиотека [`pytest`](https://docs.pytest.org/en/stable/) не входит в число стандартных модулей, однако мы включили ее в этот обзор. 
+Библиотека [`pytest`](https://docs.pytest.org/en/stable/) не входит в число стандартных модулей, однако мы включили ее в этот обзор.
 
 ### Модуль doctest
 
@@ -304,9 +304,15 @@ def quad_eq(a, b, c):
 
 ### Библиотека requests
 
-## Модуль functools
+## Функциональное программирование
 
-## Модуль asyncio
+### Модуль functools
+
+### Декораторы
+
+## Асинхронное программирование
+
+### Модуль asyncio
 
 ## Резюме
 
@@ -317,3 +323,6 @@ def quad_eq(a, b, c):
 * [Пользовательские атрибуты в Python](https://habr.com/ru/post/137415/)
 * [Python zlib Library Tutorial](https://stackabuse.com/python-zlib-library-tutorial/)
 * [PyTest](https://habr.com/ru/post/269759/)
+* [Getting Started With Async Features in Python](https://realpython.com/python-async-features/)
+* [Async IO in Python: A Complete Walkthrough](https://realpython.com/async-io-python/)
+* [An Introduction to Asynchronous Programming in Python](https://medium.com/velotio-perspectives/an-introduction-to-asynchronous-programming-in-python-af0189a88bbb)
