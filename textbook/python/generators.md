@@ -182,13 +182,15 @@ for x in fv:
 Объекты класса `FourVector` является итерируемыми, поскольку класс наследуется от типа `NamedTuple`. Давайте изменим правило итерирования:
 
 ```py
+import itertools
+
 class FourVector(NamedTuple):
     t: float
     r: list
 
     def __iter__(self):
         if isinstance(self.r, list):
-            return (x for x in [self.t] + self.r)
+            return itertools.chain([self.t], self.r)
         return (x for x in [self.t, self.r])
 
 fv1 = FourVector(1, [0.3, 0.4, 0.0])
