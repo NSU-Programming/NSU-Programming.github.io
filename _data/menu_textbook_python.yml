@@ -34,16 +34,16 @@ toc:
   - page: Стандартные модули II
     url: textbook/python/std-library-advanced
 
-  - page: Итераторы, генераторы и корутины
+  - page: Итераторы и генераторы
     url: textbook/python/generators
     
   - page: Вычисления с библиотекой numpy
     url: textbook/python/numpy
     
-  - page: Визуализация данных с matplotlib и plotly
+  - page: Визуализация данных с matplotlib
     url: textbook/python/plotting
     
-  - page: Графика и GUI с библиотеками tkinter и pygame
+  - page: Графика и GUI с библиотекой pygame
     url: textbook/python/graphics
     
   - page: Библиотека pandas
