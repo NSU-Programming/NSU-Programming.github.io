@@ -2,10 +2,10 @@ toc_list_title: Материалы к практическим занятиям
 toc:
 
 - title: Введение
-  url: cpp/intro
+  url: intro
 
 - title: Настройка рабочей среды
-  url: cpp/env
+  url: env
 
 - title: Язык C++
   url: cpp

@@ -2,4 +2,8 @@
 title: Настройка рабочей среды
 ---
 
-1. Создание [GitHub](github.com) аккаунта
+* [Настройка рабочей среды в Windows 10](setup-win)
+* [Настройка рабочей среды в Ubuntu Linux](setup-ubuntu)
+* [Как сдавать задачи](how-to-submit)
+* [Работа с git](git-tutorial)
+* [Конфигурация VSCode](vscode)
