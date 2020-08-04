@@ -8,82 +8,82 @@ chapters:
   sections:
   - name: 'Потоки ввода-вывода, строки'
     tasks:
-    - { name: 'Hello, Classroom!', id: 'hello-classroom', score: 1, test: "blackbox" }
-    - { name: 'Второе вхождение', id: 'second-ocurrence', score: 2, test: "blackbox" }
-    - { name: 'Минимальная строка', id: 'minimal-string', score: 2, test: "blackbox" }
-    - { name: 'Палиндром', id: 'is-palindrome', score: 3, test: "cmake" }
-    - { name: 'Бормотание', id: 'mumbling', score: 5, test: "cmake" }
+    - { name: 'Hello, Classroom!', id: 'hello-classroom', score: 1, test: 'blackbox' }
+    - { name: 'Второе вхождение', id: 'second-ocurrence', score: 2, test: 'blackbox' }
+    - { name: 'Минимальная строка', id: 'minimal-string', score: 2, test: 'blackbox' }
+    - { name: 'Палиндром', id: 'is-palindrome', score: 3, test: 'cmake' }
+    - { name: 'Бормотание', id: 'mumbling', score: 5, test: 'cmake' }
 
   - name: 'Контейнеры стандартной библиотеки C++'
     tasks:
-    - { name: 'Перемещение строк', id: 'move-strings', score: 2, test: "cmake" }
-    - { name: 'Разворот последовательности', id: 'sequence-reversal', score: 3, test: "cmake" }
-    - { name: 'Анаграммы', id: 'anagrams', score: 3, test: "cmake" }
-    - { name: 'Количество уникальных строк', id: 'unique-strings', score: 3, test: "blackbox" }
-    - { name: 'Вычисление арифметического выражения', id: 'arithmetic-expression-evaluation', score: 5, test: "cmake" }
-    - { name: 'Баланс скобок', id: 'brace-checker', score: 3, test: "cmake" }
+    - { name: 'Перемещение строк', id: 'move-strings', score: 2, test: 'cmake' }
+    - { name: 'Разворот последовательности', id: 'sequence-reversal', score: 3, test: 'cmake' }
+    - { name: 'Анаграммы', id: 'anagrams', score: 3, test: 'cmake' }
+    - { name: 'Количество уникальных строк', id: 'unique-strings', score: 3, test: 'blackbox' }
+    - { name: 'Вычисление арифметического выражения', id: 'arithmetic-expression-evaluation', score: 5, test: 'cmake' }
+    - { name: 'Баланс скобок', id: 'brace-checker', score: 3, test: 'cmake' }
 
   - name: 'Алгоритмы стандартной библиотеки C++'
     tasks:
-    - { name: 'Сортировка по модулю', id: 'modular-sorting', score: 2, test: "cmake" }
-    - { name: 'Сортировка без учета регистра', id: 'case-insensitive-sorting', score: 2, test: "cmake" }
-    - { name: 'Часть вектора', id: 'part-of-vector', score: 3, test: "cmake" }
-    - { name: 'Разбиение на слова', id: 'split-string', score: 3, test: "cmake" }
-    - { name: 'Перебор перестановок', id: 'permutations', score: 3, test: "blackbox" }
-    - { name: 'Поиск ближайшего элемента', id: 'nearest-element', score: 3, test: "cmake" }
+    - { name: 'Сортировка по модулю', id: 'modular-sorting', score: 2, test: 'cmake' }
+    - { name: 'Сортировка без учета регистра', id: 'case-insensitive-sorting', score: 2, test: 'cmake' }
+    - { name: 'Часть вектора', id: 'part-of-vector', score: 3, test: 'cmake' }
+    - { name: 'Разбиение на слова', id: 'split-string', score: 3, test: 'cmake' }
+    - { name: 'Перебор перестановок', id: 'permutations', score: 3, test: 'blackbox' }
+    - { name: 'Поиск ближайшего элемента', id: 'nearest-element', score: 3, test: 'cmake' }
 
   - name: 'Объектно-ориентированное программирование'
     tasks:
-    - { name: 'Отсортированные строки', id: 'sorted-strings', score: 2, test: "cmake" }
-    - { name: 'Способы инициализации', id: 'incognizable', score: 2, test: "cmake" }
-    - { name: 'Номер телефона', id: 'phone-number', score: 3, test: "cmake" }
-    - { name: 'Суммирование матриц', id: 'matrix', score: 6, test: "cmake" }
-    - { name: 'Символьная арифметика', id: 'symbolic-arithmetic', score: 4, test: "cmake" }
-    - { name: 'Лоренц-вектор', id: 'lorentz-vector', score: 4, test: "cmake" }
-    - { name: 'Статистика массива', id: 'array-stat', score: 5, test: "cmake" }
+    - { name: 'Отсортированные строки', id: 'sorted-strings', score: 2, test: 'cmake' }
+    - { name: 'Способы инициализации', id: 'incognizable', score: 2, test: 'cmake' }
+    - { name: 'Номер телефона', id: 'phone-number', score: 3, test: 'cmake' }
+    - { name: 'Суммирование матриц', id: 'matrix', score: 6, test: 'cmake' }
+    - { name: 'Символьная арифметика', id: 'symbolic-arithmetic', score: 4, test: 'cmake' }
+    - { name: 'Лоренц-вектор', id: 'lorentz-vector', score: 4, test: 'cmake' }
+    - { name: 'Статистика массива', id: 'array-stat', score: 5, test: 'cmake' }
 
   - name: 'Обобщенное программирование'
     tasks:
-    - { name: 'Часть множества', id: 'part-of-set', score: 2, test: "cmake" }
-    - { name: 'Удаление повторов', id: 'remove-duplicates', score: 2, test: "cmake" }
-    - { name: 'Все в квадрат', id: 'sqr', score: 4, test: "cmake" }
-    - { name: 'Максимальный элемент по предикату', id: 'maximum-element', score: 4, test: "cmake" }
-    - { name: 'Таблица', id: 'table', score: 6, test: "cmake" }
-    - { name: 'Дек на основе двух векторов', id: 'dequeue', score: 6, test: "cmake" }
+    - { name: 'Часть множества', id: 'part-of-set', score: 2, test: 'cmake' }
+    - { name: 'Удаление повторов', id: 'remove-duplicates', score: 2, test: 'cmake' }
+    - { name: 'Все в квадрат', id: 'sqr', score: 4, test: 'cmake' }
+    - { name: 'Максимальный элемент по предикату', id: 'maximum-element', score: 4, test: 'cmake' }
+    - { name: 'Таблица', id: 'table', score: 6, test: 'cmake' }
+    - { name: 'Дек на основе двух векторов', id: 'dequeue', score: 6, test: 'cmake' }
 
 - name: 'Язык python'
   start-index: 6
   sections:
   - name: 'Основы языка python'
     tasks:
-    - { name: 'Набор заданий I', id: 'python-basics-set1', score: 5, test: "pytest" }
-    - { name: 'Набор заданий II', id: 'python-basics-set2', score: 5, test: "pytest" }
-    - { name: 'Набор заданий III', score: 5, test: "pytest" }
-    - { name: 'Набор заданий IV', score: 5, test: "pytest" }
-    - { name: 'Набор заданий V', score: 5, test: "pytest" }
+    - { name: 'Набор заданий I', id: 'python-basics-set1', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий II', id: 'python-basics-set2', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий III', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий IV', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий V', score: 5, test: 'pytest' }
 
   - name: 'Стандартная библиотека python'
     tasks:
-    - { name: 'Набор заданий I', id: 'python-stdlib-set1', score: 5, test: "pytest" }
-    - { name: 'Набор заданий II', id: 'python-stdlib-set2', score: 5, test: "pytest" }
-    - { name: 'Набор заданий III', score: 5, test: "pytest" }
-    - { name: 'Набор заданий IV', score: 5, test: "pytest" }
-    - { name: 'Набор заданий V', score: 5, test: "pytest" }
+    - { name: 'Набор заданий I', id: 'python-stdlib-set1', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий II', id: 'python-stdlib-set2', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий III', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий IV', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий V', score: 5, test: 'pytest' }
 
   - name: 'Работа с numpy'
     tasks:
-    - { name: 'Набор заданий I', id: 'numpy-basics-set-1', score: 5, test: "pytest" }
-    - { name: 'Набор заданий II', score: 5, test: "pytest" }
-    - { name: 'Набор заданий III', score: 5, test: "pytest" }
-    - { name: 'Монте-Карло интегрирование', id: 'monte-carlo-integral', score: 4, test: "pytest" }
-    - { name: 'Монте-Карло генератор', id: 'monte-carlo-generator', score: 4, test: "pytest" }
-    - { name: 'Клеточный автомат "Жизнь"', id: 'game-of-life', score: 4, test: "pytest" }
-    - { name: 'Наибольшая общая подпоследовательность', id: 'longest-common-sequence', score: 5, test: "pytest" }
+    - { name: 'Набор заданий I', id: 'numpy-basics-set-1', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий II', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий III', score: 5, test: 'pytest' }
+    - { name: 'Монте-Карло интегрирование', id: 'monte-carlo-integral', score: 4, test: 'pytest' }
+    - { name: 'Монте-Карло генератор', id: 'monte-carlo-generator', score: 4, test: 'pytest' }
+    - { name: 'Клеточный автомат "Жизнь"', id: 'game-of-life', score: 4, test: 'pytest' }
+    - { name: 'Наибольшая общая подпоследовательность', id: 'longest-common-sequence', score: 5, test: 'pytest' }
 
   - name: 'Работа с matplotlib'
     tasks:
-    - { name: 'Кольца Ньютона', score: 4, test: "pytest" }
-    - { name: 'Отбор сигнальных событий', id: 'signal-selection', score: 4, test: "pytest" }
+    - { name: 'Кольца Ньютона', score: 4 }
+    - { name: 'Отбор сигнальных событий', id: 'signal-selection', score: 4, test: 'pytest' }
     - { name: 'Фурье-анализ сигнала', score: 4 }
     - { name: 'Неизвестная задача I', score: 'x' }
     - { name: 'Неизвестная задача II', score: 'x' }
