@@ -8,7 +8,7 @@ chapters:
   sections:
   - name: 'Потоки ввода-вывода, строки'
     tasks:
-    - { name: 'Hello, Classroom!', id: 'hello-classroom', score: 1 }
+    - { name: 'Hello, Classroom!', id: 'hello-classroom', score: 1, tags: ["custom-test"] }
     - { name: 'Второе вхождение', id: 'second-ocurrence', score: 2 }
     - { name: 'Минимальная строка', id: 'minimal-string', score: 2 }
     - { name: 'Палиндром', id: 'is-palindrome', score: 3 }
