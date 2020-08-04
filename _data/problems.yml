@@ -66,7 +66,7 @@ chapters:
     tasks:
     - { name: 'Набор заданий I', id: 'python-stdlib-set1', score: 5, test: 'pytest' }
     - { name: 'Набор заданий II', id: 'python-stdlib-set2', score: 5, test: 'pytest' }
-    - { name: 'Набор заданий III', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий III', id: 'python-stdlib-set3', score: 5, test: 'pytest' }
     - { name: 'Набор заданий IV', score: 5, test: 'pytest' }
     - { name: 'Набор заданий V', score: 5, test: 'pytest' }
 
@@ -82,11 +82,11 @@ chapters:
 
   - name: 'Работа с matplotlib'
     tasks:
-    - { name: 'Кольца Ньютона', score: 4 }
+    - { name: 'Кольца Ньютона', id: 'newtons-rings', score: 4, test: 'pytest' }
     - { name: 'Отбор сигнальных событий', id: 'signal-selection', score: 4, test: 'pytest' }
-    - { name: 'Фурье-анализ сигнала', score: 4 }
-    - { name: 'Неизвестная задача I', score: 'x' }
-    - { name: 'Неизвестная задача II', score: 'x' }
+    - { name: 'Линейная корреляция', id: 'linear-correlation', score: 4, test: 'pytest' }
+    - { name: 'Фурье-анализ сигнала', score: 4, test: 'pytest' }
+    - { name: 'Неизвестная задача', score: 'x', test: 'pytest' }
 
   - name: ' Работа с pygame'
     tasks:
