@@ -54,13 +54,13 @@ toc:
   - page: Подробнее о строках
     url: python/str
     
-  - page: Полезные модули стандартной библиотеки
+  - page: Модули стандартной библиотеки I
     url: python/std-library
-    
+
   - page: ООП в python
     url: python/oop
-    
-  - page: Продолжаем знакомство со стандартной библиотекой python
+
+  - page: Модули стандартной библиотеки II
     url: python/std-library-advanced
     
   - page: Итераторы, генераторы и корутины
@@ -69,18 +69,14 @@ toc:
   - page: Вычисления с библиотекой numpy
     url: python/numpy
     
-  - page: Визуализация данных с matplotlib и plotly
+  - page: Визуализация данных с библиотекой matplotlib
     url: python/plotting
+
+  - page: Вычисления с библиотекой scipy
+    url: python/scipy
     
-  - page: Графика и GUI с библиотеками tkinter и pygame
+  - page: Графика и GUI с библиотекой pygame
     url: python/graphics
     
   - page: Библиотека pandas
     url: python/pandas
-
-- title: Дополнительные материалы
-  url: extra
-  items:
-
-    - page: Шаблоны проектирования
-      url: extra/design-patterns
