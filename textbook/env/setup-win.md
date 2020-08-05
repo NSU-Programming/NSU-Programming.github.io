@@ -172,10 +172,144 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## Настройка VS Code
 
+Установите следующие расширения в VS Code:
 
+* [C/C++ for Visual Studio Code](https://code.visualstudio.com/docs/languages/cpp)
+* [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
+* [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+### Выбор интерпретатора python
+
+При начале работы с кодом python (файл с расширением `.py`) VS Code предложит выбрать интерпретатор, который будет использоваться для подсветки кода, проверки синтаксиса и вывода подсказок:
+
+![](../../figs/textbook-env/vscode-python-interpreter.png)
+
+Можете выбрать интерпретатор из недавно созданного окружения nsu. Конечно, этот выбор легко изменить в дальнейшем.
+
+Создадим файл `test.py` с содержимым
+
+```py
+print('Hello, world!')
+```
+
+Исполнить этот скрипт можно различными способами. Например, открыв консоль в VS Code с помощью сочетания клавиш `Ctrl+j` и набрав в ней
+
+```sh
+python test.py
+```
+
+Кроме того, после того как мы выбрали интерпретатор, в правом верхнем углу окна появляется кнопка с зеленым треугольником, нажатие на которую также приводит к открытию консоли и запуску интерпретатора python с текущим скриптом:
+
+![](../../figs/textbook-env/vscode-python-hello-world.png)
+
+### Настройка работы с GCC
+
+Создадим файл `test.cpp`, содержащий следующий код:
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, world!" << std::endl;
+    return 0;
+}
+```
+
+Скомпилируем его с помощью компилятора GCC и командной строки. Открываем консоль в VS Code (`Ctrl+j`) и исполняем команду
+
+```sh
+> g++ test.cpp
+```
+
+Компилятор создал исполняемый файл `a.out`. Запустим его:
+
+```sh
+> .\a.exe
+Hello, world!
+```
+
+Работает. Настроим теперь VS Code для автоматизации этого действия. Выбираем в меню пункт `Terminal->Configure Degault Build Task...`:
+
+![](../../figs/textbook-en/../textbook-env/vscode-cpp-default-build-task.png)
+
+Выбираем из выпавшего списка пункт `g++.exe`. В результате будет сгенерирован файл `.vscode/tasks.json` подобный такому:
+
+```json
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "C/C++: cpp.exe build active file",
+			"command": "D:\\mingw\\mingw32\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
+```
+
+Теперь при нажатии клавиш `Ctrl+Shift+B` или выборе пункта меню `Terminal->Run Build Task` будет выполняться компиляция открытого файла. Для файла `test.cpp` будет создан исполняемый файл `test.exe`.
+
+### Работа с CMake
+
+Откройте новую рабочую директорию VS Code, создайте в ней файл `main.cpp`, содержаший код
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, world!" << std::endl;
+    return 0;
+}
+```
+
+и файл `CMakeLists.txt` со следующим содержанием:
+
+```cmake
+cmake_minimum_required(VERSION 3.0.0)
+add_executable(test main.cpp)
+```
+
+Настроим cmake. Наберите комбинацию клавиш `Ctrl+Shift+P`. В активной строке сверху наберите `>CMake: Select a Kit` и выберите компилятор, который нужно использовать. Затем снова наберите `Ctrl+Shift+P` и затем `>CMake: Select Variant` и выберите `Debug` или `Release`.
+
+В нижней части окна появились инструменты управления сборкой проекта:
+
+![](../../figs/textbook-env/cmake-example-project.png)
+
+Из-за того что мы работем с компилятором GCC через mingw, необходимо правильно проинициализировать cmake. Создадим директорию для сборки проекта и выполним инициализацию CMake, указав правильный тип компилятора:
+
+```sh
+> mkdir build; cd build
+> cmake  -G "MinGW Makefiles" ..
+```
+
+Теперь сборка проекта (и все последующие конфигурации при измерении файла `CMakeLists.txt`) можно выполнять через графический интерфейс VS Code. Нажмите на кнопку "Сборка". Запустится процесс сборки проекта, а в директории `build` создастся исполняемый файл `test.exe`. Нажмите на кнопку запуска в нижней части окна чтобы запустить программу. В открывшемся терминале Вы увидите что-то вроде:
+
+```sh
+>"D:\ProgCourse\playground\cmaketest\build\test.exe"
+Hello, world!
+```
 
 ## Источники
 
 * [First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+* [VS Code: User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings)
+* [VS Code: Using GCC with MinGW](https://code.visualstudio.com/docs/cpp/config-mingw)
+* [VS Code: Get started with CMake Tools on Linux](https://code.visualstudio.com/docs/cpp/cmake-linux)
 * [Git in Visual Studio Code](https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Visual-Studio-Code)
-* [Using GCC with MinGW](https://code.visualstudio.com/docs/cpp/config-mingw)
+* [Must-have плагины и несколько полезностей для С\С++ разработки в VS Code](https://habr.com/ru/company/aktiv-company/blog/440142/)
