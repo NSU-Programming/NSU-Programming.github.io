@@ -577,7 +577,7 @@ print(f'items: {data["items"][:5]}')
 ```py
 addr='https://inspirehep.net/api'
 params = {
-    'q' : 'find+a+r+feynman',
+    'q' : 'find a r feynman',
     'size': 10,
     'page': 1
 }
