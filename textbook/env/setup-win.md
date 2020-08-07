@@ -317,7 +317,7 @@ add_executable(test main.cpp)
 
 ![github-actions](../../figs/textbook-env/github-actions.png)
 
-Новый репозиторий необходимо клонировать на Вашу локальную систему. Удобнее всего это делать с помощью [протокола ssh](https://ru.wikipedia.org/wiki/SSH). Для этого сначала необходимо [включить OpenSSL Client](http://www.spy-soft.net/windows-10-openssh-client/), который по умолчанию выключен.
+Новый репозиторий необходимо клонировать на Вашу локальную систему. Удобнее всего это делать с помощью [протокола ssh](https://ru.wikipedia.org/wiki/SSH). Для этого сначала необходимо [включить OpenSSH Client](http://www.spy-soft.net/windows-10-openssh-client/), который по умолчанию выключен.
 
 Взаимодействие с GitHub репозиторием будет происходить по протоколу ssh с помощью [техники шифорвания с открытым ключом](https://en.wikipedia.org/wiki/Public-key_cryptography). Создать пару из приватного и публичного ключа можно в консоли:
 
