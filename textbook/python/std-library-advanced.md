@@ -3,11 +3,11 @@ title: Стандартные модули II
 menu: textbook-python
 ---
 
-Этот раздел продолжает разговор о модулях стандартной библиотеки python. Формат курса не позволяет обсуждать модули в деталях, поэтому в большинстве случаев показаны только простые и наиболее характерные примеры использования различных инструментов.
+В этом разделе мы продолжаем разговор о модулях стандартной библиотеки python. Формат курса не позволяет обсуждать их в деталях, поэтому в большинстве случаев показаны только простые и наиболее характерные примеры использования различных инструментов.
 
 ## Сериализация объектов
 
-[Сериализация](https://en.wikipedia.org/wiki/Serialization) - это процесс перевода объектов в формат, в котором их можно хранить и передавать. Обратный процесс назвается десериализацией.
+[Сериализация](https://en.wikipedia.org/wiki/Serialization) - это процесс перевода объектов в формат, в котором их можно хранить и передавать. Обратный процесс называется десериализацией.
 
 ### Текстовое представление
 
@@ -60,7 +60,7 @@ print(restored_data)
 # [1, 2, 'a', ['2', 1], (3, 2, 1), {0: 0, 1: 1, 2: 4}]
 ```
 
-Мы сравнили скорость выполнения этого и предыдущего примеров. Запись и чтение данных в текстовом формате занимает около 180 микросекунд, в то время как использование бинарного представления с применением модуля `pickle` требует около 80 микросекунд для аналогичной операции.
+Сравним скорость выполнения этого и предыдущего примеров. Запись и чтение данных в текстовом формате занимает около 180 микросекунд, в то время как использование бинарного представления с применением модуля `pickle` требует около 80 микросекунд для аналогичной операции.
 
 ### Модуль json
 
@@ -78,9 +78,9 @@ with open('s1.txt', 'r') as f:
     restored_data = json.load(f)
 ```
 
-Чтобы определить правила сериализации для нового типа данных, необходимо определить класс-наследник класса [json.JSONEncoder](https://docs.python.org/3/library/json.html#json.JSONEncoder). Во многих случаях объекты пользовательских типов могут быть сериализованы через атрибут `__dict__`. Подробное обсуждение сериализации произвольных объектов выходит за рамки этого обзора.
+Чтобы определить правила сериализации для нового типа данных, необходимо определить класс-наследник класса [`json.JSONEncoder`](https://docs.python.org/3/library/json.html#json.JSONEncoder). Во многих случаях объекты пользовательских типов могут быть сериализованы через атрибут `__dict__`. Подробное обсуждение сериализации произвольных объектов выходит за рамки этого обзора.
 
-Стандартная библиотека python содержит и другие модули, позволяющие выполнять сериализацию данных, например, [cvs](https://docs.python.org/3/library/csv.html) и [xml](https://docs.python.org/3/library/xml.html). Из нестандартных инструментов упомянем библиотеку [pyyaml](https://pyyaml.org/wiki/PyYAMLDocumentation) и мощную библиотеку [protobuf](https://developers.google.com/protocol-buffers) для сериализации от компании Google.
+Стандартная библиотека python содержит и другие модули, позволяющие выполнять сериализацию данных, например, [CSV](https://docs.python.org/3/library/csv.html) и [XML](https://docs.python.org/3/library/xml.html). Из нестандартных инструментов упомянем библиотеку [pyyaml](https://pyyaml.org/wiki/PyYAMLDocumentation) и мощную библиотеку [protobuf](https://developers.google.com/protocol-buffers) для сериализации от компании Google.
 
 ## Сжатие данных
 
@@ -212,7 +212,7 @@ print(s[:12])  # Compress me!
 
 ### Модуль timeit
 
-Модуль [`timeit`](https://docs.python.org/3/library/timeit.html) содержит инструменты для измерения времени рыботы небольших частей кода. Этот модуль можно использовать двумя способами: через консольный интерфейс и через вызов функций внутри кода. Начем с интерфейса командной строки и классического сравнения функции `map`, генераторного выражения и спискового включения:
+Модуль [`timeit`](https://docs.python.org/3/library/timeit.html) содержит инструменты для измерения времени работы небольших частей кода. Этот модуль можно использовать двумя способами: через консольный интерфейс и через вызов функций внутри кода. Начнем с интерфейса командной строки и классического сравнения функции `map`, генераторного выражения и спискового включения:
 
 ```sh
 $ python -m timeit -r 10 -n 1000 'sum([x**2 for x in range(10000)])'
@@ -268,7 +268,7 @@ for idx, c in enumerate([code1, code2, code3, code4]):
 
 ### Модуль unittest
 
-Модуль [`unittest`](https://docs.python.org/3/library/unittest.html) предоставляет большой набор инструментов для [модульного тестирования кода](https://en.wikipedia.org/wiki/Unit_testing). Покажем базовые приемы тестирования на примере функции `quad_eq`, которая принимает числа `a`, `b` и `c` и возвращает действительные корни квадратного уравнения `ax^2+bx+c=0`:
+Модуль [`unittest`](https://docs.python.org/3/library/unittest.html) предоставляет большой набор инструментов для [модульного тестирования кода](https://en.wikipedia.org/wiki/Unit_testing). Покажем базовые приемы тестирования на примере функции `quad_eq`, которая должна принимать числа `a`, `b` и `c` и возвращать действительные корни квадратного уравнения `ax^2+bx+c=0`:
 
 ```py
 # файл quadeq.py
@@ -286,7 +286,7 @@ def quad_eq(a, b, c):
     ]
 ```
 
-Найдем здесь ошибку с помощью тестов. Для этого определим наследника класса [`unittest.TestCase`](https://docs.python.org/3/library/unittest.html#unittest.TestCase). Методы этого класса, имя которых начинается с символов `test`, задают набор тестов. В методах-тестах вызываются специальные методы класса `unittest.TestCase`, выполняющие проверки:
+Найдем здесь ошибку с помощью тестов. Для этого определим наследника класса [`unittest.TestCase`](https://docs.python.org/3/library/unittest.html#unittest.TestCase). Методы этого класса, имена которых начинаются с символов `test`, задают набор тестов. В методах-тестах вызываются специальные методы класса `unittest.TestCase`, выполняющие проверки:
 
 ```py
 # файл test_quadeq.py
@@ -298,9 +298,11 @@ class TestQuadEq(unittest.TestCase):
         # assertEqual(a, b) проверяет равенство a и b
         self.assertEqual(quad_eq(1, 3, 2), [-2, -1])
         self.assertEqual(quad_eq(1, -1, -2), [-1, 2])
+        self.assertEqual(quad_eq(2, -2, -4), [-1, 2])
 
     def test_single_root(self):
         self.assertEqual(quad_eq(1, 2, 1), [-1])
+        self.assertEqual(quad_eq(2, 4, 2), [-1])
         self.assertEqual(quad_eq(1, 6, 9), [-3])
 
     def test_no_roots(self):
@@ -310,6 +312,7 @@ class TestQuadEq(unittest.TestCase):
 
     def test_linear_equation(self):
         self.assertEqual(quad_eq(0, 1, 1), [-1])
+        self.assertEqual(quad_eq(0, 2, 2), [-1])
 
     def test_not_an_equation(self):
         self.assertFalse(quad_eq(0, 0, 1))
@@ -330,12 +333,12 @@ if __name__ == '__main__':
 
 ```sh
 $ python test_quadeq.py
-.E.F..
+.E.FF.
 ======================================================================
 ERROR: test_linear_equation (__main__.TestQuadEq)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "test_quadeq.py", line 20, in test_linear_equation
+  File "test_quadeq.py", line 22, in test_linear_equation
     self.assertEqual(quad_eq(0, 1, 1), [-1])
   File "/home/vitaly/work/CppAndPython/playground/quadeq.py", line 10, in quad_eq
     (-b - sqrt(D)) / (2*a),
@@ -345,23 +348,38 @@ ZeroDivisionError: float division by zero
 FAIL: test_not_an_equation (__main__.TestQuadEq)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "test_quadeq.py", line 23, in test_not_an_equation
+  File "test_quadeq.py", line 26, in test_not_an_equation
     self.assertFalse(quad_eq(0, 0, 1))
 AssertionError: [0.0] is not false
 
+======================================================================
+FAIL: test_single_root (__main__.TestQuadEq)
 ----------------------------------------------------------------------
-Ran 6 tests in 0.001s
+Traceback (most recent call last):
+  File "test_quadeq.py", line 13, in test_single_root
+    self.assertEqual(quad_eq(2, 4, 2), [-1])
+AssertionError: Lists differ: [-4.0] != [-1]
 
-FAILED (failures=1, errors=1)
+First differing element 0:
+-4.0
+-1
+
+- [-4.0]
++ [-1]
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.006s
+
+FAILED (failures=2, errors=1)
 ```
 
 Модуль `unittest` обнаружил класс `TestQuadEq` и выполнил тесты. Первая строка
 
 ```sh
-.E.F..
+.E.FF.
 ```
 
-показывает, что четыре теста завершиличь успешно (символы `'.'`), в одном из тестов была провалена проверка в assert-методе класса `unittest.TestCase` (символ `'F'`) и при выполнении еще одного теста было выброшено исключение (символ `'E'`). Отчет об ошибках, который вывел `unittest`, позволяет понять, что мы забыли проверить некоторые частные случаи перед применением основной формулы. Внесем необходимые изменения:
+показывает, что три теста завершились успешно (символы `'.'`), в двух из тестов была провалена проверка в assert-методе класса `unittest.TestCase` (символ `'F'`) и при выполнении еще одного теста было выброшено исключение (символ `'E'`). Отчет об ошибках, который вывел `unittest`, позволяет понять, что мы забыли проверить некоторые частные случаи перед применением основной формулы и поставить скобки около `2*a` при отрицательном дискриминанте. Внесем необходимые изменения:
 
 ```py
 # файл quadeq.py
@@ -374,7 +392,7 @@ def quad_eq(a, b, c):
     if D < 0:
         return []
     elif D == 0:
-        return [-b/2 * a]
+        return [-b / (2*a)]
     return [
         (-b - sqrt(D)) / (2*a),
         (-b + sqrt(D)) / (2*a)
@@ -392,7 +410,7 @@ Ran 6 tests in 0.000s
 OK
 ```
 
-Вызов с параметром `-v` (verbose) приведет к более подробномы выводу:
+Вызов с параметром `-v` (verbose) приведет к более подробному выводу:
 
 ```sh
 $ python test_quadeq.py -v
@@ -441,7 +459,7 @@ def quad_eq(a, b, c):
     if D < 0:
         return []
     elif D == 0:
-        return [-b/2 * a]
+        return [-b / (2*a)]
     return [
         (-b - sqrt(D)) / (2*a),
         (-b + sqrt(D)) / (2*a)
@@ -454,14 +472,14 @@ if __name__ == '__main__':
 Запускаем:
 
 ```sh
-$ python testing_unit.py
+$ python quadeq.py
 $ 
 ```
 
 Все примеры были запущены и во всех случаях было получены ожидаемые результаты. В консоль при этом ничего не было выведено. Чтобы убедиться в том, что все произошло именно так, запустим программу еще раз, включив моду verbose:
 
 ```sh
-$ python testing_unit.py  -v
+$ python quadeq.py  -v
 Trying:
     quad_eq(1, 3, 2)
 Expecting:
@@ -493,11 +511,11 @@ Test passed.
 
 Работает.
 
-Разработка программы может опираться на процедуру тестирования. При [таком подходе](https://habr.com/ru/post/206828/) сначала пишутся тесты и только после этого основная программа. Эта техника позволяет сразу писать код, который удовлетворяет необходимым контрактам, и быстро обнаруживать различные ошибки. Покрытие кода тестами является признаком хорошего программного продукта. Не пренебрегайте модульным тестированием своих программ.
+Разработка программы может опираться на процедуру тестирования. При [таком подходе](https://habr.com/ru/post/206828/) сначала пишутся тесты, и только после этого - основная программа. Эта техника позволяет сразу писать код, который удовлетворяет необходимым контрактам, и быстро обнаруживать различные ошибки.  Покрытие кода тестами является признаком хорошего программного продукта. Не пренебрегайте модульным тестированием своих программ.
 
 ## Веб-программирование
 
-Язык python хорошо подходит для работы с сетью: его стандартная библиотека имеет модули для работы с различными протоколами (например, [HTTP](https://ru.wikipedia.org/wiki/HTTP), [FTP](https://ru.wikipedia.org/wiki/FTP), [SMTP](https://ru.wikipedia.org/wiki/SMTP)); очень популярны фреймворки для разработки веб-сайтов на python (например, [Django](https://www.djangoproject.com/)). Подробный разговор об этом выходит далеко за пределы этого курса, однако несколько примеров работы с сетью мы рассмотрим.
+Язык python хорошо подходит для работы с сетью: его стандартная библиотека имеет модули для работы с различными протоколами (например, [HTTP](https://ru.wikipedia.org/wiki/HTTP), [FTP](https://ru.wikipedia.org/wiki/FTP), [SMTP](https://ru.wikipedia.org/wiki/SMTP)); очень популярны фреймворки для разработки веб-сайтов на python (например, [Django](https://www.djangoproject.com/)). Подробный разговор об этом выходит далеко за пределы этого курса, однако несколько примеров работы с сетью мы всё же рассмотрим.
 
 ### Модуль urllib
 
@@ -507,6 +525,7 @@ Test passed.
 
 ```py
 import urllib.request
+import urllib.parse
 import json
 
 protocol='https://'
@@ -517,7 +536,7 @@ params = {
     'access_token': vkkey,  # секрет
     'v': 5.52               # версия API
 }
-parstr = '&'.join([f'{k}={v}' for k, v in params.items()])
+parstr = urllib.parse.urlencode(params)
 url = f'{protocol}{base_url}/{method}?{parstr}'
 with urllib.request.urlopen(url) as f:
     if f.getcode() == 200:  # статус OK
@@ -532,7 +551,7 @@ for key, val in data.items():
 #  last_name: Vorobyev
 ```
 
-API-сервис Вконтакте работает через протокол HTTPS, `api.vk.com/method` - это адрес API-сервиса. Мы использовали API-метод `users.get` с тремя параметрами: идентификатор пользователя (`user_id`), ключ идентификации (`access_token`) и версия API (`v`). Ключ идентификации является секретом и не должен оказываться в открытом доступе. Создать ключ для своего аккаунта Вконтакте можно с помощью [простой процедуры](https://vk.com/dev/access_token).
+API-сервис Вконтакте работает через протокол HTTPS, `api.vk.com/method` - это адрес API-сервиса. Мы использовали API-метод `users.get` с тремя параметрами: идентификатор пользователя (`user_id`), ключ идентификации (`access_token`) и версия API (`v`). Параметры для вставки в URL склеили с помощью функции [`urllib.parse.urlencode`](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlencode). Ключ идентификации является секретом и не должен оказываться в открытом доступе. Создать ключ для своего аккаунта Вконтакте можно с помощью [простой процедуры](https://vk.com/dev/access_token).
 
 Функция [`urllib.request.urlopen`](https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen) выполнила метод GET протокола HTTP для указанного URL и вернула объект типа [`http.client.HTTPResponse`](https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse). Статус-код `200` означает, что запрос был успешно обработан. Метод `HTTPResponse.read` позволяет прочитать полученные в ответ на запрос данные. В нашем случае данные получены в формате json, который мы десериализовали с помощью функции `json.reads`.
 
@@ -558,11 +577,11 @@ print(f'items: {data["items"][:5]}')
 ```py
 addr='https://inspirehep.net/api'
 params = {
-    'q' : 'find+a+r+feynman',
+    'q' : 'find a r feynman',
     'size': 10,
     'page': 1
 }
-parstr = '&'.join([f'{k}={v}' for k, v in params.items()])
+parstr = urllib.parse.urlencode(params)
 url = f'{addr}/literature?{parstr}'
 with urllib.request.urlopen(url) as f:
     data = json.loads(f.read())
