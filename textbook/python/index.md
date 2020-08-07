@@ -13,4 +13,3 @@ menu: textbook-python
 * [Визуализация данных с matplotlib и plotly](plotting)
 * [Графика и GUI с библиотеками tkinter и pygame](graphics)
 * [Библиотека pandas](pandas)
-  
