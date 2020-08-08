@@ -47,29 +47,28 @@ toc:
 - title: Язык python
   url: python
   items:
-    
   - page: Основы языка python
     url: python/basics
     
   - page: Подробнее о строках
     url: python/str
     
-  - page: Модули стандартной библиотеки I
+  - page: Стандартные модули I
     url: python/std-library
 
   - page: ООП в python
     url: python/oop
 
-  - page: Модули стандартной библиотеки II
+  - page: Стандартные модули II
     url: python/std-library-advanced
-    
-  - page: Итераторы, генераторы и корутины
+
+  - page: Итераторы и генераторы
     url: python/generators
     
   - page: Вычисления с библиотекой numpy
     url: python/numpy
     
-  - page: Визуализация данных с библиотекой matplotlib
+  - page: Визуализация данных с matplotlib
     url: python/plotting
 
   - page: Вычисления с библиотекой scipy
