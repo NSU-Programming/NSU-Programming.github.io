@@ -55,7 +55,7 @@ toc:
     
   - page: Стандартные модули I
     url: python/std-library
-    
+
   - page: ООП в python
     url: python/oop
 
@@ -70,16 +70,12 @@ toc:
     
   - page: Визуализация данных с matplotlib
     url: python/plotting
+
+  - page: Вычисления с библиотекой scipy
+    url: python/scipy
     
   - page: Графика и GUI с библиотекой pygame
     url: python/graphics
     
   - page: Библиотека pandas
     url: python/pandas
-
-- title: Дополнительные материалы
-  url: extra
-  items:
-
-    - page: Шаблоны проектирования
-      url: extra/design-patterns
