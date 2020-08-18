@@ -58,7 +58,7 @@ chapters:
     tasks:
     - { name: 'Набор заданий I', id: 'python-basics-set1', score: 5, test: 'pytest' }
     - { name: 'Набор заданий II', id: 'python-basics-set2', score: 5, test: 'pytest' }
-    - { name: 'Набор заданий III', id: 'python-basics-set2', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий III', id: 'python-basics-set3', score: 5, test: 'pytest' }
 
   - name: 'Стандартная библиотека python'
     tasks:
