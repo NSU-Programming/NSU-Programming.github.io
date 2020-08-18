@@ -23,7 +23,7 @@ title: Задания
       {% for task in section.tasks %}
         <li>
           {% if task.id %}
-            <a href="https://git.inp.nsk.su/prognsu/tasks/{{ task.id }}">{{ task.name }}</a>
+            <a href="https://github.com/NSU-Programming/{{ task.id }}">{{ task.name }}</a>
           {% else %}
             {{ task.name }}
           {% endif %}
