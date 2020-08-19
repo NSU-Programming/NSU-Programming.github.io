@@ -58,17 +58,13 @@ chapters:
     tasks:
     - { name: 'Набор заданий I', id: 'python-basics-set1', score: 5, test: 'pytest' }
     - { name: 'Набор заданий II', id: 'python-basics-set2', score: 5, test: 'pytest' }
-    - { name: 'Набор заданий III', score: 5, test: 'pytest' }
-    - { name: 'Набор заданий IV', score: 5, test: 'pytest' }
-    - { name: 'Набор заданий V', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий III', id: 'python-basics-set3', score: 5, test: 'pytest' }
 
   - name: 'Стандартная библиотека python'
     tasks:
     - { name: 'Набор заданий I', id: 'python-stdlib-set1', score: 5, test: 'pytest' }
     - { name: 'Набор заданий II', id: 'python-stdlib-set2', score: 5, test: 'pytest' }
     - { name: 'Набор заданий III', id: 'python-stdlib-set3', score: 5, test: 'pytest' }
-    - { name: 'Набор заданий IV', score: 5, test: 'pytest' }
-    - { name: 'Набор заданий V', score: 5, test: 'pytest' }
 
   - name: 'Работа с numpy'
     tasks:
@@ -82,19 +78,19 @@ chapters:
 
   - name: 'Работа с matplotlib'
     tasks:
-    - { name: 'Кольца Ньютона', id: 'newtons-rings', score: 4, test: 'pytest' }
-    - { name: 'Отбор сигнальных событий', id: 'signal-selection', score: 4, test: 'pytest' }
-    - { name: 'Линейная корреляция', id: 'linear-correlation', score: 4, test: 'pytest' }
-    - { name: 'Фурье-анализ сигнала', score: 4, test: 'pytest' }
-    - { name: 'Неизвестная задача', score: 'x', test: 'pytest' }
+    - { name: 'Отбор сигнальных событий', id: 'signal-selection', score: 5, test: 'pytest' }
+    - { name: 'Линейная корреляция', id: 'linear-correlation', score: 5, test: 'pytest' }
+    - { name: 'Кольца Ньютона', id: 'newtons-rings', score: '>5', test: 'pytest' }
+    - { name: 'Фурье-анализ сигнала', id: fourier-filter, score: '>5', test: 'pytest' }
+    - { name: 'Свертка с разрешением', id: convolution, score: '>5', test: 'pytest' }
 
   - name: ' Работа с pygame'
     tasks:
+    - { name: 'Игра "Nim"', id: 'nim-game', score: '>7' }
     - { name: 'Игра "Жизнь"', id: 'game-of-life-gui', score: '>8' }
-    - { name: 'Игра "Nim"', id: 'nim-game', score: '>8' }
+    - { name: 'Просачивание', id: 'percolation', score: '>8' }
     - { name: 'Динамическая визуализация графа', id: 'dynamic-graph-visualization', score: '>8' }
     - { name: 'Игра "Hex"', id: 'hex-game', score: '>8' }
-    - { name: 'Просачивание', id: 'percolation', score: '>8' }
 
-- name: 'Задания на пятерку'
+- name: 'Дополнительные задания'
   sections: []
