@@ -43,7 +43,7 @@ next(its)  # 3
 
 ## Генераторы
 
-Другой встречавшийся нам итерируемый объект - результат вызова функции [`range`](https://docs.python.org/3/library/functions.html#func-range):
+Другой встречавшийся нам итерируемый объект — результат вызова функции [`range`](https://docs.python.org/3/library/functions.html#func-range):
 
 ```py
 import sys
@@ -54,7 +54,7 @@ for x in range(5):
 
 rng = range(10**6)
 type(rng)  # <class 'range'>
-sys.getsizeof(rng)  # 48 - размер объекта в байтах
+sys.getsizeof(rng)  # 48 — размер объекта в байтах
 
 l = list(rng)
 sys.getsizeof(l)  # 9000120
@@ -213,12 +213,12 @@ for x in fv2:
 
 Итерируемый объект должен иметь реализацию хотя бы одного из методов `__iter__` и `__getitem__`. Объект-итератор должен иметь реализацию метода `__next__`.
 
-Генераторы являются инструментом для вычисления элементов последовательносей "на лету" и позволяют избежать хранения всех элементов последовательности в памяти. Генераторные выражения позволяют создавать генераторы с простой логикой. Генераторы удобно использовать при реализации итераторов.
+Генераторы являются инструментом для вычисления элементов последовательностей "на лету" и позволяют избежать хранения всех элементов последовательности в памяти. Генераторные выражения позволяют создавать генераторы с простой логикой. Генераторы удобно использовать при реализации итераторов.
 
 ## Источники
 
 * [The Python Wiki: Generators](https://wiki.python.org/moin/Generators)
 * [Как работает yield](https://habr.com/ru/post/132554/)
 * [How to make an iterator in Python](https://treyhunner.com/2018/06/how-to-make-an-iterator-in-python/)
-* [PEP 289 - Generator Expressions](https://www.python.org/dev/peps/pep-0289/)
+* [PEP 289 — Generator Expressions](https://www.python.org/dev/peps/pep-0289/)
 * [Сопрограммы в Python](https://habr.com/ru/post/196918/)

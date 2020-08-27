@@ -146,7 +146,7 @@ int main() {
 * Экспоненциальное распределение `exponential_distribution`
 * Гамма-распределение `gamma_distribution`
 * Нормальное распределение `normal_distribution`
-* Распределение хи-квардат `chi_squared_distribution`
+* Распределение хи-квадрат `chi_squared_distribution`
 * f-распределение Фишера `fisher_f_distribution`
 * t-распределение Стьюдента `student_t_distribution`
 
