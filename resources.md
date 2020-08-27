@@ -39,10 +39,10 @@ title: Полезные ресурсы
 * Редактор исходного кода [VS Code](https://code.visualstudio.com/)
 * GNU компилятор для Windows [MinGW-w64 installer](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/)
 * Система автоматизации сборки ПО [CMake](https://cmake.org/download/)
-* Средства для работы с GitHub в Windows [GitHub Desctop](https://desktop.github.com/)
+* Средства для работы с GitHub в Windows [GitHub Desktop](https://desktop.github.com/)
 * Дистрибутив языка python [Anaconda Windows installers](https://www.anaconda.com/products/individual#windows)
 
 ## Разное
 * [Modern C++ Course](https://www.ipb.uni-bonn.de/teaching/modern-cpp/) (Bonn U.)
-* Интерактивные оглайн компиляторы [godbolt.org](https://godbolt.org/)
+* Интерактивные онлайн компиляторы [godbolt.org](https://godbolt.org/)
 * Онлайн среда разработки [repl.it](https://repl.it/)

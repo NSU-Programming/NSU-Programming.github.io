@@ -9,7 +9,7 @@ title: "python: дополнительные главы"
 ```py
 def split_count(document: str, sep: str) -> (int):
     """ Подсчитывает количество частей, на которые разделитель sep разбивает
-        строку doucment
+        строку document
 
     Аргументы:
         - document: str - строка
@@ -29,7 +29,7 @@ help(split_count)
 #
 # split_count(document: str, sep: str) -> int
 #     Подсчитывает количество частей, на которые разделитель sep разбивает
-#         строку doucment
+#         строку document
 #
 #     Аргументы:
 #         - document: str - строка
