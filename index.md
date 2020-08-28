@@ -29,7 +29,7 @@ title: Программирование на C++ и python
 <div class="row">
     <div class="col-sm-12 mb-2">
         <div class="card border-none">
-            <a class="btn btn-block btn-danger p-4" href="enroll2020">Запись на альтернативные дисциплины 2020</a>
+            <a class="btn btn-block btn-danger p-4" target="_blank" href="https://forms.gle/YqouV8b7UKJmCKGr6">Запись на альтернативные дисциплины 2020</a>
         </div>
     </div>
 </div>
