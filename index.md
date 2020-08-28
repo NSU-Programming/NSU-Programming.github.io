@@ -46,15 +46,15 @@ title: Программирование на C++ и python
 <div class="row">
     <div class="col-sm-6 mb-2 pr-1">
         <div class="card border-none">
-            <a class="btn btn-block btn-success p-4" href="problems">
-                <p class="card-text"><i class="fa fa-check-square-o"></i> Задания</p>
+            <a class="btn btn-block btn-success p-4" href="textbook">
+                <p class="card-text"><i class="fa fa-pencil-square-o"></i> Материалы</p>
             </a>
         </div>
     </div>
     <div class="col-sm-6 mb-2 pl-1">
         <div class="card border-none">
-            <a class="btn btn-block btn-success p-4" href="textbook">
-                <p class="card-text"><i class="fa fa-pencil-square-o"></i> Материалы</p>
+            <a class="btn btn-block btn-success p-4" href="problems">
+                <p class="card-text"><i class="fa fa-check-square-o"></i> Задания</p>
             </a>
         </div>
     </div>
@@ -70,15 +70,15 @@ title: Программирование на C++ и python
     </div>
     <div class="col-sm-4 mb-2 pl-1 pr-1">
         <div class="card border-none">
-            <a class="btn btn-block btn-warning p-4" href="qna">
-                <p class="card-text"><i class="fa fa-fire"></i> Q&amp;A</p>
+            <a class="btn btn-block btn-warning p-4" href="team">
+                <p class="card-text"><i class="fa fa-child"></i> Команда</p>
             </a>
         </div>
     </div>
     <div class="col-sm-4 mb-2 pl-1">
         <div class="card border-none">
-            <a class="btn btn-block btn-warning p-4" href="team">
-                <p class="card-text"><i class="fa fa-child"></i> Команда</p>
+            <a class="btn btn-block btn-warning p-4" href="qna">
+                <p class="card-text"><i class="fa fa-fire"></i> Q&amp;A</p>
             </a>
         </div>
     </div>
