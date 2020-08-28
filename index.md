@@ -32,7 +32,7 @@ title: Программирование на C++ и python
     <div class="col-sm-6 mb-2 pl-1">
         <div class="card">
             <a class="btn btn-block btn-primary p-4" href="seminars">
-                <p class="card-text"><i class="fa fa-road"></i> Практические занятия</p>
+                <p class="card-text"><i class="fa fa-road"></i> Семинары</p>
             </a>
         </div>
     </div>
@@ -59,21 +59,21 @@ title: Программирование на C++ и python
     <div class="col-sm-4 mb-2 pr-1">
         <div class="card">
             <a class="btn btn-block btn-warning p-4" href="about">
-                <p class="card-text"><i class="fa fa-fire"></i> О курсе</p>
+                <p class="card-text"><i class="fa fa-fire"></i> О&nbsp;курсе</p>
             </a>
         </div>
     </div>
     <div class="col-sm-4 mb-2 pr-1">
         <div class="card">
             <a class="btn btn-block btn-warning p-4" href="qna">
-                <p class="card-text"><i class="fa fa-fire"></i> Вопросы и ответы</p>
+                <p class="card-text"><i class="fa fa-fire"></i> Q&amp;A</p>
             </a>
         </div>
     </div>
     <div class="col-sm-4 mb-2 pl-1">
         <div class="card">
             <a class="btn btn-block btn-warning p-4" href="team">
-                <p class="card-text"><i class="fa fa-child"></i> Команда курса</p>
+                <p class="card-text"><i class="fa fa-child"></i> Команда</p>
             </a>
         </div>
     </div>
