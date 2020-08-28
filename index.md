@@ -19,7 +19,7 @@ title: Программирование на C++ и python
 </div>
 
 <div class="row">
-    <div class="col-sm-12 mb-2">
+    <div class="col-sm-12 mb-2 pl-1 pr-1">
         <div class="card border-secondary">
             <img class="m-0" src="figs/enrollement_plot.png" />
         </div>
@@ -27,7 +27,7 @@ title: Программирование на C++ и python
 </div>
 
 <div class="row">
-    <div class="col-sm-12 mb-2">
+    <div class="col-sm-12 mb-2 pl-1 pr-1">
         <div class="card border-none">
             <a class="btn btn-block btn-danger p-4" target="_blank" href="https://forms.gle/YqouV8b7UKJmCKGr6">Запись на альтернативные дисциплины 2020</a>
         </div>
@@ -35,14 +35,14 @@ title: Программирование на C++ и python
 </div>
 
 <div class="row">
-    <div class="col-sm-6 mb-2 pr-1">
+    <div class="col-sm-6 mb-2 pl-1 pr-1">
         <div class="card border-none">
             <a class="btn btn-block btn-primary p-4" href="lectures">
                 <p class="card-text"><i class="fa fa-glass"></i> Лекции</p>
             </a>
         </div>
     </div>
-    <div class="col-sm-6 mb-2 pl-1">
+    <div class="col-sm-6 mb-2 pl-1 pr-1">
         <div class="card border-none">
             <a class="btn btn-block btn-primary p-4" href="seminars">
                 <p class="card-text"><i class="fa fa-road"></i> Семинары</p>
@@ -52,14 +52,14 @@ title: Программирование на C++ и python
 </div>
 
 <div class="row">
-    <div class="col-sm-6 mb-2 pr-1">
+    <div class="col-sm-6 mb-2 pl-1 pr-1">
         <div class="card border-none">
             <a class="btn btn-block btn-success p-4" href="textbook">
                 <p class="card-text"><i class="fa fa-pencil-square-o"></i> Материалы</p>
             </a>
         </div>
     </div>
-    <div class="col-sm-6 mb-2 pl-1">
+    <div class="col-sm-6 mb-2 pl-1 pr-1">
         <div class="card border-none">
             <a class="btn btn-block btn-success p-4" href="problems">
                 <p class="card-text"><i class="fa fa-check-square-o"></i> Задания</p>
@@ -69,7 +69,7 @@ title: Программирование на C++ и python
 </div>
 
 <div class="row">
-    <div class="col-sm-4 mb-2 pr-1">
+    <div class="col-sm-4 mb-2 pl-1 pr-1">
         <div class="card border-none">
             <a class="btn btn-block btn-warning p-4" href="about">
                 <p class="card-text"><i class="fa fa-fire"></i> О&nbsp;курсе</p>
@@ -83,7 +83,7 @@ title: Программирование на C++ и python
             </a>
         </div>
     </div>
-    <div class="col-sm-4 mb-2 pl-1">
+    <div class="col-sm-4 mb-2 pl-1 pr-1">
         <div class="card border-none">
             <a class="btn btn-block btn-warning p-4" href="qna">
                 <p class="card-text"><i class="fa fa-fire"></i> Q&amp;A</p>
