@@ -3,9 +3,15 @@ layout: default
 title: Программирование на C++ и python
 ---
 
-Добро пожаловать на страницу курса "Программирование на C++ и python" для студентов второго курса [физического факультета](http://phys.nsu.ru) [Новосибирского государственного университета](https://www.nsu.ru)!
-
-В рамках этого курса студенты получают начальные навыки программирования на языках C++ и python, представление об инструментах контроля версий и совместной разработки ПО, осваивают популярные библиотеки для научных вычислений и визуализации данных. Подробнее [о курсе](about).
+<div class="row">
+    <div class="col-sm-12 mb-2">
+        <div class="card p-2 border-secondary">
+          В рамках этого курса студенты получают начальные навыки программирования на языках C++ и python,
+          представление об инструментах контроля версий и совместной разработки ПО,
+          осваивают популярные библиотеки для научных вычислений и визуализации данных.
+        </div>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-sm-12 mb-2">
@@ -50,14 +56,21 @@ title: Программирование на C++ и python
 </div>
 
 <div class="row">
-    <div class="col-sm-6 mb-2 pr-1">
+    <div class="col-sm-4 mb-2 pr-1">
+        <div class="card">
+            <a class="btn btn-block btn-warning p-4" href="about">
+                <p class="card-text"><i class="fa fa-fire"></i> О курсе</p>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-4 mb-2 pr-1">
         <div class="card">
             <a class="btn btn-block btn-warning p-4" href="qna">
                 <p class="card-text"><i class="fa fa-fire"></i> Вопросы и ответы</p>
             </a>
         </div>
     </div>
-    <div class="col-sm-6 mb-2 pl-1">
+    <div class="col-sm-4 mb-2 pl-1">
         <div class="card">
             <a class="btn btn-block btn-warning p-4" href="team">
                 <p class="card-text"><i class="fa fa-child"></i> Команда курса</p>
