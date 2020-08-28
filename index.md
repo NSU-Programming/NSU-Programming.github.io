@@ -10,10 +10,18 @@ title: Программирование на C++ и python
 
 <div class="row">
     <div class="col-sm-12 mb-2">
-        <div class="card p-2 border-secondary">
+        <div class="card border-none">
           В рамках этого курса студенты получают навыки программирования на языках C++ и python,
           представление об инструментах контроля версий и совместной разработки ПО,
           осваивают популярные библиотеки для научных вычислений и визуализации данных.
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 mb-2">
+        <div class="card border-secondary">
+            <img class="m-0" src="figs/enrollement_plot.png" />
         </div>
     </div>
 </div>
