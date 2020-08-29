@@ -15,6 +15,15 @@ $(function () {
   });
   
   $('[data-toggle="tooltip"]').tooltip();
+  
+  $('.accordion button[data-toggle="collapse"]').popover({
+    placement: 'bottom',
+    html: true,
+    trigger: 'hover',
+    content: function () {
+      return $($(this).attr('data-target')).find('.card-body').html();
+    }
+  });
 });
 </script>
 
