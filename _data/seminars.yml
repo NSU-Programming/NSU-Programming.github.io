@@ -1,0 +1,172 @@
+seminars:
+- title: 'Занятие 1. C++: основы'
+  content:
+  - title: 'Настройка рабочей среды'
+    subcontent:
+    - title: 'Создание GitHub аккаунта'
+    - title: 'Установка VS Code, mingw, git, CMake'
+  - title: 'Компилирование программ с помощью gcc и CMake'
+  - title: 'Освоение процедуры сдачи заданий'
+    subcontent:
+    - title: 'Выполнение задания "Hello, Classroom!"'
+  - title: 'Работа с потоками ввода-вывода'
+    subcontent:
+    - title: 'Библиотеки iostream, fstream, sstream'
+  - title: 'Работа со строками в C++'
+    subcontent:
+    - title: 'Библиотека string'
+
+  materials:
+  - { title: 'Настройка рабочей среды', link: 'textbook/env/index' }
+  - { title: 'Работа с потоками ввода-вывода в C++', link: 'textbook/cpp/io' }
+  - { title: 'Строки в C++', link: 'textbook/cpp/string' }
+
+- title: 'Занятия 2-3. C++: контейнеры'
+  content:
+  - title: 'Контейнеры стандартной библиотеки C++'
+    subcontent:
+    - title: 'vector, list, array, deque, priority_queue'
+    - title: 'set, map, unordered_set, unordered_map'
+    - title: 'range-based for loop'
+
+  - title: 'Эффективная передача параметров в функцию'
+    subcontent:
+    - title: 'Передача параметров в функцию по ссылке'
+    - title: 'Константные параметры'
+
+  - title: 'Итераторы'
+    subcontent:
+    - title: 'Типы итераторов'
+    - title: 'Конструирование контейнеров с помощью итераторов'
+
+  materials:
+  - { title: 'Эффективная передача параметров в функцию', link: 'textbook/cpp/function-parameters' }
+  - { title: 'Контейнеры стандартной библиотеки C++', link: 'textbook/cpp/containers' }
+  - { title: 'Итераторы', link: 'textbook/cpp/iterators' }
+
+- title: 'Занятия 4-5. C++: алгоритмы'
+  content:
+  - title: 'Алгоритмы стандартной библиотеки C++'
+    subcontent:
+    - title: 'for_each, sort, stable_sort, lower_bound, upper_bound, binary_search, copy_if, unique, any_of, all_of, none_of, copy_if, erase'
+    - title: 'Компараторы и предикаты'
+  - title: 'Лямбда-функции'
+  - title: 'Библиотека numeric'
+    subcontent:
+    - title: 'iota, accumulate, inner_product'
+  
+  materials:
+    - { title: 'Алгоритмы стандартной библиотеки C++', link: 'textbook/cpp/algorithms'}
+    - { title: 'Библиотеки numeric и random', link: 'textbook/cpp/numeric'}
+  
+- title: 'Занятие 6. C++: классы'
+  content:
+  - title: 'Классы'
+    subcontent:
+    - title: 'Публичные и приватные поля и методы'
+    - title: 'Статические поля и методы'
+    - title: 'Конструктор, деструктор, специальные методы'
+    - title: 'Константные поля и методы'
+    - title: 'Перегрузка операторов'
+    - title: 'Ключевые слова delete и default'
+  materials:
+    - { title: 'Классы', link: 'textbook/cpp/classes' }
+
+- title: 'Занятие 7. C++: наследование, динамическое выделение памяти'
+  content:
+  - title: 'Наследование'
+    subcontent:
+    - title: 'Абстрактные типы'
+    - title: 'Виртуальные функции'
+    - title: 'Ключевые слова override и final'
+  - title: 'Динамическое выделение памяти'
+    subcontent:
+    - title: 'Использование new и delete'
+    - title: 'Умные указатели unique_ptr и shared_ptr'
+    - title: 'Идиома RAII'
+  materials:
+  - { title: 'Наследование', link: 'textbook/cpp/inheritance' }
+  - { title: 'Динамическое выделение памяти', link: 'cpp/dynamic-memory' }
+
+- title: 'Занятие 8. C++: обобщенное программирование'
+  content:
+  - title: 'Обобщенное программирование'
+    subcontent:
+    - title: 'Шаблонные функции'
+    - title: 'Шаблонные классы'
+  materials:
+    - { title: 'Обобщенное программирование', link: 'textbook/cpp/templates' }
+
+- title: 'Занятие 9. Python: основы'
+  content:
+  - title: 'Основы синтаксиса языка python'
+  - title: 'Базовые типы данных и встроенные контейнеры'
+    subcontent:
+    - title: 'int, float, list, str, dict, set, tuple'
+  - title: 'Запись/чтение из файла'
+  - title: 'Подробнее о строках'
+    subcontent:
+    - title: 'f-, r-, и b-строки'
+    - title: 'методы count, capitalize, isdigit, encode и др.'
+  - title: 'Полезные модули стандартной библиотеки'
+    subcontent:
+    - title: 'Библиотеки os и sys'
+    - title: 'Аргументы командной строки и библиотека argparse'
+    - title: 'Библиотеки datetime и calendar'
+    - title: 'Библиотеки decimal и fraction'
+  materials:
+    - { title: 'Основы синтаксиса языка python', link: 'textbook/python/basics' }
+    - { title: 'Строки', link: 'textbook/python/str' }
+    - { title: 'Стандартные модули python, часть I', link: 'textbook/python/std-library' }
+
+- title: 'Занятие 10. Python: стандартная библиотека'
+  content:
+  - title: 'Объектно-ориентированная разработка с python'
+  - title: 'Продолжаем знакомство со стандартной библиотекой python'
+    subcontent:
+    - title: 'Основы работы с web: библиотеки wget, requests'
+    - title: 'Сериализация с библиотекой json'
+    - title: 'Временные файлы с библиотекой tempfile'
+  - title: 'Итераторы, генераторы. Ключевое слово yield'
+  materials:
+    - { title: ООП в python, link: 'textbook/python/oop'}
+    - { title: 'Стандартные модули python, часть II', link: 'textbook/python/std-library-advanced' }
+    - { title: Итераторы и генераторы, link: 'textbook/python/generators' }
+
+- title: 'Занятие 11. Python: библиотека numpy'
+  content:
+  - title: 'Вычисления с библиотекой numpy'
+    subcontent:
+    - title: 'Создание массивов numpy'
+    - title: 'Способы индексирования'
+    - title: 'Операции с массивами numpy, broadcasting'
+    - title: 'Случайные числа с numpy'
+    - title: 'Линейная алгебра с numpy'
+  materials:
+    - { title: 'Вычисления с библиотекой numpy', link: 'textbook/python/numpy' }
+
+- title: 'Занятие 12. Python: библиотека matplotlib'
+  content:
+  - title: 'Визуализация данных с библиотекой matplotlib'
+    subcontent:
+    - title: 'Графики plot, errorbar'
+    - title: 'Гистограммы hist'
+    - title: 'Диаграммы рассеяния scatter'
+    - title: 'Контурные диаграммы contour'
+    - title: 'Настройка отображения графиков'
+  materials:
+    - { title: 'Визуализация данных с matplotlib', link: 'textbook/python/plotting'}
+  
+- title: 'Занятие 13. Python: библиотека pygame'
+  content:
+  - title: 'Графика с библиотекой pygame'
+    subcontent:
+    - title: 'Структура программы с pygame, главный цикл'
+    - title: 'Отображение геометрических фигур'
+    - title: 'Обработка событий'
+  materials:
+    - { title: 'Графика и GUI с библиотекой pygame', link: 'textbook/python/graphics'}
+
+- title: 'Занятия 14-16: решение заданий'
+  content:
+  - title: 'Работа над задачами'
