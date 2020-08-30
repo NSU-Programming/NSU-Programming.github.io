@@ -1,0 +1,45 @@
+---
+layout: page
+title: Программа практических занятий
+---
+
+{% assign seminars = site.data.seminars %}
+
+<p>Практические занятия состоят из двух частей. Первая часть (занятия 1-8) посвящена языку C++, вторая часть (занятия 9-13) — языку python. Оставшиеся три занятия используются для обсуждения заданий, которые студенты выполняют для получения зачета.</p>
+
+<div class="accordion" id="acc_sem0">
+{% for seminar in seminars.seminars %}
+  <div class="card">
+    <div class="card-header p-1" id="sem{{ forloop.index }}">
+        <h2 class="mb-0 mt-0">
+            <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse{{ forloop.index }}">
+              <i class="fa fa-plus text-info mr-2"></i> {{ seminar.title }}</button>
+        </h2>
+    </div>
+    <div id="collapse{{ forloop.index }}" class="collapse" aria-labelledby="sem{{ forloop.index }}">
+      <div class="card-body">
+        <ul class="list-unstyled mb-0">
+          {% for entry in seminar.content %}
+            <li>{{ entry.title }}</li>
+            {% if entry.subcontent %}
+              <ul>
+                {% for subentry in entry.subcontent %}
+                <li>{{ subentry.title }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% if seminar.materials %}
+          <h3>Материалы</h3>
+          <ul>
+            {% for entry in seminar.materials %}
+              <li><a href={{ entry.link }}>{{ entry.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif%}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
