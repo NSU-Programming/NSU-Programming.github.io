@@ -3,284 +3,67 @@ layout: page
 title: Программа лекций
 ---
 
-<script>
-$(function () {
-  function shown(collapsible) {
-    // return shown and being transformed to shown
-    return collapsible.filter('.show,:not(.show).collapsing');
-  }
-
-  $('.button-toggle').click(function () {
-    var collapsible = $($(this).attr('data-target') + ' .collapse');
-    if (collapsible.length > shown(collapsible).length) { // some blocks are hidden
-      collapsible.collapse('show');
-    } else {
-      collapsible.collapse('hide');
-    }
-  });
-  
-  $('[data-toggle="tooltip"]').tooltip();
-  
-  $('.button-toggle').each(function () {
-    var icon = $(this).find('i.fa');
-    var collapsible = $($(this).attr('data-target') + ' .collapse')
-    collapsible.on('show.bs.collapse hide.bs.collapse', function (e) {
-      // at this time .collapsing has not been set yet, so use e.type to detect what is going to happen
-      var showMinus = collapsible.length <= shown(collapsible).length + (e.type == 'show' ? +1 : -1);
-      icon.toggleClass('fa-angle-double-right', !showMinus);
-      icon.toggleClass('fa-angle-double-down', showMinus);
-    });
-  });
-
-  $('.accordion button[data-toggle="collapse"]').popover({
-    placement: 'bottom',
-    html: true,
-    trigger: 'hover',
-    content: function () {
-      return $($(this).attr('data-target')).find('.card-body').html();
-    }
-  });
-
-  $('.collapse').on('show.bs.collapse hidden.bs.collapse', function (e) {
-    // do not show popovers when corresponding collapsibles are not fully collapsed
-    $(this).closest('.card')
-      .find('button[data-toggle="collapse"]')
-      .popover('hide')
-      .popover(e.type == 'show' ? 'disable' : 'enable');
-  });
-});
-</script>
+{% assign cpplectures = site.data.lecturescpp.lectures %}
+{% assign pylectures = site.data.lecturespy.lectures %}
 
 <p>Восемь лекций курса разделены на два блока: в первом обсуждается язык C++, во втором — язык Python. Содержание лекций не дублирует программу практических занятий. Значительное внимание на лекциях уделяется обсуждению общих концепций и обзору возможностей языков программирования.</p>
 
 <h2><button class="btn btn-info button-toggle" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="Развернуть/свернуть все лекции" data-target="#acc_cpp"><i class="fa fa-angle-double-right"></i></button> Часть 1. Язык С++</h2>
 
 <div class="accordion" id="acc_cpp">
+  {% for lecture in cpplectures %}
     <div class="card">
-        <div class="card-header p-1" id="Lect1">
-            <h2 class="mb-0 mt-0">
-                <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapseOne">
-                  <i class="fa fa-plus text-info mr-2"></i> Лекция 1. Основы C++, ООП</button>
-            </h2>
+      <div class="card-header p-1" id="Lect{{ forloop.index }}cpp">
+        <h2 class="mb-0 mt-0">
+          <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse{{ forloop.index }}cpp">
+            <i class="fa fa-plus text-info mr-2"></i> {{ lecture.title }}</button>
+        </h2>
+      </div>
+      <div id="collapse{{ forloop.index }}cpp" class="collapse" aria-labelledby="Lect{{ forloop.index }}cpp">
+        <div class="card-body">
+          <ul class="list-unstyled mb-0">
+            {% for entry in lecture.content %}
+              <li> {{ entry.title }} </li>
+                {% if entry.subcontent %}
+                  <ul> {% for subentry in entry.subcontent %}
+                    <li> {{ subentry.title }} </li>
+                  {% endfor %} </ul>
+                {% endif %}
+            {% endfor %}
+          </ul>
         </div>
-        <div id="collapseOne" class="collapse" aria-labelledby="Lect1">
-            <div class="card-body">
-              <ul class="list-unstyled mb-0">
-                <li>Потоки ввода-вывода</li>
-                <li>Функции
-                  <ul>
-                    <li>Передача аргументов по ссылке</li>
-                    <li>Перегрузка функций</li>
-                  </ul>
-                </li>
-                <li>lvalue- и rvalue-выражения</li>
-                <li>Инкапсуляция и классы</li>
-                  <ul>
-                    <li>Поля и методы</li>
-                    <li>Объявление и определение класса</li>
-                    <li>Особые методы класса</li>
-              </ul>
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="card">
-        <div class="card-header p-1" id="headingTwo">
-            <h2 class="mb-0 mt-0">
-                <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapseTwo">
-                  <i class="fa fa-plus text-info mr-2"></i> Лекция 2. Продвинутые классы</button>
-            </h2>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
-            <div class="card-body">
-              <ul class="list-unstyled mb-0">
-                <li>Статические поля и методы</li>
-                <li>Перегрузка операторов</li>
-                <li>Полиморфизм и наследование</li>
-                <li>Идиома RAII</li>
-                  <ul>
-                    <li>Пример 1. Работа с файлами</li>
-                    <li>Пример 2. Работа с динамической памятью</li>
-                  </ul>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header p-1" id="heading3">
-            <h2 class="mb-0 mt-0">
-                <button type="button" class="btn btn-block text-left collapsed" data-toggle="collapse" data-target="#collapse3">
-                  <i class="fa fa-plus text-info mr-2"></i> Лекция 3. Стандартная библиотека C++</button>
-            </h2>
-        </div>
-        <div id="collapse3" class="collapse" aria-labelledby="heading3">
-            <div class="card-body">
-              <ul class="list-unstyled mb-0">
-                <li>Стандартные контейнеры</li>
-                  <ul>
-                    <li>Последовательные контейнеры: vector, list</li>
-                    <li>Ассоциативные контейнеры: set, map</li>
-                  </ul>
-                <li>Итераторы
-                  <ul>
-                    <li>Классификация итераторов</li>
-                  </ul>
-                <li>Вычислительная сложность алгоритмов</li>
-                <li>Алгоритмы STL</li>
-                <li>Библиотека numeric</li>
-              </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-header p-1" id="heading4">
-            <h2 class="mb-0 mt-0">
-                <button type="button" class="btn btn-block text-left collapsed" data-toggle="collapse" data-target="#collapse4">
-                  <i class="fa fa-plus text-info mr-2"></i> Лекция 4. Обобщенное и функциональное программирование в C++</button>
-            </h2>
-        </div>
-        <div id="collapse4" class="collapse" aria-labelledby="heading4">
-            <div class="card-body">
-              <ul class="list-unstyled mb-0">
-                <li>Обобщенное программирование</li>
-                <ul>
-                  <li>Шаблонные функции</li>
-                  <li>Шаблонные классы</li>
-                </ul>
-                <li>Функциональное программирование</li>
-                <ul>
-                  <li>Лямбда-выражения</li>
-                  <li>Библиотека functional</li>
-                </ul>
-              </ul>
-            </div>
-        </div>
-    </div>
+  {% endfor %}
 </div>
 
 <h2><button class="btn btn-info button-toggle" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="Развернуть/свернуть все лекции" data-target="#acc_py"><i class="fa fa-angle-double-right"></i></button> Часть 2. Язык python</h2>
 
 <div class="accordion" id="acc_py">
-  <div class="card">
-      <div class="card-header p-1" id="Lect5">
-          <h2 class="mb-0 mt-0">
-              <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse5">
-                <i class="fa fa-plus text-info mr-2"></i> Лекция 5. Введение в python I</button>
-          </h2>
+  {% for lecture in pylectures %}
+    <div class="card">
+      <div class="card-header p-1" id="Lect{{ forloop.index }}py">
+        <h2 class="mb-0 mt-0">
+          <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse{{ forloop.index }}py">
+            <i class="fa fa-plus text-info mr-2"></i> {{ lecture.title }}</button>
+        </h2>
       </div>
-      <div id="collapse5" class="collapse" aria-labelledby="Lect5">
-          <div class="card-body">
-            <ul class="list-unstyled mb-0">
-              <li>Базовые типы и контейнеры</li>
-              <ul>
-                <li>int, float, str</li>
-                <li>list, tuple, set, dict</li>
-              </ul>
-              <li>Управляющие конструкции</li>
-              <ul>
-                <li>if, while, for, тернарный оператор</li>
-              </ul>
-              <li>Функции</li>
-              <ul>
-                <li>Способы передачи аргументов в функцию</li>
-              </ul>
-              <li>Строки</li>
-            </ul>
-          </div>
+      <div id="collapse{{ forloop.index }}py" class="collapse" aria-labelledby="Lect{{ forloop.index }}py">
+        <div class="card-body">
+          <ul class="list-unstyled mb-0">
+            {% for entry in lecture.content %}
+              <li> {{ entry.title }} </li>
+                {% if entry.subcontent %}
+                  <ul> {% for subentry in entry.subcontent %}
+                    <li> {{ subentry.title }} </li>
+                  {% endfor %} </ul>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-  </div>
-
-  <div class="card">
-      <div class="card-header p-1" id="Lect6">
-          <h2 class="mb-0 mt-0">
-              <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse6">
-                <i class="fa fa-plus text-info mr-2"></i> Лекция 6. Введение в python II</button>
-          </h2>
-      </div>
-      <div id="collapse6" class="collapse" aria-labelledby="Lect6">
-          <div class="card-body">
-            <ul class="list-unstyled mb-0">
-              <li>Объектно-ориентированная разработка с python</li>
-              <li>Обзор стандартной библиотеки</li>
-              <ul>
-                <li>os, sys, string, decimal, fractions, collections, itertools, datetime</li>
-              </ul>
-            </ul>
-          </div>
-      </div>
-  </div>
-
-
-  <div class="card">
-      <div class="card-header p-1" id="Lect7">
-          <h2 class="mb-0 mt-0">
-              <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse7">
-                <i class="fa fa-plus text-info mr-2"></i> Лекция 7. Научные вычисления в python</button>
-          </h2>
-      </div>
-      <div id="collapse7" class="collapse" aria-labelledby="Lect7">
-          <div class="card-body">
-            <ul class="list-unstyled mb-0">
-              <li>Вычисления с numpy</li>
-              <ul>
-                <li>Массивы numpy</li>
-                <li>Механизм broadcasting</li>
-                <li>Линейная алгебра с numpy</li>
-              </ul>
-              <li>Визуализация данных с matplotlib</li>
-              <ul>
-                <li>plot, errorbar, hist</li>
-                <li>scatter</li>
-                <li>countour</li>
-                <li>Продвинутая настройка графиков</li>
-              </ul>
-              <li>Модули библиотеки scipy</li>
-              <ul>
-                <li>special, integrate, linalg, interpolate, optimize, stats, fftpack</li>
-              </ul>
-              <li>Символьные вычисления с sympy</li>
-            </ul>
-          </div>
-      </div>
-  </div>
-
-  <div class="card">
-      <div class="card-header p-1" id="Lect8">
-          <h2 class="mb-0 mt-0">
-              <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse8">
-                <i class="fa fa-plus text-info mr-2"></i> Лекция 8. Библиотека pygame</button>
-          </h2>
-      </div>
-      <div id="collapse8" class="collapse" aria-labelledby="Lect8">
-          <div class="card-body">
-            <ul class="list-unstyled mb-0">
-              <li>Основы работы с pygame</li>
-              <ul>
-                <li>Главный цикл</li>
-                <li>Рисование геометрических фигур</li>
-                <li>Обработка событий</li>
-              </ul>
-              <li>Пример. Визуализация модели физической системы с pygame</li>
-            </ul>
-          </div>
-      </div>
-  </div>
-
-  <div class="card">
-      <div class="card-header p-1" id="Lect9">
-          <h2 class="mb-0 mt-0">
-              <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse9">
-                <i class="fa fa-plus text-info mr-2"></i> Бонус-лекция</button>
-          </h2>
-      </div>
-      <div id="collapse9" class="collapse" aria-labelledby="Lect9">
-          <div class="card-body">
-            <ul class="list-unstyled mb-0">
-              <li>Вариант 1. Создаем и тренируем нейронную сеть с нуля на python</li>
-              <li>Вариант 2. Автоматические дифференцирование с библиотекой jax</li>
-              <li>Вариант 3. Библиотека pandas</li>
-          </div>
-      </div>
-  </div>
+    </div>
+  {% endfor %}
 </div>
 
 <h2>Архив</h2>

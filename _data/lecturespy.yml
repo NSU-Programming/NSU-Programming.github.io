@@ -1,0 +1,52 @@
+lectures:
+- title: 'Лекция 5. Введение в python I'
+  content:
+  - title: 'Базовые типы и контейнеры'
+    subcontent:
+    - title: 'int, float, str'
+    - title: 'list, tuple, set, dict'
+  - title: 'Управляющие конструкции'
+    subcontent:
+    - title: 'if, while, for, тернарный оператор'
+  - title: 'Функции'
+    subcontent:
+    - title: 'Способы передачи аргументов в функцию'
+  - title: 'Строки'
+
+- title: 'Лекция 6. Введение в python II'
+  content:
+  - title: 'Объектно-ориентированная разработка с python'
+  - title: 'Обзор стандартной библиотеки'
+    subcontent:
+    - title: 'os, sys, string, decimal, fractions, collections, itertools, datetime'
+
+- title: 'Лекция 7. Научные вычисления в python'
+  content:
+  - title: 'Вычисления с numpy'
+    subcontent:
+    - title: 'Массивы numpy'
+    - title: 'Механизм broadcasting'
+    - title: 'Линейная алгебра с numpy'
+  - title: 'Визуализация данных с matplotlib'
+    subcontent:
+    - title: 'plot, errorbar, hist'
+    - title: 'scatter'
+    - title: 'countour'
+    - title: 'Продвинутая настройка графиков'
+  - title: 'Модули библиотеки scipy: special, integrate, linalg, interpolate, optimize, stats, fftpack'
+  - title: 'Символьные вычисления с sympy'
+
+- title: 'Лекция 8. Библиотека pygame'
+  content:
+  - title: 'Основы работы с pygame'
+    subcontent:
+    - title: 'Главный цикл'
+    - title: 'Рисование геометрических фигур'
+    - title: 'Обработка событий'
+  - title: 'Пример. Визуализация модели физической системы с pygame'
+
+- title: 'Бонус-лекция'
+  content:
+  - title: 'Вариант 1. Создаем и тренируем нейронную сеть с нуля на python'
+  - title: 'Вариант 2. Автоматические дифференцирование с библиотекой jax'
+  - title: 'Вариант 3. Библиотека pandas'
