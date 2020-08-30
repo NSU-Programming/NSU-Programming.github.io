@@ -56,7 +56,7 @@ $(function () {
     });
   });
 
-  $('.accordion button[data-toggle="collapse"]').popover({
+  $('.lectures.accordion button[data-toggle="collapse"]').popover({
     placement: 'bottom',
     html: true,
     trigger: 'hover',
@@ -65,7 +65,7 @@ $(function () {
     }
   });
 
-  $('.collapse').on('show.bs.collapse hidden.bs.collapse', function (e) {
+  $('.lectures .collapse').on('show.bs.collapse hidden.bs.collapse', function (e) {
     // do not show popovers when corresponding collapsibles are not fully collapsed
     $(this).closest('.card')
       .find('button[data-toggle="collapse"]')
