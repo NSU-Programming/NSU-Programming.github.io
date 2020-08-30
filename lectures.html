@@ -40,6 +40,14 @@ $(function () {
       return $($(this).attr('data-target')).find('.card-body').html();
     }
   });
+
+  $('.collapse').on('show.bs.collapse hidden.bs.collapse', function (e) {
+    // do not show popovers when corresponding collapsibles are not fully collapsed
+    $(this).closest('.card')
+      .find('button[data-toggle="collapse"]')
+      .popover('hide')
+      .popover(e.type == 'show' ? 'disable' : 'enable');
+  });
 });
 </script>
 
