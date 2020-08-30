@@ -1,0 +1,73 @@
+---
+layout: page
+title: Программа лекций
+---
+
+{% assign cpplectures = site.data.lecturescpp.lectures %}
+{% assign pylectures = site.data.lecturespy.lectures %}
+
+<p>Восемь лекций курса разделены на два блока: в первом обсуждается язык C++, во втором — язык Python. Содержание лекций не дублирует программу практических занятий. Значительное внимание на лекциях уделяется обсуждению общих концепций и обзору возможностей языков программирования.</p>
+
+<h2><button class="btn btn-info button-toggle" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="Развернуть/свернуть все лекции" data-target="#acc_cpp"><i class="fa fa-angle-double-right"></i></button> Часть 1. Язык С++</h2>
+
+<div class="accordion" id="acc_cpp">
+  {% for lecture in cpplectures %}
+    <div class="card">
+      <div class="card-header p-1" id="Lect{{ forloop.index }}cpp">
+        <h2 class="mb-0 mt-0">
+          <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse{{ forloop.index }}cpp">
+            <i class="fa fa-plus text-info mr-2"></i> {{ lecture.title }}</button>
+        </h2>
+      </div>
+      <div id="collapse{{ forloop.index }}cpp" class="collapse" aria-labelledby="Lect{{ forloop.index }}cpp">
+        <div class="card-body">
+          <ul class="list-unstyled mb-0">
+            {% for entry in lecture.content %}
+              <li> {{ entry.title }} </li>
+                {% if entry.subcontent %}
+                  <ul> {% for subentry in entry.subcontent %}
+                    <li> {{ subentry.title }} </li>
+                  {% endfor %} </ul>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<h2><button class="btn btn-info button-toggle" data-toggle="tooltip" data-trigger="hover" data-placement="right" title="Развернуть/свернуть все лекции" data-target="#acc_py"><i class="fa fa-angle-double-right"></i></button> Часть 2. Язык python</h2>
+
+<div class="accordion" id="acc_py">
+  {% for lecture in pylectures %}
+    <div class="card">
+      <div class="card-header p-1" id="Lect{{ forloop.index }}py">
+        <h2 class="mb-0 mt-0">
+          <button type="button" class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse{{ forloop.index }}py">
+            <i class="fa fa-plus text-info mr-2"></i> {{ lecture.title }}</button>
+        </h2>
+      </div>
+      <div id="collapse{{ forloop.index }}py" class="collapse" aria-labelledby="Lect{{ forloop.index }}py">
+        <div class="card-body">
+          <ul class="list-unstyled mb-0">
+            {% for entry in lecture.content %}
+              <li> {{ entry.title }} </li>
+                {% if entry.subcontent %}
+                  <ul> {% for subentry in entry.subcontent %}
+                    <li> {{ subentry.title }} </li>
+                  {% endfor %} </ul>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<h2>Архив</h2>
+
+<ul>
+  <li><a href="https://github.com/VitalyVorobyev/CppPython2019/tree/master/Lectures" target="_blank">Лекции 2019 года</a></li>
+</ul>
