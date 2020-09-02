@@ -384,15 +384,6 @@ git push -u origin master
 
 ![](../../figs/textbook-env/vscode-git-push.png)
 
-Если Вы считаете, что задание решено верно и Вы готовы его сдать, создайте pull request (PR) на GitHub:
-
-![github-pr1](../../figs/textbook-env/github-pr1.png)
-![github-pr2](../../figs/textbook-env/github-pr2.png)
-
-Преподаватель может задавать вопросы и просить выполнить измерения в коде в обсуждении PR на GitHub. Вы можете отвечать на комментарии там же. Чтобы внести изменения в код, необходимо выполнить изменения локально, а затем повторить последовательность `add`, `commit`, `push`. Внесенные изменения будут отражены в PR.
-
-Задание засчитывается в тот момент, когда преподаватель выполняет команду merge для Вашего PR.
-
 ## Источники
 
 * [First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
