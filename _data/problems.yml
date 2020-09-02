@@ -69,8 +69,7 @@ chapters:
   - name: 'Работа с numpy'
     tasks:
     - { name: 'Набор заданий I', id: 'numpy-basics-set-1', score: 5, test: 'pytest' }
-    - { name: 'Набор заданий II', score: 5, test: 'pytest' }
-    - { name: 'Набор заданий III', score: 5, test: 'pytest' }
+    - { name: 'Набор заданий II', id: 'numpy-basics-set-2', score: 5, test: 'pytest' }
     - { name: 'Монте-Карло интегрирование', id: 'monte-carlo-integral', score: 4, test: 'pytest' }
     - { name: 'Монте-Карло генератор', id: 'monte-carlo-generator', score: 4, test: 'pytest' }
     - { name: 'Клеточный автомат "Жизнь"', id: 'game-of-life', score: 4, test: 'pytest' }
