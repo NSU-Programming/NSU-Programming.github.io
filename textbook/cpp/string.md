@@ -3,15 +3,15 @@ title: Строки в C++
 menu: textbook-cpp
 ---
 
-Для работы со строкам и в C++ используется тип `string`. В разделе про [потоки](io) мы уже создавали объекты типа `string` и использовали их с операторами `<<` и `>>`. Рассмотрим этот тип подробнее.
+Для работы со строкам в C++ используется тип `string`. В разделе про [потоки](io) мы уже создавали объекты типа `string` и использовали их с операторами `<<` и `>>`. Рассмотрим этот тип подробнее.
 
-Рассмотрим основные способы создания объектов `string`
+Примеры создания объектов `string`:
 
 ```cpp
-string a;  // пустая строка
-string b("abc");  // строка проинициализирована списком символов
-string c1(b);  // c1 является копией b
-string c2 = b;  // c2 является копией b
+string a;           // пустая строка
+string b("abc");    // строка проинициализирована списком символов
+string c1(b);       // c1 является копией b
+string c2 = b;      // c2 является копией b
 string d('d', 10);  // d = "dddddddddd"
 ```
 
@@ -19,13 +19,15 @@ string d('d', 10);  // d = "dddddddddd"
 
 ```cpp
 string a("abz");
-char c = a[2];  // 'z'
+char c = a[2];     // 'z'
 char b = a.at(1);  // 'b'
-a[2] = 'c';  // a = "abc"
+a[2] = 'c';        // a = "abc"
 ```
+
 Механизмы обращения к элементу через оператор `[]` и с помощью метода `at()` отличаются. В первом случае не происходит проверки того, что индекс меньше, чем длина строки. Если это условие не выполняется, то мы приходим к ситуации неопределенного поведения. Метод `at()` выполняет эту проверку и генерирует исключение в случае некорректного индекса. За это более безопасное поведение мы платим процессорным временем для дополнительной проверки.
 
 По символам строки можно пройти в цикле:
+
 ```cpp
 string s("abcde");
 
@@ -37,12 +39,13 @@ for (char ch : s) {
 Узнать длину строки можно с помощью метода `size()`.
 
 Строки можно конкатенировать с помощью оператора `+` или метода `append`:
+
 ```cpp
 string a("Hello, ");
 string b("world!");
 string c = a + b;  // "Hello, world!"
-a.append(b);  // a = "Hello, world!"
-a += b;  // a = "Hello, world!world!"
+a.append(b);       // a = "Hello, world!"
+a += b;            // a = "Hello, world!world!"
 ```
 
 Добавить символ в конец строки можно с помощью метода `push_back()`, а удалить последний символ - с помощью метода `pop_back()`.
@@ -50,19 +53,22 @@ a += b;  // a = "Hello, world!world!"
 Для строк определены все операторы сравнения `==`, `!=`, `>`, `<`, `>=`, `<=`, выполняющие лексикографическое сравнение.
 
 В типе `string` реализованы некоторые алгоритмы. Например, можно осуществлять поиск по строке:
-```cpp
-string str ("There are two needles in this haystack with needles.");
-string str2 ("needle");
 
-size_t found = str.find(str2);  // found = 14
+```cpp
+string line("There are two needles in this haystack with needles.");
+string query("needle");
+
+size_t found = line.find(query);  // found = 14
 if (found != string::npos) {
-    cout << "first 'needle' found at: " << found << '\n';
+    cout << "first '" << query << "' found at: " << found << '\n';
 }
 ```
-Метод `find()` возвращает позицию первого символа, которому соответствует совпадение. Если совпадений не найдено, возвращается специальная константа. `size_t` это беззнаковый целочисленный тип.
 
-Больше возможностей типа `string` можно найти в документации. 
+Метод `find()` возвращает позицию первого символа, которому соответствует совпадение. Если совпадений не найдено, возвращается специальная константа. `size_t` - это беззнаковый целочисленный тип.
+
+Больше возможностей типа `string` можно найти в [документации](https://en.cppreference.com/w/cpp/string/basic_string). 
 
 ## Документация 
-* [http://www.cplusplus.com/reference/string/string/](http://www.cplusplus.com/reference/string/string/)
-* [\<cctype\>](http://www.cplusplus.com/reference/cctype/) - библиотека для работы с символами
+
+* [en.cppreference.com/w/cpp/string/basic_string](https://en.cppreference.com/w/cpp/string/basic_string)
+* [en.cppreference.com/w/cpp/header/cctype](https://en.cppreference.com/w/cpp/header/cctype)
